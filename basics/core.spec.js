@@ -37,4 +37,26 @@ describe('Первое задание', () => {
             assert.equal(core.factorial(4), 24);
         })
     })
+    
+    describe('#isBinary', () => {
+        it('Возвращает true при передаче степени двойки', () => {
+            assert.equal(core.isBinary(1), true);
+            assert.equal(core.isBinary(2), true);
+            assert.equal(core.isBinary(2048), true);
+        }), 
+        it('Возвращает false при передаче не степени двойки', () => {
+            assert.equal(core.isBinary(0), false);
+            assert.equal(core.isBinary(12), false);
+            assert.equal(core.isBinary(1023), false);
+        })
+    })
+    
+    describe('#fibonacci', () => {
+        it('Возвращает n-ое число Фибоначчи корректно', () => {
+            assert.equal(core.fibonacci(1), 1);
+            assert.equal(core.fibonacci(2), 1);
+            assert.equal(core.fibonacci(7), 13);
+            assert.equal(core.fibonacci(10), 55);
+        })
+    })
 })

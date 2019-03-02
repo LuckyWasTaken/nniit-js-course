@@ -18,6 +18,14 @@ function recSumTo(n) {
 function factorial(n) {
 }
 
+//Напишите функцию, которая определяет, является ли число бинарным
+function isBinary(n) {
+}
+
+//Напишите функцию, которая находит N-е число Фибоначчи
+function fibonacci(n) {
+}
+
 module.exports = {
-    isInteger, even, sumTo, recSumTo, factorial
+    isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
 }
