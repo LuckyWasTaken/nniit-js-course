@@ -37,4 +37,17 @@ describe('Первое задание', () => {
             assert.equal(core.factorial(4), 24);
         })
     })
+    
+    describe('#isBinary', () => {
+        it('Возвращает true при передаче степени двойки', () => {
+            assert.equal(core.isBinary(1), true);
+            assert.equal(core.isBinary(2), true);
+            assert.equal(core.isBinary(2048), true);
+        }), 
+        it('Возвращает false при передаче не степени двойки', () => {
+            assert.equal(core.isBinary(0), false);
+            assert.equal(core.isBinary(12), false);
+            assert.equal(core.isBinary(1023), false);
+        })
+    })
 })
