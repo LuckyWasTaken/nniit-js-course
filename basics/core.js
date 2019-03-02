@@ -27,5 +27,5 @@ function fibonacci(n) {
 }
 
 module.exports = {
-    isInteger, even, sumTo, recSumTo, factorial
+    isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
 }
