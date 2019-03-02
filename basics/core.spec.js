@@ -50,4 +50,13 @@ describe('Первое задание', () => {
             assert.equal(core.isBinary(1023), false);
         })
     })
+    
+    describe('#fibonacci', () => {
+        it('Возвращает n-ое число Фибоначчи корректно', () => {
+            assert.equal(core.fibonacci(1), 1);
+            assert.equal(core.fibonacci(2), 1);
+            assert.equal(core.fibonacci(7), 13);
+            assert.equal(core.fibonacci(10), 55);
+        })
+    })
 })
