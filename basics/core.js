@@ -27,8 +27,8 @@ function sumTo(n) {
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-    if(n == 1){
-        return 1;
+    if(n < 0){
+        return null;
     } else {
         return n + recSumTo(n - 1)
     }
@@ -90,7 +90,7 @@ console.log(
 )
 
 console.log(
-    recSumTo(10)
+    recSumTo(-1)
 )
 
 console.log(
