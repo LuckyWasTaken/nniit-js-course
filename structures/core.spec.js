@@ -11,13 +11,18 @@ describe("Структуры данных", () => {
       });
   });
 
-
   describe("#truncate", () => {
     it("Корректно отрабатывает на строчках меньше n символов", () => {
       assert.equal(core.truncate("привет", 20), "привет");
     }),
       it("Корректно отрабатывает на строчках больше n символов", () => {
-        assert.equal(core.truncate("Собирает мать сына в школу, кладет ему хлеб, колбасу и гвозди", 26), "Собирает мать сына в школу...");
+        assert.equal(
+          core.truncate(
+            "Собирает мать сына в школу, кладет ему хлеб, колбасу и гвозди",
+            26
+          ),
+          "Собирает мать сына в школу..."
+        );
       });
   });
 
@@ -26,7 +31,7 @@ describe("Структуры данных", () => {
       assert.equal(core.isEmpty({}), true);
     }),
       it("Корректно обрабатывает непустой объект", () => {
-        assert.equal(core.isEmpty({a: 1}), false);
+        assert.equal(core.isEmpty({ a: 1 }), false);
       });
   });
 
@@ -35,17 +40,17 @@ describe("Структуры данных", () => {
       assert.deepEqual(core.multiply({}), {});
     }),
       it("Корректно обрабатывает непустой объект", () => {
-        assert.deepEqual(core.multiply({a: 1}), {a: 2});
+        assert.deepEqual(core.multiply({ a: 1 }), { a: 2 });
       });
-      it("Корректно обрабатывает массив с нечисловыми значениями", () => {
-          assert.deepEqual(core.multiply({a: "a", b: 42}), {a: "a", b: 84});
-      })
+    it("Корректно обрабатывает массив с нечисловыми значениями", () => {
+      assert.deepEqual(core.multiply({ a: "a", b: 42 }), { a: "a", b: 84 });
+    });
   });
 
   describe("#sumArr", () => {
     it("Корректно обрабатывает массив", () => {
       assert.equal(core.sumArr([1, 2, 3]), 6);
-    })
+    });
   });
 
   describe("#isPali", () => {
