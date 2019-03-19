@@ -1,7 +1,6 @@
  //Напишите функцию, которая проверяет, является ли число целым используя побитовые операторы
 function isInteger(n) {
-    let checker = Number.isInteger(n); 
-    return checker; 
+    return (n^0)===n; 
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
@@ -9,7 +8,7 @@ function even() {
     let arr = [];
     for(let i = 2, j =0; i<=20; i++){
         if (i%2===0){
-            arr[j++] = i;
+            arr.push(i);
         }
     }
     return arr;
@@ -28,9 +27,8 @@ function sumTo(n) {
 function recSumTo(n) {
     if (n===0){
         return 0;
-    }else{
-        return n +recSumTo(n-1);
     }
+    return n +recSumTo(n-1);
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -44,17 +42,16 @@ function factorial(n) {
 
 //Напишите функцию, которая определяет, является ли число бинарным
 function isBinary(n) {
-    let checker = Number.isBinary(n); 
-    return checker; 
+    let num = Math.log2(n);
+    return Number.isInteger(num);
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
     if (n === 1 || n === 2 ){
         return 1;
-    }else {
-        return fibonacci(n-2) + fibonacci(n-1);
     }
+    return fibonacci(n-2) + fibonacci(n-1);
 }
 
 module.exports = {
