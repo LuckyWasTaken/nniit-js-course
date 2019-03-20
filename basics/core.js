@@ -1,28 +1,27 @@
 //Напишите функцию, которая проверяет,
 //является ли число целым используя побитовые операторы
 function isInteger(n) {
-  if (n % 1 == 0) return true;
-  return false;
+  return n == n << 32;
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
-  let arr = [];
+  const arr = [];
   arr[0] = 2;
-  for (let count = 1; arr[count - 1] < 20; count++){
-    arr[count] = arr[count - 1] + 2;
+  for (let i = 2; arr[i - 2] < 20; i++) {
+    arr.push(i * 2);
   }
   return arr;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя цикл
 function sumTo(n) {
-  let summa = 0;
+  let sum = 0;
   while (n > 0) {
-    summa += n;
+    sum += n;
     n--;
   }
-  return summa;
+  return sum;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
@@ -47,10 +46,8 @@ function factorial(n) {
 function isBinary(n) {
   if (n == 1) return true;
   if (n % 2 == 0) {
-    let exp2 = 2;
-    while (exp2 <= n) {
+    for (let exp2 = 2; exp2 <= n; exp2 *= 2) {
       if (exp2 == n) return true;
-      exp2 *= 2;
     }
   }
   return false;
