@@ -6,8 +6,7 @@ function isInteger(n) {
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
   var array = [];
-  array[0] = 2;
-  for (var i = 1; i <= 9; i++) {
+  for (var i = 0; i <= 9; i++) {
     array[i] = (i + 1) * 2;
   }
   return array;
