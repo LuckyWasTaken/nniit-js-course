@@ -6,7 +6,7 @@ function isInteger(n) {
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
-  let arr = [];
+  const arr = [];
   arr[0] = 2;
   for (let count = 1; arr[count - 1] < 20; count++){
     arr[count] = arr[count - 1] + 2;
