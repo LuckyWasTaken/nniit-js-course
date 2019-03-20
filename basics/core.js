@@ -14,6 +14,9 @@ function even() {
 
 //Напишите функцию, считающую сумму чисел до заданного используя цикл
 function sumTo(n) {
+	if (n <= 0){
+		return null;
+	}
 	let sum = 0;
 	for (i = 0; i <= n; i++){
 		sum += i;
@@ -23,14 +26,23 @@ function sumTo(n) {
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-	if (n === 1)
+	if (n <= 0){
+		return null;
+	}
+	if (n === 1){
 		return 1;
-	else
+	}
 		return n + recSumTo(n - 1);
 }
 
 //Напишите функцию, считающую факториал заданного числа
 function factorial(n) {
+	if (n < 0){
+		return null;
+	}
+	if ((n === 0) || (n === 1)){
+		return 1;
+	}
 	let fact = 1;
 	for (i = 1; i <= n; i++){
 		fact *= i;
@@ -40,21 +52,25 @@ function factorial(n) {
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
- while (((n % 2) === 0) && n > 1)
-   n /= 2;
- return (n === 1);
+	while (((n % 2) === 0) && n > 1){
+		n /= 2;
+	}
+	return (n === 1);
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
-function fibonacci(n) {
-	function fib_iter(a, b, c)
-{
-	if (c == 1)
+function fibIter(a, b, n){
+	if (n < 1){
+		return null;
+	}
+	if (n === 1){
 		return b;
-	else
-		return fib_iter(b, a + b, c - 1);
+	}
+	return fibIter(b, a + b, n - 1);
 }
-	return fib_iter(0, 1, n);
+
+function fibonacci(n) {
+	return fibIter(0, 1, n);
 }
 
 module.exports = {
