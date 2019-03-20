@@ -1,7 +1,11 @@
 //Напишите функцию, которая проверяет,
 //является ли число целым используя побитовые операторы
 function isInteger(n) {
+<<<<<<< HEAD
   return n == n << 32;
+=======
+  return n % 1 == 0;
+>>>>>>> 4033aa45ed7f0060f4f66d2b8f80e3bc9f624711
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
@@ -55,15 +59,15 @@ function isBinary(n) {
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
-  let F1 = 1,
-    F2 = 1;
-  if (n <= 2) return F2;
-  for (let FN = 0; n >= 3; n--) {
-    FN = F1 + F2;
-    F1 = F2;
-    F2 = FN;
+  let f1 = 1,
+    f2 = 1;
+  if (n <= 2) return f2;
+  for (let fN = 0; n >= 3; n--) {
+    fN = f1 + f2;
+    f1 = f2;
+    f2 = fN;
   }
-  return F2;
+  return f2;
 }
 
 module.exports = {
