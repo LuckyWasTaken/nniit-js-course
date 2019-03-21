@@ -61,4 +61,3 @@ module.exports = {
   sumArr,
   isPali
 };
- 

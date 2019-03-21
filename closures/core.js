@@ -7,7 +7,6 @@ function sum(a){
  
 
 // Напишите замыкание, которое будет принимать число и считать среднее арифметическое от всех переданных ранее чисел (если задание не до конца понятно - подглядите тесты :) )
-
 function average() {
   let arr=[];
   return function(n){
@@ -19,7 +18,6 @@ function average() {
     return sum/ arr.length;
   }
 }
-
 
 module.exports = {
   sum,
