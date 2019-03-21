@@ -1,45 +1,26 @@
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
 function capitalize(str) {
-  let buf = [];
-  if (str.length >= 1) {
-    buf[0] = str[0].toUpperCase();
-  }
-  for (let i = 1; i <= str.length - 1; i++) {
-    if (String.fromCharCode(32) != str[i]) {
-      buf[i] = str[i];
-    } else {
-      buf[i] = String.fromCharCode(32);
-      i++;
-      buf[i] = str[i].toUpperCase();
-    }
-  }
-  return buf.join("");
+  let firstSymbol = str.charAt(0).toUpperCase();
+  return firstSymbol + str.substr(1, str.length-1);
 }
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n < длина строки - ничего делать не надо)
 function truncate(str, n) {
   let buf;
-
   if (n > str.length) {
     return str;
-  } else if (n <= str.length) {
-    buf = str.substr(0, n);
-    buf += "...";
-    return buf;
   }
+  buf = str.substr(0, n);
+  buf+=("...");
+  return buf;
 }
 
 //Определите, пуст ли объект
 function isEmpty(obj) {
-  let i = 0;
   for (let key in obj) {
-    i++;
-  }
-  if (i === 0) {
-    return true;
-  } else {
     return false;
   }
+  return true;
 }
 
 //Напишите функцию, умножающую численные свойства на 2
@@ -63,23 +44,12 @@ function sumArr(arr) {
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
-  let buf = [];
-  let buf2 = [];
-  str.toLowerCase();
-  for (let i = 0; i < str.length; i++) {
-    if (String.fromCharCode(32) != str[i]) {
-      buf[i] = str[i];
-    }
-  }
-  for (let i = 0; i < buf.length; i++) {
-    buf2[i] = buf[i];
-  }
-  buf2.reverse();
-  if (buf.join("") === buf2.join("")) {
-    return true;
-  } else {
-    return false;
-  }
+  let leftIndex = 0;
+  let rightIndex = str.length - 1;
+
+  while (leftIndex < rightIndex)
+    if (str[leftIndex++] != str[rightIndex--]) return false;
+  return true;
 }
 
 module.exports = {
