@@ -26,10 +26,10 @@ function truncate(str, n) {
 
 //Определите, пуст ли объект
 function isEmpty(obj) {
-  let empty = 0;
-  empty = Object.getOwnPropertyNames(obj);
-  if (empty == 0) return true;
-  return false;
+  for (key in obj) {
+    if (obj[key] != undefined) return false;
+  }
+  return true;
 }
 
 //Напишите функцию, умножающую численные свойства на 2
