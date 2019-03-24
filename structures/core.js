@@ -19,7 +19,7 @@ function isEmpty(obj) {
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) {
   for (let key in obj){
-    if(Number.isInteger(obj[key])){
+    if(Number.isNamber(obj[key])){
       obj[key]*=2;
   }
   return obj;
@@ -35,7 +35,12 @@ function sumArr(arr) {
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
-  let strlen = str.length;
+  let arr = str.split("");
+  arr =arr.reverse();
+  arr = arr.join("");
+  return arr === str;
+}
+ /* let strlen = str.length;
   let i,j;
   for (i=0,j=strlen-1; i<strlen;i++,j--){
     if(str[i]==str[j]){
@@ -45,7 +50,7 @@ function isPali(str) {
     }
   }
   return true;
-}
+}*/
 
 module.exports = {
   capitalize,
