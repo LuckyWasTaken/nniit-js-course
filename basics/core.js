@@ -37,7 +37,7 @@ function factorial(n) {
   return f;
 }
 
-//Напишите функцию, которая определяет, является ли число бинарным
+//Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
   let num = Math.log2(n);
   return Number.isInteger(num);
