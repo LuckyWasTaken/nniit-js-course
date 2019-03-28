@@ -24,16 +24,16 @@ function capitalize(str) {
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
 	if ((typeof str != "string") || (typeof n != "number")){
-	return null;
+		return null;
 	}	
 	if (!str){
 		return "";
 	}
 	if ((n > str.length) || (n < 0) || (n === str.length)){
-	return str;
+		return str;
 	}
 	if (n === 0){
-	return "..."
+		return "..."
 	}
 	return str.substring(0, n) + "...";	
 }
