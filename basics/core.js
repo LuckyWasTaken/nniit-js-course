@@ -18,14 +18,17 @@ function even(){
 
 //Напишите функцию, считающую сумму чисел до заданного используя цикл
 function sumTo(n){
-	let sum;
-	for(let i = 0; i <= n; i++)
+	let sum = 0;
+	for(let i = 0; i <= n; i++){
 		sum += i;
+	}
 	return sum;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n){
+	if(n <= 0)
+		return null;
 	return n + recSumTo(n - 1);
 }
 
@@ -33,8 +36,7 @@ function recSumTo(n){
 function factorial(n){
 	if(n === 0)
 		return 1;
-	else 
-		return n * factorial(n - 1);
+	return n * factorial(n - 1);
 }
 
 //Напишите функцию, которая определяет, является ли число бинарным
