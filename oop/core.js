@@ -28,15 +28,24 @@ class Point3D extends Point {
 // Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала
 class Queue {
     constructor(array) {
-        this.array = array;
+        this._array = array;
     }
 
     enqueue(element) {
-        this.array.push(element);
+        this._array.push(element);
     }
 
     dequeue() {
-        this.array.shift();
+        return this._array.shift();
+
+    }
+
+    get array() {
+        return this._array;
+    }
+
+    set array(value) {
+        this._array = value;
     }
 }
 
