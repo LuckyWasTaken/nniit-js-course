@@ -42,4 +42,12 @@ describe('ООП', () => {
             assert.equal(point.z, -3);
         });
     });
+
+    describe('#Queue', () => {
+        it('test Queue', () => {
+            const queue = new core.Queue();
+            queue.inQueue(5);
+            assert.equal(queue.outQueue(), 5);
+        });
+    });
 });
