@@ -42,4 +42,15 @@ describe('ООП', () => {
             assert.equal(point.z, -3);
         });
     });
+
+    describe('#Queue', () => {
+        it('Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала', () => {
+          const queue = new core.Queue();
+            queue.pushToQueue(3);
+          assert.equal(queue.arr, "1,2,3");
+          queue.shiftToQueue();
+          assert.equal(queue.arr, "2,3");
+         });
+
+    });
 });
