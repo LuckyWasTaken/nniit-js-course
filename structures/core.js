@@ -1,52 +1,20 @@
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
-function capitalize(str){
-	return str.charAt(0).toUpperCase() + str.slice(1);
-}
+function capitalize(str) {}
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
-function truncate(str, n){
-	if(str.length < n){
-		return str;
-	}
-	return str.slice(0, n) + '...';
-}
+function truncate(str, n) {}
 
 //Определите, пуст ли объект
-function isEmpty(obj){
-	for(let key in obj){
-		return false;
-	}
-	return true;
-}
+function isEmpty(obj) {}
 
 //Напишите функцию, умножающую численные свойства на 2
-function multiply(obj){
-	for(let key in obj){
-		if(!isNaN(parseFloat(obj[key])) && isFinite(obj[key])){
-			obj[key] *= 2;
-		}
-	}
-	return obj;
-}
+function multiply(obj) {}
 
 //Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
-function sumArr(arr){
-	let sum = arr.reduce(add, 0);
-	function add(a, b){
-		return a + b;
-	}
-	return sum;
-}
+function sumArr(arr) {}
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
-function isPali(str){
-	let len = str.length;
-	for(let i = 0; i < len/2; i++){
-		if(str[i] != str[len-i-1])
-			return false;
-	}
-	return true;
-}
+function isPali(str) {}
 
 module.exports = {
   capitalize,
