@@ -26,10 +26,12 @@ function isEmpty(obj) {
 
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) {
-    return function(number) {
-        return number * factor;
-      };
-    let twice = multiply(2);
+   for (let key in obj) {
+    if (!isNaN(obj[key])) {
+      obj[key] *= 2;
+    }
+  }
+  return obj;
 }
 
 //Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
