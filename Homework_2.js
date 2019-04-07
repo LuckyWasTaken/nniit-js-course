@@ -1,21 +1,14 @@
 function capitalize(str) {
-  let arr = str.split(" "); //разбиваем строку на массив
-  let upperWord = [];
-  for (let i = 0; i < arr.length; i++) {
-    //для каждого слова i меняем первую букву на заглавную
-    let word = arr[i][0].toUpperCase() + arr[i].slice(1); //и приклеиваем хвост
-    upperWord.push(word); //кладем получившееся слово в массив
+    return str.split(" ").map(function(item) {
+        return item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+    }).join(" ")
   }
-  var newStr = upperWord.join(" "); //склеиваем новую строку
-  return newStr;
-}
 
 function truncate(str, n) {
   if (n > str.length) {
     return str;
-  } else {
-    return str.substr(0, n) + "...";
   }
+    return str.substr(0, n) + "...";
 }
 
 function isEmpty(obj) {
