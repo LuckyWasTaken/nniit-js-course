@@ -50,13 +50,13 @@ describe("ООП", () => {
       queue.addToQueue(3);
       queue.addToQueue(2);
 
-      assert.equal(queue.getFirst, 5);
+      assert.equal(queue.First, 5);
     });
 
     it("Пустая очередь", () => {
         let queue = new core.Queue();
 
-      assert.equal(queue.getFirst, undefined);
+      assert.equal(queue.First, undefined);
     });
   });
 });

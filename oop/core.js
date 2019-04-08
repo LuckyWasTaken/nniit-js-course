@@ -18,19 +18,26 @@ class Point3D extends Point {
     super(x, y);
     this.z = z;
   }
+  get lengthToNull() {
+    return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2) + Math.pow(this.z,2));
+  }
 }
 
 // Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала
 class Queue {
   constructor() {
-    this.queueArray=[];
+    this._queueArray=[];
   }
   addToQueue(elementToAdd) {
-    this.queueArray.push(elementToAdd);
+    this._queueArray.push(elementToAdd);
   }
 
-  get getFirst() {
-    return  this.queueArray.shift();
+  get First() {
+    if (this._queueArray.length===0){
+      console.log("Error! Empty array!");
+      // 'shift' сам вернет 'undefined' для пустого массива, так что 'return undefined' можно здесь не писать. 
+    }
+    return  this._queueArray.shift();
   }
 }
 
