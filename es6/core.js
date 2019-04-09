@@ -4,7 +4,7 @@
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
 function fioToName(fio) {
-    let [...data] = fio.split(' ');
+    let data = fio.split(' ');
     return `${data[1]} ${data[0]}`;
 }
 
@@ -40,11 +40,15 @@ function calculateSalaryDifference(arr) {
 // возвращает массив чисел от 1 до n, где вместо чисел, которые делятся на 3 — "Foo",
 // чисел, которые делятся на 5 — "Bar", а на 15 — "FooBar"
 // * покройте тестами
-function fooBar(arr) {
-    ans = [];
-    arr.forEach((item, i) => {
-        ans[i] = item % 15 == 0 ? "FooBar" : item % 3 == 0 ? "Foo" : item % 5 == 0 ? "Bar" : "";
-    });
+function fooBar(n) {
+    function* generateArray(n) {
+        let i = 0;
+        while (i++ < n) {
+            yield i % 15 == 0 ? "FooBar" : i % 3 == 0 ? "Foo" : i % 5 == 0 ? "Bar" : ""
+        }
+        return n % 15 == 0 ? "FooBar" : n % 3 == 0 ? "Foo" : n % 5 == 0 ? "Bar" : "";
+    }
+    let ans=[...generateArray(n)];
     return ans;
 }
 
@@ -87,16 +91,9 @@ module.exports = {
     fooBar
 };
 
-d=new Dictionary();
-d.setValue("JS",true);
-console.log(d.getValue("JS"));
-console.log(d.change("JAVA", false));
-console.log(d.change("JS", "very good"));
-d.setValue("Python",3.5);
-console.log(d.getValue("Python"));
-d.del("Python");
-console.log(d.getValue("Python"));
+console.log(fooBar(6));
 
+leti=5;
 
 
 

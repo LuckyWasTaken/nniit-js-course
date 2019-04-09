@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163fe769-8aca-41c0-946f-9576bf341a4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/core.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/core.spec.js" afterDir="false" />
     </list>
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+            <state relative-caret-position="1581">
+              <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -32,8 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core.spec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+            <state relative-caret-position="476">
+              <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -46,8 +46,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core.js" />
         <option value="$PROJECT_DIR$/core.spec.js" />
+        <option value="$PROJECT_DIR$/core.js" />
       </list>
     </option>
   </component>
@@ -63,6 +63,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -74,7 +75,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -121,12 +121,13 @@
       <updated>1554498721728</updated>
       <workItem from="1554498724022" duration="10026000" />
       <workItem from="1554659697277" duration="1078000" />
-      <workItem from="1554723789771" duration="6119000" />
+      <workItem from="1554723789771" duration="6523000" />
+      <workItem from="1554838883292" duration="1783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17223000" />
+    <option name="totallyTimeSpent" value="19410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -137,7 +138,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24836601" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31045753" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.52124184" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -160,14 +161,19 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/core.spec.js</url>
           <line>74</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/core.js</url>
-          <line>96</line>
+          <line>93</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/core.js</url>
+          <line>44</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -182,15 +188,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+        <state relative-caret-position="476">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="43" selection-end-line="40" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        <state relative-caret-position="1581">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -38,7 +38,7 @@ describe('es6', () => {
 
     describe('#fooBar', () => {
         it('переводит верно', () => {
-            assert.deepEqual(core.fooBar([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]), ['', '', 'Foo', '', 'Bar',
+            assert.deepEqual(core.fooBar(15), ['', '', 'Foo', '', 'Bar',
                 'Foo', '', '', 'Foo', 'Bar', '', 'Foo', '', '', 'FooBar']);
         });
         it('на пустой массив возвращается пустой массив', () => {
