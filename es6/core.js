@@ -44,9 +44,9 @@ function fooBar(n) {
     function* generateArray(n) {
         let i = 0;
         while (i++ < n) {
-            yield i % 15 == 0 ? "FooBar" : i % 3 == 0 ? "Foo" : i % 5 == 0 ? "Bar" : ""
+            yield i % 15 == 0 ? "FooBar" : i % 3 == 0 ? "Foo" : i % 5 == 0 ? "Bar" : i;
         }
-        return n % 15 == 0 ? "FooBar" : n % 3 == 0 ? "Foo" : n % 5 == 0 ? "Bar" : "";
+        return n % 15 == 0 ? "FooBar" : n % 3 == 0 ? "Foo" : n % 5 == 0 ? "Bar" : i;
     }
     let ans=[...generateArray(n)];
     return ans;
@@ -91,10 +91,8 @@ module.exports = {
     fooBar
 };
 
+
 console.log(fooBar(6));
-
-leti=5;
-
 
 
 
