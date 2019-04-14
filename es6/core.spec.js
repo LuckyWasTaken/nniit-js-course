@@ -36,6 +36,32 @@ describe("es6", () => {
     });
   });
 
+  describe("#fooBar", () => {
+    it("Массив корректный", () => {
+      assert.deepEqual(core.fooBar(15), [
+        1,
+        2,
+        "Foo",
+        4,
+        "Bar",
+        "Foo",
+        7,
+        8,
+        "Foo",
+        "Bar",
+        11,
+        "Foo",
+        13,
+        14,
+        "FooBar"
+      ]);
+    });
+
+    it("Некорректное значение числа n", () => {
+      assert.equal(core.fooBar(-1), false);
+    });
+  });
+
   describe("#Dictionary", () => {
     it("экземпляр класса создается", () => {
       const dic = new core.Dictionary();

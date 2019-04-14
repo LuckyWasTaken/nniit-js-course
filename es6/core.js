@@ -41,8 +41,11 @@ function calculateSalaryDifference(arr) {
 // чисел, которые делятся на 5 — "Bar", а на 15 — "FooBar"
 // * покройте тестами
 function fooBar(n) {
+  if (n <= 1) {
+    return false;
+  }
   let arr = [];
-  for (let i = 1; i < n; i++) {
+  for (let i = 1; i <= n; i++) {
     if (i % 15 === 0) {
       arr.push("FooBar");
     } else if (i % 5 === 0) {
@@ -104,5 +107,6 @@ module.exports = {
   fioToName,
   filterUnique,
   Dictionary,
-  calculateSalaryDifference
+  calculateSalaryDifference,
+  fooBar
 };
