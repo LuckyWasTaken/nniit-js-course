@@ -17,7 +17,7 @@ function truncate(str, n) {
   if (n > str.length) {
     return str;
   }
-  let newStr = str.slice(0, n) + "...";
+  const newStr = str.slice(0, n) + "...";
   return newStr;
 }
 
@@ -51,10 +51,7 @@ function sumArr(arr) {
 function isPali(str) {
   let arr = str.split("");
   arr.reverse();
-  if (arr.join("") != str) {
-    return 0;
-  }
-  return 1;
+  return arr.join("")=== str?true:false;
 }
 
 module.exports = {
