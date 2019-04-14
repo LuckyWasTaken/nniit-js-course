@@ -51,28 +51,37 @@ describe('es6', () => {
     });
 
     describe('#Dictionary', () => {
-        it('экземпляр класса создается', () => {
-            const dic = new core.Dictionary();
-            assert.equal(!!dic, true);
-        });
-        
-        it('Тестим словарь', () => {
-            const dic = new core.Dictionary();
+        const dic = new core.Dictionary();
+        beforeEach(function () {
             dic.set("табуретка", "стул без спинки");
             dic.set("стул", "табуретка со спинкой");
+        });
+        it('экземпляр класса создается', () => {
+            const dic1 = new core.Dictionary();
+            assert.equal(!!dic1, true);
+        });
+        it('Тестим словарь на работу с массивом', () => {
             let arr = ['a', 'r', 'r', 'a', 'y'];
-            
-            assert.deepEqual(dic.set(arr, "массив"), -1);
-            assert.deepEqual(dic.set(123, "chislo"), -1);
+            assert.deepEqual(dic.set(arr, "массив"), false);
+        });
+        it('Тестим словарь на работу с числами', () => {
+            assert.deepEqual(dic.set(123, "chislo"), false);
+        });
+        it('Тестим словарь на поиск значений слов по введенному слову', () => {
             assert.deepEqual(dic.getWord("табуретка"), "стул без спинки");
-            assert.equal(dic.getWord("не табуретка"), -2);
+        });
+        it('Тестим на поиск слова, которого нет в словаре', () => {
+            assert.equal(dic.getWord("не табуретка"), false);
+        });
+        it('Тестим на замену значения слова в словаре', () => {
             dic.change("табуретка", "неудобный стул без спинки");
             assert.equal(dic.getWord("табуретка"), "неудобный стул без спинки");
-            dic.delete("табуретка");
-            assert.equal(dic.getWord("табуретка"), -2);
-
-
         });
+        it('Тестим словарь на удаление слова из словаря', () => {
+            dic.delete("табуретка");
+            assert.equal(dic.getWord("табуретка"), false);
+        });
+
     });
 });
 

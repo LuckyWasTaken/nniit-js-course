@@ -12,7 +12,7 @@ function fioToName(string) {
         alert("You enter wrong data!");
         return undefined;
     }
-    let[surName, firstName, ...rest] = string.split(" ");
+    let[surName, firstName] = string.split(" ");
     return `${firstName} ${surName}`;
 }
 
@@ -23,13 +23,12 @@ function filterUnique(numericArray) {
     if(Array.isArray(numericArray) == false){
         alert("Your data is incorrect!");
         return undefined;
-    }else if(numericArray.length === 0){
+    }
+    if(numericArray.length === 0){
         return [];
     }
-    let set = new Set();
-    numericArray.forEach(function(item, i, numericArray){
-        set.add(item);
-    });
+    // вот этот момент прямо огонь (конструктор Set принимает массив)!
+    let set = new Set(numericArray);
     return Array.from(set);
 }
 
@@ -59,6 +58,7 @@ function calculateSalaryDifference(sallaryArray) {
     }, sallaryArray[0]);
     return sallary.min == 0 ? sallary.max : sallary.max / sallary.min;
 }
+
 
 // Задачка с собеседований fooBar
 // Напишите функцию, которая принимает n
@@ -92,45 +92,44 @@ class Dictionary {
     constructor(){
         this._map = new Map();
     }
+    //такой check мне гораздо больше нравится! - не знал, что так тоже можно)
     _check (word){
-        if(!word || typeof(word) !== 'string'){
-            return false;
-        }
-        return true;
+        return word && typeof word === "string";
     }
     set (word, meaning){
         if(this._check(word) === false || this._check(meaning) === false){
         console.log("You enter wrong data!");
-        return -1;
+        return false;
         }
         this._map.set(word, meaning);
+        return true;
         }
 
     getWord (word){
         if(this._check(word) === false){
             console.log("You enter wrong data!");
-            return -1;
+            return false;
         }
         if(this._map.has(word)){
             return this._map.get(word);
         } 
         console.log("Word isn't founded!");
-        return -2;
+        return false;
     }
     
     delete(word) {
         if(this._check(word) === false){
             console.log("You enter wrong data!");
-            return -1;
+            return false;
         }
-        this._map.has(word) ? this._map.delete(word) : console.log("Word isn't founded!");
+        return this._map.has(word) ? this._map.delete(word) && true : console.log("Word isn't founded!") && false;
     };
     change(word, meaning){
         if(this._check(word) === false || this._check(meaning) === false){
             console.log("You enter wrong data!");
-            return -1;
+            return false;
         }
-        this._map.has(word) ? this._map.set(word, meaning) : console.log("Word isn't founded!");
+        return this._map.has(word) ? this._map.set(word, meaning) && true : console.log("Word isn't founded!") && false;
     }
 }
 
