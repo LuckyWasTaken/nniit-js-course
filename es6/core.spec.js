@@ -35,12 +35,44 @@ describe('es6', () => {
             assert.equal(!!core.calculateSalaryDifference([]), false);
         });
     });
+    
+    describe('#fooBar', () => {
+        it('массив заполняется корректно', () => {
+            assert.deepEqual(core.fooBar(20), [1, 2, "Foo", 4, "Bar", "Foo", 7, 8, "Foo", "Bar", 11, "Foo", 13, 14, "FooBar", 16, 17, "Foo", 19, "Bar"]);
+        });
+
+        it('Введено не число', () => {
+            assert.deepEqual(core.fooBar("five"), false);
+        });
+
+        it('число меньеше 1!', () => {
+            assert.deepEqual(core.fooBar(-4), false);
+        });
+    });
 
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
-
             assert.equal(!!dic, true);
+        });
+        
+        it('Тестим словарь', () => {
+            const dic = new core.Dictionary();
+            dic.set("табуретка", "стул без спинки");
+            dic.set("стул", "табуретка со спинкой");
+            let arr = ['a', 'r', 'r', 'a', 'y'];
+            
+            assert.deepEqual(dic.set(arr, "массив"), -1);
+            assert.deepEqual(dic.set(123, "chislo"), -1);
+            assert.deepEqual(dic.getWord("табуретка"), "стул без спинки");
+            assert.equal(dic.getWord("не табуретка"), -2);
+            dic.change("табуретка", "неудобный стул без спинки");
+            assert.equal(dic.getWord("табуретка"), "неудобный стул без спинки");
+            dic.delete("табуретка");
+            assert.equal(dic.getWord("табуретка"), -2);
+
+
         });
     });
 });
+
