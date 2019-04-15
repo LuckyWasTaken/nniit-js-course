@@ -36,16 +36,20 @@ describe('es6', () => {
         });
     });
 
+<<<<<<< HEAD
     describe('#fooBar', () => {
         it('возвращает правильный массив', () => {
             assert.deepEqual(core.fooBar(15), [1, 2, "Foo", 4, "Bar", "Foo", 7, 8, "Foo", "Bar", 11, "Foo", 13, 14, "FooBar"]);
         });
     });
+=======
+>>>>>>> 7f25be0175d66f9258b091dfa32d5c61a7eddfe7
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
+<<<<<<< HEAD
 
             it('правильно проверяет  слово', () => {
                 dc = new core.Dictionary();
@@ -58,6 +62,8 @@ describe('es6', () => {
                 assert.equal(dc.set(1, 2), false);
                 assert.equal(dc.set("Hello", "Привет"), true);
             });
+=======
+>>>>>>> 7f25be0175d66f9258b091dfa32d5c61a7eddfe7
         });
     });
 });
