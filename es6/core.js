@@ -4,7 +4,7 @@
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
 function fioToName(str) {
-  let [lastName, firstName, ...rest] = str.split(" ");
+  let [lastName, firstName] = str.split(" ");
   return `${firstName} ${lastName}`;
 }
 
@@ -45,18 +45,14 @@ function fooBar(n) {
     return false;
   }
   let arr = [];
-  for (let i = 1; i <= n; i++) {
-    if (i % 15 === 0) {
-      arr.push("FooBar");
-    } else if (i % 5 === 0) {
-      arr.push("Bar");
-    } else if (i % 3 === 0) {
-      arr.push("Foo");
-    } else {
-      arr.push(i);
-    }
-  }
-  return arr;
+   for (let i = 1; i <= n; i++) {
+     arr.push(i);
+   }
+  const result = arr.map(
+    n => `${n % 3 ? "" : "Foo"}${n % 5 ? "" : "Bar"}` || n
+  );
+
+  return result;
 }
 
 // Реализуйте класс "словарь слов"
