@@ -1,13 +1,11 @@
-const resButton = document.getElementById("resButton");
 const firstNumber = document.getElementById("firstNum");
 const secondNumber = document.getElementById("secondNum");
 const select = document.getElementById("select");
 const result = document.getElementById("result");
 
-resButton.onclick = onClickResButton;
-firstNumber.oninput = onClickResButton;
-secondNumber.oninput = onClickResButton;
-select.onchange = onClickResButton;
+firstNumber.oninput = onInputRes;
+secondNumber.oninput = onInputRes;
+select.onchange = onInputRes;
 
 function countResult(){
     let res;
@@ -33,7 +31,7 @@ function countResult(){
     return res;
 }
 
-function onClickResButton(){
+function onInputRes(){
     result.style.background = "white";
     result.style.color = "black";
     result.style.fontSize = "15pt";
