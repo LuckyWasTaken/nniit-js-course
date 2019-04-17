@@ -42,17 +42,4 @@ describe('ООП', () => {
             assert.equal(point.z, -3);
         });
     });
-	
-	describe('#Queue', () => {
-        it('Очередь создана, добавлено 3 элемента, получено 3 элемента, начиная с 1-го', () => {
-            let queue = new core.Queue();
-			queue.addElement(5);
-			queue.addElement("Вася");
-			queue.addElement(4.5);
-
-            assert.equal(queue.getElem(), 5);
-            assert.equal(queue.getElem(), "Вася");
-            assert.equal(queue.getElem(), 4.5);
-        });
-    });
 });

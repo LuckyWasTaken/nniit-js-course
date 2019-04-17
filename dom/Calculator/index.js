@@ -15,10 +15,11 @@ function countResult(){
         res = +firstNumber.value - (+secondNumber.value);
     }
     else if (select.value === "*"){
-        res = +firstNumber.value * (+secondNumber.value);
+        //res = (+firstNumber.value * (+secondNumber.value));
+        res = (Math.round((+firstNumber.value * (+secondNumber.value)) * 1000000) / 1000000);
     }
     else if (select.value === "/"){
-        res = +firstNumber.value / (+secondNumber.value);
+        res = (Math.round((+firstNumber.value / (+secondNumber.value))* 1000000) / 1000000);
     }
     if (isNaN(res)){
         return "wrong input!"
