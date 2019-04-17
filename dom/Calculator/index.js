@@ -25,7 +25,7 @@ function countResult(){
         return "wrong input!";
     }
     if (res > 1000000000000000){
-        return "to large number";
+        return "too large number";
     }
     return res;
 }
