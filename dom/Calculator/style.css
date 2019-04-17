@@ -1,0 +1,86 @@
+div.layout{
+	background-image: url(81.jpg);
+	background-repeat: repeat;
+    width: 80%;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div.content{
+    font-family: Helvetica, Verdana;
+}
+div.docName{
+    text-align: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+}
+#inputsField{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+	font-size: 17pt;
+    color: white;
+}
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+h1{
+    font-size: 17pt;
+    color: white;
+    font-weight: 600;
+}
+div.buttons{
+    text-align: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+}
+#resButton{
+    text-align: center;
+    padding: 15px;
+    font-size: 15pt;
+    font-weight: 600;
+    color: white;
+    background: none;
+    text-decoration: none;
+    width: 120px;
+    height: 60px;
+    border: 3px solid white;
+    border-radius: 4px;
+}
+#resButton:hover {
+    background-color: white;
+    color: rgb(4, 117, 80);
+}
+input{
+    height: 40px;
+    font-size: 15pt;
+    font-weight: 600;
+    border-radius: 4px;
+}
+select{
+    height: 50px;
+    width: 50px;
+    font-size: 15pt;
+    font-weight: 600;
+    border-radius: 4px;
+}
+#result{
+    text-align: center;
+	background: rgba(255, 255, 255, 0.55);
+    width: 180px;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    padding: 25px;
+	font-size: 15pt;
+    color: #2F4F4F;
+    border-radius: 4px;
+}

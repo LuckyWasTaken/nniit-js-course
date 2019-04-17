@@ -1,0 +1,68 @@
+div.layout{
+	background-image: url(dark-gray-ornamic.png);
+	background-repeat: repeat;
+    width: 80%;
+    height: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div.content{
+    font-family: Helvetica, Verdana;
+}
+div.docName{
+    text-align: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+}
+h1{
+    font-size: 17pt;
+    color: white;
+    font-weight: 100;
+}
+#textChangingColor{
+	background: rgba(255, 255, 255, 0.55);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+	font-size: 17pt;
+    color: #2F4F4F;
+    border-radius: 4px;
+}
+div.buttons{
+    text-align: center;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px;
+}
+button{
+    text-align: center;
+    padding: 15px;
+    font-size: 15pt;
+    border-radius: 4px;
+    background: none;
+    text-decoration: none;
+    width: 100px;
+    font-weight: 600;
+}
+#redButton{
+    margin-right: 40px;
+    border: 3px solid #DC143C;
+    color: #DC143C;
+}
+#redButton:hover {
+    background-color: #DC143C;
+    color: white;
+}
+#blueButton{
+    margin-left: 40px;
+    border: 3px solid #0000CD;
+    color: #0000CD;
+}
+#blueButton:hover {
+    background-color: #0000CD;
+    color: white;
+}
