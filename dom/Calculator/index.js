@@ -5,6 +5,9 @@ const select = document.getElementById("select");
 const result = document.getElementById("result");
 
 resButton.onclick = onClickResButton;
+firstNumber.oninput = onClickResButton;
+secondNumber.oninput = onClickResButton;
+select.onchange = onClickResButton;
 
 function countResult(){
     let res;
