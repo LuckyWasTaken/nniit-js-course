@@ -1,7 +1,7 @@
 div.layout{
 	background-image: url(81.jpg);
 	background-repeat: repeat;
-    width: 80%;
+    width: 70%;
     height: 500px;
     margin-right: auto;
     margin-left: auto;
@@ -64,6 +64,7 @@ input{
     font-size: 15pt;
     font-weight: 600;
     border-radius: 4px;
+    width: 180px;
 }
 select{
     height: 50px;

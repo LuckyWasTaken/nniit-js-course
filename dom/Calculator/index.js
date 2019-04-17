@@ -22,7 +22,10 @@ function countResult(){
         res = (Math.round((+firstNumber.value / (+secondNumber.value))* 1000000) / 1000000);
     }
     if (isNaN(res)){
-        return "wrong input!"
+        return "wrong input!";
+    }
+    if (res > 1000000000000000){
+        return "to large number";
     }
     return res;
 }
