@@ -65,7 +65,7 @@ describe('es6', () => {
         it('слово находится', () => {
             const dic = new core.Dictionary();
             dic.addWord('Редиска', 'нехороший человек');
-            assert.equal(dic.deleteWord('Редиска'), true);
+            assert.equal(dic.findWord('Редиска'), true);
         });
     });
 });
