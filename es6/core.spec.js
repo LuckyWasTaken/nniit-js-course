@@ -36,11 +36,36 @@ describe('es6', () => {
         });
     });
 
+    describe('#fooBar', () => {
+        it('вернулся корректный массив', () => {
+            assert.deepEqual(core.fooBar(16), [1,2,"Foo",4,"Bar","Foo",7,8,"Foo","Bar",11,"Foo",13,14,"FooBar"]);
+        });
+    });
+
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
+        });
+
+        it('слово добавляется', () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.addWord('Человек', 'двуногое без перьев'), true);
+            assert.equal(dic.addWord('Редиска', 'нехороший человек'), true);
+            assert.equal(dic.addWord(13, 'отличное число!'), false);
+        });
+
+        it('слово удаляется', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('Человек', 'двуногое без перьев');
+            assert.equal(dic.deleteWord('Человек'), true);
+        });
+
+        it('слово находится', () => {
+            const dic = new core.Dictionary();
+            dic.addWord('Редиска', 'нехороший человек');
+            assert.equal(dic.deleteWord('Редиска'), true);
         });
     });
 });
