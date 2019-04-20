@@ -1,0 +1,46 @@
+:root {
+    --text-color: dimgrey;
+}
+
+#header {
+    position: center;
+    color: dimgrey;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 5%;
+    padding-bottom: 1%;
+}
+#text {
+    margin: auto;
+    width: 40%;
+    color: var(--text-color);
+    text-align: center;
+}
+.buttons {
+    position: relative;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.left{
+    width: auto;
+    display: inline-block;
+    float: left;
+}
+.right{
+    width: auto;
+    display: inline-block;
+    float: right;
+}
+
+#color1{
+    display: inline-block;
+    position: relative;
+
+}
+
+#color2{
+    display: inline-block;
+    position: relative;
+}
