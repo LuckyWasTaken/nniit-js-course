@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css"> 
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Калькулятор</h1>
+    <p>Введите числа, выберите необходимое арифметическое действие из выпадающего списка.
+        Результат будет вычислен автоматически. 
+    </p>
+    <input type="number" id="firstInput">
+    <select name="select" id="select">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+    </select>
+    <input type="number" id="secondInput"> 
+    <div><output id="result">0</output></div>
+    <script src="index.js"></script>
+</body>
+</html>

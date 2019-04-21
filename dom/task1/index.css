@@ -1,0 +1,22 @@
+button{
+    width: 150px;
+    height: 50px;
+    border-radius: 0 100px;
+    color: white;
+}
+
+.red{
+    background-color: rgb(248, 113, 89);
+    border: 3px solid red;
+}
+
+.blue{
+    background-color: rgb(120, 120, 248);
+    border: 3px solid blue;
+}
+
+p{
+    font-family: Verdana;
+    border: 3px solid rgb(19, 240, 38);
+    padding: 10px 10px 10px 50px;
+}
