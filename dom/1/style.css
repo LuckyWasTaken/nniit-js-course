@@ -1,0 +1,24 @@
+body {
+  background-color: aliceblue;
+  font: 12pt/15pt Georgia;
+}
+
+button {
+  margin-bottom: 5mm;
+  margin-right: 5mm;
+  padding: 3mm;
+}
+
+#buttonRed {
+  border-color: crimson;
+}
+
+#buttonGreen {
+  border-color: forestgreen;
+}
+
+div {
+  color: forestgreen;
+  border: 1px solid gray;
+  padding: 3mm;
+}

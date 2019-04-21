@@ -1,0 +1,32 @@
+<htmL>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Задача 2</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="head">
+      <h1>Калькулятор</h1>
+      Введите два значения и выберите арифметическое действие. Результат будет
+      выведен автоматически.
+    </div>
+
+    <form>
+      <input id="element1" type="number" oninput="calculate()" />
+
+      <select id="sign" onchange="calculate()">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+      </select>
+
+      <input id="element2" type="number" oninput="calculate()" />
+
+      <mark><output id="result"></output></mark>
+    </form>
+
+    <script src="index.js"></script>
+  </body>
+</htmL>

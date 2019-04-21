@@ -1,0 +1,15 @@
+body {
+  background-color: #ccccff;
+}
+
+.head {
+  margin-top: 30px;
+  text-align: center;
+  font: 15px arial, sans-serif;
+  opacity: 0.8;
+}
+
+form {
+  text-align: center;
+  line-height: 200px;
+}
