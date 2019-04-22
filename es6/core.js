@@ -5,8 +5,8 @@
 // строку формата Имя Фамилия
 function fioToName(name) 
 {
-    let [lastName, firstName,...data]=name.split(' ');
-    return '${firstName}${lastName}';
+    let [lastName,firstName]=name.split(' ');
+    return '${firstName} ${lastName}';
 }
 
 // преобразуйте массив чисел так, чтобы в нем остались только
@@ -14,7 +14,7 @@ function fioToName(name)
 // присмотритесь к коллекции "Set"
 function filterUnique(arr)
  {
-     let set=new Set();
+     let set=new Set(arr);
      set.forEach(number=>{set.add(number);});
      return [...set];
     
@@ -97,6 +97,8 @@ class Dictionary
          }
 
          this._map.set(word,propereties);
+
+         return true;
 
      }
      setValue(word,propereties)
