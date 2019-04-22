@@ -11,3 +11,5 @@
 ## Ссылки на презентации
 * [Вводная](https://docs.google.com/presentation/d/14nSXLlktagsnade_2zy_FPcqrflQRXqfXMNLnbY2rkQ)
 * [Структуры данных и область видимости](https://slideship.com/users/@luckywastaken/presentations/2019/03/R9i7p6ZxUbNZcf3xYtYGzs/)
+* [ООП](https://slideship.com/users/@marsibarsi/unlisted_presentations/2019/03/3mq8nvmFxxSFxfYVT4BoBd/?hash=agwlQevIuqhWZHARzVLDNkJzQSLLtxUx)
+* [ES6+](https://slideship.com/users/@luckywastaken/unlisted_presentations/2019/04/PXGw5U1BadxyKUrFnRogEb/?hash=lOHEauDHMiqJYidgoJyoeoimoExrKrrr)
