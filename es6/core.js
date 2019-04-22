@@ -62,8 +62,22 @@ function fooBar(n) {
 // присмотритесь к коллекции "Map"
 // * покройте класс тестами
 class Dictionary {
-    constructor(arr) {
-        this.arr = arr;
+    constructor() {
+        let dictionary = new Map();
+    }
+    addWord(word, significance) {
+        if (dictionary.check(word) && dictionary.check(significance)) {
+            dictionary.set(word, significance);
+        }
+    }
+    check(str) {
+        return str && typeof str === "string";
+    }
+
+    getSignificance(word) {
+        if (dictionary.has(word)) {
+            console.log(`${word} : ${dictionary.get(word)}`);
+        }
     }
 }
 
