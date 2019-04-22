@@ -1,5 +1,5 @@
 const assert = require('assert');
-const core = require('./core');
+const core = require('./core').default;
 
 describe('es6', () => {
     describe('#fioToName', () => {
@@ -33,6 +33,12 @@ describe('es6', () => {
 
         it('на пустой массив возвращается falsy значение', () => {
             assert.equal(!!core.calculateSalaryDifference([]), false);
+        });
+    });
+
+    describe('#fooBar', () => {
+        it('возвращает корректный массив', () => {
+            assert.deepEqual(core.fooBar(16), [1,2,"Foo",4,"Bar","Foo",7,8,"Foo","Bar",11,"Foo",13,14,"FooBar",16]);
         });
     });
 
