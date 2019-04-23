@@ -7,11 +7,11 @@ let num1 ;
 let num2 ;
 
  cube1.oninput = function() {
-  num1 = cube1.value;
+  num1 = Number(cube1.value);
 };
 
  cube2.oninput = function() {
-  num2 = cube2.value;};
+  num2 = Number(cube2.value);};
 
 
 button.onclick = function() {
