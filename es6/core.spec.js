@@ -36,11 +36,31 @@ describe('es6', () => {
         });
     });
 
+    describe('#fooBar', () => {
+        it('возвращает правильный массив', () => {
+            assert.deepEqual(core.fooBar(5), [1, 2, 'Bar', 4]);
+        });
+    });
+
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
         });
-    });
+        it("Получение слова из словаря", () => {
+            const dic = new core.Dictionary();
+            dic.addWord("word", "Слово");
+            assert.equal(dic.getWord("word"), "Слово"); 
+          });
+          it("Добавление в словарь слова без перевода", () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.addWord("word"), false);
+          });
+          it("Повторное добавление слова в словарь", () => {
+            const dic = new core.Dictionary();
+            dic.addWord("word", "Слово");
+            assert.equal(dic.addWord("word", "Другое слово"), false);
+          });
+        });
 });
