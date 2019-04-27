@@ -1,0 +1,24 @@
+<htmL>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Запрос в JSON-базу</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div class="head">
+      <h1>Введите ID</h1>
+      После ввода данных на странице благодаря чудесам JS <br>отобразится вся
+      информация со страницы 'https://jsonplaceholder.typicode.com/todos/',<br> соответствующая введенному Вами userID.
+    </div>
+
+    <form onsubmit="getInfo();return false;">
+      <input id="id" type="number" />
+      <button id="ok">OK</button>
+    </form>
+
+    <ol id="list" class="out"></ol>
+
+    <script src="index.js"></script>
+  </body>
+</htmL>
