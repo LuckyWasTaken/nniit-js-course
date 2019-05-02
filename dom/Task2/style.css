@@ -2,9 +2,6 @@
   display: grid;
   grid-template-columns: repeat(3,100px) 200px;
   grid-gap: 5px;
-  margin: 0 auto;
-  max-width:1200px;
-  min-width:500px;
 }
 .calculator button{
   margin-top:10px;
