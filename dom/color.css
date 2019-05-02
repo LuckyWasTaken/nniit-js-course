@@ -1,0 +1,35 @@
+html {
+  background: #100a1c;
+  background-image:
+    radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+    radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+  background-attachment: fixed;
+  color: #6cacc5;
+} 
+
+body {
+  color: #6cacc5;
+  padding: 5em;
+  text-align: center;
+}
+
+table {
+  color: #c97874;
+  background: rgba(42,50,113, .28);
+  border: 0;
+  width: 720px;
+  padding: 0.5em;
+  font: inherit;
+  text-align: left;
+}
+
+button {
+  border: 0;
+  background: rgba(42,50,113, .28);
+  color: #6cacc5;
+  cursor: pointer;
+  font: inherit;
+  margin: 0.5em;
+  width: 7em;
+  height: 3em;
+}
