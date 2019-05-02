@@ -1,0 +1,29 @@
+.blockStyle{
+  display:grid;
+  grid-template-areas:
+  "textBlock textBlock"
+  "button1 button2";                 /*В 1 раз гриды юзаю, да и вообще забыл уже верстку :((( */
+  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 auto;
+  max-width:1200px;
+  min-width:500px;
+}
+.textBlock{
+  grid-area: textBlock;
+  text-align:justify;
+}
+button[name="button1"]{
+  grid-area: button1;
+  background-color: rgba(167, 166, 166, 0.26);
+}
+button[name="button2"]{
+  grid-area: button2;
+  background-color: rgba(167, 166, 166, 0.26);
+}
+button{
+  max-height:100px;
+  font-size:20px;
+  font-family:DejaVu Sans Mono, monospace;
+}

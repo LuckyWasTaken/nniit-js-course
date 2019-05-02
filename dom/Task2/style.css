@@ -1,0 +1,52 @@
+.calculator{
+  display: grid;
+  grid-template-columns: repeat(3,100px) 200px;
+  grid-gap: 5px;
+  margin: 0 auto;
+  max-width:1200px;
+  min-width:500px;
+}
+.calculator button{
+  margin-top:10px;
+  height:30px;
+  font-size:10px;
+}
+[name="deleteOperator"]{
+  grid-column-start: 3;
+  grid-column-end:4;
+}
+.newopfunc{
+  grid-row-start:3;
+  font-size:10px;
+  grid-column-start:1;
+  grid-column-end: 3;
+  display:none;
+
+}
+.newopname{
+  font-size:10px;
+  margin-top:10px;
+  text-align:center;
+  display:none;
+}
+form[class="calculator"] select{
+  font-size:15px;
+  font-family:fantasy;
+  color:rgba(19, 19, 17, 1);
+  padding-left: calc(50% - 1em);
+}
+form[class="calculator"] output{
+  font-size:15px;
+  font-family:fantasy;
+  color:rgba(19, 19, 17, 1);
+}
+form[class="calculator"] input{
+  font-size:15px;
+  font-family:fantasy;
+  color:rgba(19, 19, 17, 1);
+  text-align:center;
+}
+input::-webkit-input-placeholder  {font-size:9px;font-family:serif;}
+input::-moz-placeholder           {font-size:9px;font-family:serif;}
+input:-moz-placeholder            {font-size:9px;font-family:serif;}
+input:-ms-input-placeholder       {font-size:9px;font-family:serif;}

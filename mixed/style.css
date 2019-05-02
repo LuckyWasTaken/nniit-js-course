@@ -1,0 +1,24 @@
+#getInformation{
+  display:grid;
+  width:400px;
+  margin:0 auto;
+  justify-content:center;
+  justify-items:center;
+  grid-gap: 1rem;
+}
+.searchInput{
+  width:400px;
+  height:40px;
+  text-align:center;
+  font-family: 'PT Sans', sans-serif;
+  border-radius:5px;
+}
+button[name="searchButton"]{
+  font-size:15px;
+  font-family: 'PT Sans', sans-serif;
+  width:300px;
+  height:40px;
+  background-color:rgba(20, 177, 184, 0.6);
+  border-color: rgba(20, 177, 184, 0.8);
+  outline:none;
+}

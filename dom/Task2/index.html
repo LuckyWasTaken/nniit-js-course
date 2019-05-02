@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>second task</title>
+    <script defer src="index.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <form class="calculator">
+      <input type="number" placeholder="Введите операнд a" class="op">
+
+      <select class="selector">
+        <option class="+">+</option>
+        <option class="-">-</option>
+        <option class="*">*</option>
+        <option class="/">/</option>
+      </select>
+
+      <input type="number"  placeholder="Введите операнд b" class="op">
+
+      <output name="result"> = 0</output>
+
+      <button type="button" name="addOperator">Новый оператор</button>
+      <input type="text" class="newopname" placeholder="имя оператора">
+      <input type="text" class="newopfunc" placeholder="что делает новый оператор">
+      <button type="button" name="deleteOperator">Удалить оператор</button>
+    </form>
+  </body>
+</html>
