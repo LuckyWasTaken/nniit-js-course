@@ -41,9 +41,9 @@ function fooBar(n) {
     return false;
   }
   let arr = [];
-  let buf;
-  while (n > 0) {
+  for (; n > 0; n--) {
     if (n % 3 == 0 || n % 5 == 0) {
+      let buf = "";
       if (n % 3 == 0) {
         buf = "Foo";
       }
@@ -54,8 +54,6 @@ function fooBar(n) {
     } else {
       arr.unshift(n);
     }
-    buf = "";
-    n--;
   }
   return arr;
 }
