@@ -1,0 +1,18 @@
+table{
+    border-collapse: collapse;
+}
+
+tbody  :first-child :not(:nth-child(5n))  {
+    border: 2px solid rgb(74, 76, 88);
+    background-color: darkgray;
+}
+
+table *{
+    border: 1px solid rgb(105, 100, 100);
+}
+
+tr *{
+    padding: 1px 10px;
+    text-align: center;
+    font-size: 16pt;
+}
