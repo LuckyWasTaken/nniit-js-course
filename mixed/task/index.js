@@ -1,13 +1,11 @@
 function loadInformation() {
   const userID = parseInt(document.getElementById("userID").value);
   let totalresult;
-  console.log(userID);
 
   fetch("https://jsonplaceholder.typicode.com/todos/")
     .then(response => response.json())
     .then(json => {
       totalresult = json.filter(object => object["userId"] === userID);
-      console.log("parsed");
       showResult(totalresult);
     })
     .catch(function(ex) {
@@ -16,7 +14,6 @@ function loadInformation() {
 }
 
 function showResult(totalresult) {
-  console.log(totalresult.length);
   document.getElementById("list").innerHTML = "";
   if (totalresult.length === 0) {
     const str = document.createElement("p");
