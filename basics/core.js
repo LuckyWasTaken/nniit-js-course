@@ -17,7 +17,7 @@ function even()
     for (let i=0;i<10;i++)
     {
         num+=2;
-        numbers[i]=num;
+        numbers.push(num);
     }
     return numbers;
 }
