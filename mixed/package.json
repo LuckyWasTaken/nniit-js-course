@@ -1,0 +1,13 @@
+{
+  "name": "mixed",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "es6-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "loadash": "^1.0.0"
+  }
+}

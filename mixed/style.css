@@ -1,0 +1,30 @@
+body{
+    background-color: rgba(233, 236, 234, 0.952);
+}
+h2{
+    color: dimgrey;
+    
+}
+.main{
+    width: 80ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+a{
+    color: dimgray;
+}
+#top{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    font-size: 80%;
+    text-align: center;
+    color: dimgray;
+}
+#form{
+    width: 60%;
+    padding: 1%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
