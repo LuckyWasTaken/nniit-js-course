@@ -10,24 +10,24 @@ function even() {
     for (i = 1; i < 21; i++) {
         if (i % 2 == 0) arr.push(i);
     }
+    return arr;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя цикл
 function sumTo(n) {
     var sum = 0;
-    for (i = 1; i < n; i++) {
-        sum =  sum + sum + i;
+    for (i = 1; i <= n; i++) {
+        sum =  sum + i;
     }
     return sum;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-    var sum;
-    sum = n;
-    while (n > 0) {
-        sum += (sum + n);
-        n--;
+    if (n > 0) {
+        return n + recSumTo(n - 1);
+    } else {
+        return n;
     }
 }
 
@@ -38,25 +38,27 @@ function factorial(n) {
         mult *= n - 1;
         n--;
     }
+    return mult;
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
-    while (1) {
-        if (n % 2 == 0) {
-            n /=2;
-        } else {
-            return false
-        }
-        if (n = 1) return true;
-    }
+    // while (1) {
+    //     if (n % 2 == 0) {
+    //         n /=2;
+    //     } else {
+    //         return false
+    //     }
+    //     if (n = 1) return true;
+    // }
+    return ((n != 0) && ((n & (~n + 1)) === n));
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
-    var a = 1, b = 1, sum = 0;
+    var a = 1, b = 1;
     if (n == 1 || n == 2) return 1;
-    for (i = 3; i < n; i++) {
+    for (i = 3; i <= n; i++) {
         temp = b;
         b = a + b
         a = temp;
