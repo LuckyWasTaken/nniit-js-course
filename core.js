@@ -1,53 +1,66 @@
-//Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
-function capitalize(str) {
-  if (typeof str !== 'string') {return null};
-  return str.replace(/(?:^|\s)\S/g, function(a){ return a.toUpperCase(); } );
+//Напишите функцию, которая проверяет, является ли число целым используя побитовые операторы
+function isInteger(n) {
+    return (n ^ 0) === n;
 }
 
-//Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
-function truncate(str, n) {
-  if (typeof str !== 'string' || typeof n !== 'number') {return null}; // comparing type of input  with returned str-value of F typeof
-  if (str.length < n) {return str;};
-  return str = str.substring (0, n) + "..."; // getting string cut from 0- to N-elements 
+//Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
+function even() {   
+    const basicCharacter = 2, finishCharacter = 20;
+    let arrayOfEvenNumbers = [];
+    let characterToReturn = basicCharacter;
+    for (let i = 0; i < finishCharacter/basicCharacter; i++)
+    {
+        arrayOfEvenNumbers.push(characterToReturn);
+        characterToReturn += 2;
+    };
+     return arrayOfEvenNumbers;
 }
 
-//Определите, пуст ли объект
-function isEmpty(obj) {  
-  if (!obj) {
-  throw new Error ('ERROR! The current object is empty'); // throwing an error
-}
-else return true;}
-
-//Напишите функцию, умножающую численные свойства на 2
-function multiply(obj) {
-  return Object.keys(obj).lenght === 0;
+//Напишите функцию, считающую сумму чисел до заданного используя цикл
+function sumTo(n) {
+    let sum = 0;
+    for (; n > 0; n--)
+    {
+       sum += n;
+    }
+    return sum;
 }
 
-//Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
-function sumArr(arr) {
-  const initialValue = 0;
-  return arr.reduce(function(accumulator, currentValue) {return accumulator + currentValue;},initialValue);
+//Напишите функцию, считающую сумму чисел до заданного используя рекурсию
+function recSumTo(n) {
+    if (n <= 0) {
+        throw new Error ("Your number doesn't fit conditions. Please try again.");}
+        if (n === 1){return 1;}
+        return n + recSumTo(n- 1);}
+
+//Напишите функцию, считающую факториал заданного числа
+function factorial(n) {
+    if (~~n !== n && n < 0 && n > 171) {
+        throw new Error ("JS is a serios programming language but not that much:)");
+    }
+    if (n === 1)
+    {
+        return 1;
+    }
+    else 
+    {
+        return n * factorial (n - 1);
+    }}
+
+
+//Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
+function isBinary(n) { 
+   this.n = Math.log2(n);
+   return (this.n ^ 0) === this.n;
 }
 
-//Напишите функцию, определяющую, является ли данное слово палиндромом
-function isPali(str) {if (str == "") {return true};
-for (let i = 0, j = str.length - 1; i < str.length; i++, j--){
-  return str[i] ===  str[j];  
-    /* in the manner of JS:
-  function isPali(str) {
-  let arr = str.split ("");
-  arr = arr.reverse();
-  arr = arr.join(""); 
-  if (arr === str) {return true}
-  else return false;}
-  //ну или как-то так.//
-*/}
+//Напишите функцию, которая находит N-е число Фибоначчи
+function fibonacci(n) {
+    if (n <= 1)
+    return n;
+    else return fibonacci (n-1) + fibonacci (n - 2);
+}
 
 module.exports = {
-  capitalize,
-  truncate,
-  isEmpty,
-  multiply,
-  sumArr,
-  isPali
-};
+    isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
+}
