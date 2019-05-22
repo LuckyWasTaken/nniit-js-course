@@ -1,8 +1,8 @@
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
 function capitalize(str) 
 {
-  var charCode = str.charCodeAt(0);
-  var index=0;
+  let charCode = str.charCodeAt(0);
+  let index=0;
   if  ( ( (charCode>1071)&&(charCode<1104) ) || ( (charCode>96)&&(charCode<123) ) )
   {
     let ch = String.fromCharCode(charCode-32);
