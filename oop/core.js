@@ -39,9 +39,9 @@ class Queue
     {
        return this.queue.shift();
     }
-    pushElement=function()
+    pushElement=function(word)
     {
-       this.queue.push();
+       this.queue.push(word);
     }
 }
 
