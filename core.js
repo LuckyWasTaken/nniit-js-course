@@ -1,66 +1,124 @@
-//Напишите функцию, которая проверяет, является ли число целым используя побитовые операторы
-function isInteger(n) {
-    return (n ^ 0) === n;
+// в данных задачах нужно использовать возможности es6
+// ко всем заданиям можно дописать свои тесты в файле core.spec.js
+
+// Напишите функцию, которая принимает ФИО пользователя и возвращает
+// строку формата Имя Фамилия
+function fioToName(Fio) {
+    let _fio = Fio.replace(/<[^>]+>/g,"");
+    let [vorname, nachname, ...whatevername] = _fio.split(" "); // destructing assignment plus spread
+    return `${vorname} ${nachname}`;
 }
 
-//Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
-function even() {   
-    const basicCharacter = 2, finishCharacter = 20;
-    let arrayOfEvenNumbers = [];
-    let characterToReturn = basicCharacter;
-    for (let i = 0; i < finishCharacter/basicCharacter; i++)
-    {
-        arrayOfEvenNumbers.push(characterToReturn);
-        characterToReturn += 2;
+// преобразуйте массив чисел так, чтобы в нем остались только
+// уникальные элементы
+// присмотритесь к коллекции "Set"
+    function filterUnique(arr) {
+        let set = new Set(arr);
+        return Array.from(set); // or: return set; ???
+    }
+
+// Задача: разница зарплат
+// в функцию приходит массив из n зарплат сотрудников фирмы
+// ваша задача определить, во сколько раз зарплата самого высокооплачиваемого
+// сотрудника превышает зарплату самого низкооплачиваемого
+// присмотритесь к методу .reduce
+function calculateSalaryDifference(salaryArr) {
+        let minSalary = salaryArr.reduce( function (min,current){
+            if (current < min) {return current}
+            else {return min};
+        },0)
+        let maxSalary = salaryArr.reduce( function (max,current){
+            if (current > max) {return current}
+            else {return max};
+        },0)
+        return maxSalary / minSalary;
+}
+
+// Задачка с собеседований fooBar
+// Напишите функцию, которая принимает n
+// возвращает массив чисел от 1 до n, где вместо чисел, которые делятся на 3 — "Foo",
+// чисел, которые делятся на 5 — "Bar", а на 15 — "FooBar"
+// * покройте тестами
+function fooBar(n) {
+    let resultFooBar = [];
+        for(let i = 0, j = 1; j <= n; i++, j++){
+        if (j % 15 === 0){resultFooBar[i] = "fooBar";}
+        else if (j % 3 === 0){resultFooBar[i] = "foo";}
+        else if (j % 5 === 0){resultFooBar[i] = "Bar";}
+        else resultFooBar[i] = j;
+    }; 
+    return resultFooBar;
+};
+// Я несоклько часов безрезультатно пытался реалзовать через метод map без предварительного цикла, передавая пустой массив опр. размерности, 
+// пока не прочитал в спецификации, что callback вызывается только индексами с присовоенными знанчениями. fucked up
+/* то же самое только через map
+function fooBar (n){
+    let resultFooBar = [];
+    for (let i = 1; i <=n; i++){
+        resultFooBar.push(i);
     };
-     return arrayOfEvenNumbers;
+    return resultFooBar = resultFooBar.map(function(currentItem){
+        if (currentItem % 15 === 0) {return 'fooBar'};
+        if (currentItem % 3 === 0) {return 'foo'};
+        if (currentItem % 5 === 0) {return 'Bar'};
+        return currentItem;
+    });
 }
 
-//Напишите функцию, считающую сумму чисел до заданного используя цикл
-function sumTo(n) {
-    let sum = 0;
-    for (; n > 0; n--)
-    {
-       sum += n;
+ */
+
+// Реализуйте класс "словарь слов"
+// класс должен быть безопасным и работать только со словами
+// присмотритесь к коллекции "Map"
+// * покройте класс тестами
+class Dictionary {
+    constructor () {
+        this._dictMap = new Map ();
     }
-    return sum;
-}
 
-//Напишите функцию, считающую сумму чисел до заданного используя рекурсию
-function recSumTo(n) {
-    if (n <= 0) {
-        throw new Error ("Your number doesn't fit conditions. Please try again.");}
-        if (n === 1){return 1;}
-        return n + recSumTo(n- 1);}
+    addWord (word, meaning){
+        if (typeof word != "string") {return false}; 
+        if (word.match(/<[^>]+>/)) {
+            alert(`unvalid word`); // but meaning may be an URL as well
+        return false;}
+        if (this._dictMap.has(word) == true ){
+            alert (`This word already exists`);
+            return false;}
+        else {this._dictMap.set(word,meaning);}
+        return true;
+    };
 
-//Напишите функцию, считающую факториал заданного числа
-function factorial(n) {
-    if (~~n !== n && n < 0 && n > 171) {
-        throw new Error ("JS is a serios programming language but not that much:)");
+    deleteWord (word){
+        if (this._dictMap.delete(word) == true) {
+            alert (`The word has been deleted`); 
+        return true;}
+        else alert (`The word you're tryina delete doesn't exist.`);   // "delete" returns true and deletes meaning itself
+    };
+    getMeaning (word){
+       if (this._dictMap.has(word)!= true){
+           alert (`The word you're looking for doesn't exist`);
+           return false;}
+        else {
+            return this._dictMap.get(word);}// getting meaning by key-word
+            
+       };
+    getWord (meaning){                                      // no clue how to find a key for its value;
+        for(let [key, val] of this._dictMap.entries()){     // the only first meaning found is returned :(
+            if (val === meaning) {return key}
+            else alert (`Word not found!`);
+            return false;
+        }};
+       
     }
-    if (n === 1)
-    {
-        return 1;
+
+
+    
+        
     }
-    else 
-    {
-        return n * factorial (n - 1);
-    }}
-
-
-//Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
-function isBinary(n) { 
-   this.n = Math.log2(n);
-   return (this.n ^ 0) === this.n;
-}
-
-//Напишите функцию, которая находит N-е число Фибоначчи
-function fibonacci(n) {
-    if (n <= 1)
-    return n;
-    else return fibonacci (n-1) + fibonacci (n - 2);
-}
 
 module.exports = {
-    isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
-}
+    fioToName,
+    filterUnique,
+    Dictionary,
+    calculateSalaryDifference
+};
