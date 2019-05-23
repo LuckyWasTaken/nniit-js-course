@@ -1,6 +1,8 @@
+const textElement = document.getElementById("textBlock");
+
 function changeBlue() {
-    document.getElementById("textBlock").style.color = "#008CBA";
+    textElement.style.color = "#008CBA";
 }
 function changeRed() {
-    document.getElementById("textBlock").style.color = "#f44336";
+    textElement.style.color = "#f44336";
 }

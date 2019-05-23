@@ -10,9 +10,9 @@
 
 <div>
     <form>
-        <input type="text" id="number1" placeholder="First number" oninput="calculate()">
+        <input type="text" class="numbers" id="number1" placeholder="First number" oninput="calculate()">
 
-        <select id="operation" name="operation" onchange="calculate()">
+        <select id="operation" onchange="calculate()">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
@@ -21,7 +21,7 @@
             <option value="^">^</option>
         </select>
 
-        <input type="text" id="number2" placeholder="Second number" oninput="calculate()">
+        <input type="text" class="numbers" id="number2" placeholder="Second number" oninput="calculate()">
 
         =
 

@@ -4,12 +4,20 @@ function sum(a) {
         return a + b;
     }
 }
-function sum2() { //задание со звездочкой
-    let sum = 0;
-    for (let i = 0; i < arguments.length; i++) {
-        sum += arguments [i];
+
+function sum2(a) { //задание со звездочкой
+    let sum = a;
+    function add(b) {
+        if (b) {
+            sum += b;
+            return add;
+        } else
+            return sum;
     }
-    return sum;
+    add.toString = function () {
+        return sum;
+    };
+    return add;
 }
 
 // Напишите замыкание, которое будет принимать число и считать среднее арифметическое от всех переданных ранее чисел (если задание не до конца понятно - подглядите тесты :) )

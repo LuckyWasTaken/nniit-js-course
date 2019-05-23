@@ -1,8 +1,23 @@
-.button {
+.button1, .button2 {
     color: white;
     width:100px;
     height:30px;
     font-size: 20px;
     border-radius: 12px;
     cursor: pointer;
+}
+.buttons{
+    text-align: center;
+}
+.button1 {
+    background-color: #008CBA;
+}
+.button2 {
+    background-color: #f44336;
+}
+.textBlock{
+    font-size: 20px;
+}
+p {
+    text-indent: 40px;
 }

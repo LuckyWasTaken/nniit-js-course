@@ -1,3 +1,5 @@
+const placeholder = document.getElementById("placeholder");
+
 function search() {
     const id = parseInt(document.getElementById("id").value);
     fetch("https://jsonplaceholder.typicode.com/todos/",{method:'GET'})
@@ -14,55 +16,33 @@ function search() {
         });
 }
 
-function display(filtered) {
-    let table = document.createElement("TABLE");
-    document.body.appendChild(table);
+function addElement(stringData, tag, row){
+    const cell = document.createElement(tag);
+    cell.appendChild(document.createTextNode(stringData));
+    row.appendChild(cell);
+}
 
-    let row = document.createElement("TR");
+function display(filtered) {
+    while (placeholder.firstChild) {
+        placeholder.removeChild(placeholder.firstChild);
+    }
+
+    const table = document.createElement("TABLE");
+    placeholder.appendChild(table);
+
+    const row = document.createElement("TR");
     table.appendChild(row);
 
-    let cell = document.createElement("TH");
-    let text = document.createTextNode("UserId");
-    cell.appendChild(text);
-    row.appendChild(cell);
-
-    cell = document.createElement("TH");
-    text = document.createTextNode("Id");
-    cell.appendChild(text);
-    row.appendChild(cell);
-
-    cell = document.createElement("TH");
-    text = document.createTextNode("Title");
-    cell.appendChild(text);
-    row.appendChild(cell);
-
-    cell = document.createElement("TH");
-    text = document.createTextNode("Completed");
-    cell.appendChild(text);
-    row.appendChild(cell);
+    for (let d of ["UserId", "Id", "Title", "Completed"]){
+        addElement(d, "TH", row)
+    }
 
     filtered.forEach((item) => {
-        row = document.createElement("TR");
-        table.appendChild(row);
+        const subrow = document.createElement("TR");
+        table.appendChild(subrow);
 
-        cell = document.createElement("TD");
-        text = document.createTextNode(item.userId);
-        cell.appendChild(text);
-        row.appendChild(cell);
-
-        cell = document.createElement("TD");
-        text = document.createTextNode(item.id);
-        cell.appendChild(text);
-        row.appendChild(cell);
-
-        cell = document.createElement("TD");
-        text = document.createTextNode(item.title);
-        cell.appendChild(text);
-        row.appendChild(cell);
-
-        cell = document.createElement("TD");
-        text = document.createTextNode(item.completed);
-        cell.appendChild(text);
-        row.appendChild(cell);
+        for (let d of [item.userId, item.id, item.title, item.completed]){
+            addElement(d, "TD", subrow)
+        }
     });
 }
