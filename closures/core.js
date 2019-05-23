@@ -1,12 +1,40 @@
 // Напишите функцию, суммирующую два числа, так, что sum(a)(b) == a + b (задание с очень жирной звездочкой на поразбираться - суммируйте любое количество чисел)
-function sum(a) {
-}
+function sum(a)
+{
+    return function (b)
+    {
+        return a + b;
+    };
+
+    // Функция, считающая сумму любого количества аргументов, но выражение вызова должно терминироваться пустым вызовом,
+    // например, выражение "sum(10)(20)(30)();" возвращает 60
+    // return function (b)
+    // {
+    //     if (b == undefined)
+    //         return a;
+    //     else
+    //         return sum(a + b);
+    // };
+};
 
 // Напишите замыкание, которое будет принимать число и считать среднее арифметическое от всех переданных ранее чисел (если задание не до конца понятно - подглядите тесты :) )
-function average() {
-}
+function average()
+{
+    var value = 0;
+    var count = 0;
 
-module.exports = {
-  sum,
-  average
+    function addValue(i)
+    {
+        value += i;
+        count++;
+        return value / count;
+    };
+
+    return addValue;
+};
+
+module.exports =
+{
+    sum,
+    average
 };
