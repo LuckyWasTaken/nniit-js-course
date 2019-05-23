@@ -12,7 +12,9 @@ function capitalize(str) {
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
-  if(str.length<n)return str;
+  if(str.length<n){
+    return str;
+  }
   return str.substring(0,n)+"...";
 }
 
@@ -27,7 +29,9 @@ function isEmpty(obj) {
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) {
   for(let key in obj){
-    if(isFinite(obj[key]))obj[key]*=2;
+    if(isFinite(obj[key])){
+      obj[key]*=2;
+    }
   }
   return obj;
 }
@@ -40,7 +44,9 @@ function sumArr(arr) {
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
   for(let i=0;i<str.length/2;i++){
-    if(str[i]!==str[str.length-1-i])return false;
+    if(str[i]!==str[str.length-1-i]){
+      return false;
+    }
   }
   return true;
 }
