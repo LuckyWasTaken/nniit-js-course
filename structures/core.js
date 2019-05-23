@@ -10,7 +10,10 @@ function capitalize(str) {
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
-    return str.substring(0,n);
+    if (str !== str.substring(0,n)){
+      str = str.substring(0,n)+'...';
+    }
+    return str;
 }
 
 //Определите, пуст ли объект
