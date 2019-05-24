@@ -23,6 +23,13 @@ describe('ООП', () => {
             assert.equal(point.x, 1);
             assert.equal(point.y, 0);
         });
+
+        it('Проверка на дистанцию', () => {
+            const point = new core.Point(3,4);
+            const lenght = point.getLenght();
+
+            assert.equal(lenght, 5);
+        });
     });
 
     describe('#Point3D', () => {
@@ -40,6 +47,15 @@ describe('ООП', () => {
             assert.equal(point.x, 1);
             assert.equal(point.y, 2.5);
             assert.equal(point.z, -3);
+        });
+    });
+    describe('#Queue', () => {
+        it('Создаем очередь и проверяем первый и последний элемент', () => {
+            const queue = new core.Queue([2,2,4,6]);
+            queue.lastElement = 5;
+            
+            assert.equal(queue.qArray[4], 5);
+            assert.equal(queue.firstElement, 2);
         });
     });
 });
