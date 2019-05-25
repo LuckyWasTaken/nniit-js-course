@@ -37,9 +37,10 @@ function sumArr(arr) {
 }
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
-function isPali(str) {}
+function isPali(str) {
   const reversed = str.split("").reverse().join("");
   return str === reversed;
+}
 
 module.exports = {
   capitalize,
