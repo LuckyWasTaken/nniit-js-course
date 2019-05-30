@@ -4,27 +4,39 @@
 //   return (str) ? str[0].toUpperCase() + str.slice(1) : str;
 // }
 //каждое слово заглавным
+// function capitalize(str) {
+//   if (!str) {return str;}
+//   str =  str[0].toUpperCase() + str.slice(1);
+//   for (let i =2; i<str.length; i++)
+//   {
+//     if( (str[i-1] === ' ')&& (str[i]!=' '))
+//     {
+//       str = str.slice(0,i) + str[i].toUpperCase() + str.slice(i+1);
+//     }
+//   }
+//   return str;
+// }
+
 function capitalize(str) {
   if (!str) {return str;}
-  str =  str[0].toUpperCase() + str.slice(1);
-  for (let i =2; i<str.length; i++)
+  let arr  = str.split(' ');
+  for (let i = 0; i<arr.length; i++)
   {
-    if( (str[i-1] === ' ')&& (str[i]!=' '))
-    {
-      str = str.slice(0,i) + str[i].toUpperCase() + str.slice(i+1);
-    }
+      arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
   }
+  str = arr.join(' ');
   return str;
 }
+
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
   if (str.length <= n)
   {
     return str;
-  } else {
+  } 
     return str.substr(0,n)+'...';
-  }
+  
 }
 
 //Определите, пуст ли объект
@@ -57,7 +69,7 @@ function sumArr(arr) {
 function isPali(str) {
   for (let i = 0; i<(str.length)/2; i++ )
   {
-    if (str[0+i] != str[str.length - 1 - i])
+    if (str[0+i] !== str[str.length - 1 - i])
     {
       return false
     }

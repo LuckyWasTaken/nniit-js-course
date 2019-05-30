@@ -34,11 +34,9 @@ function recSumTo(n) {
         
         return n + recSumTo(n-1);
     }
-    else
-    {
+   
         return n;
-    }
-
+    
     
 }
 
@@ -56,7 +54,7 @@ function factorial(n) {
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
-    return ((n != 0) && ((n & (~n + 1)) === n));
+    return ((n !== 0) && ((n & (~n + 1)) === n));
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
@@ -65,22 +63,21 @@ function fibonacci(n) {
     {
         return 1;
     }
-    else
-    {
-    let predpred =1;
-    let pred  = 1;
-    let tek = 2;
+   
+    let prevprev =1;
+    let prev  = 1;
+    let cur = 2;
     let i = 3;
     while (i<n)
     {
-        predpred = pred;
-        pred = tek;
-        tek = predpred + pred;
+        prevprev = prev;
+        prev = cur;
+        cur = prevprev + prev;
         
         i++;
     }
-    return tek;
-    }
+    return cur;
+    
 }
 
 module.exports = {
