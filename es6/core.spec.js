@@ -31,8 +31,14 @@ describe('es6', () => {
             assert.equal(core.calculateSalaryDifference([1, 2, 3]), 3);
         });
 
-        it('на пустой массив возвращается falsy значение', () => {
+        it('на пустой массив возвращается false значение', () => {
             assert.equal(!!core.calculateSalaryDifference([]), false);
+        });
+    });
+
+    describe('#fooBar', () => {
+        it('возвращает корректный массив', () => {
+            assert.deepEqual(core.fooBar(15), [1, 2, 'Foo', 4, 'Bar', 'Foo', 7, 8, 'Foo', 'Bar', 11, 'Foo', 13, 14, 'FooBar']);
         });
     });
 
@@ -42,5 +48,32 @@ describe('es6', () => {
 
             assert.equal(!!dic, true);
         });
+
+        it('ключ и значение должны состоять только из символов латиницы и кириллицы', () => {
+            const dic = new core.Dictionary({"1":"+-=","hello":"привет"});
+            assert.equal(dic.dict.size, 1);
+        });
+
+        it('ключ может состоять только из символов латиницы', () => {
+            const dic = new core.Dictionary({"1":"+-=","hello":"привет"});
+            assert.equal(dic.dict.size, 1);
+        });
+
+        it('значение может состоять только из символов кириллицы', () => {
+            const dic = new core.Dictionary({"1":"+-=","hello":"привет"});
+            assert.equal(dic.dict.size, 1);
+        });
+
+        it('возвращает перевод, если слово есть в словаре', () => {
+            const dic = new core.Dictionary({"hello":"привет"});
+            assert.equal(dic.getTranslation("hello"), "привет");
+        });
+
+        it('возвращает null, если слово не найдено в словаре', () => {
+            const dic = new core.Dictionary({"hello":"привет"});
+            assert.equal(dic.getTranslation("go"), null);
+        });
+
+
     });
 });

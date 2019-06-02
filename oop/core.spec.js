@@ -42,4 +42,19 @@ describe('ООП', () => {
             assert.equal(point.z, -3);
         });
     });
+
+    describe('#Queue', () => {
+        it('возвращает корректный размер, если элемент был удален из очереди', () => {
+            const queue = new core.Queue();
+            queue.enqueue(123);
+            queue.enqueue("hello");
+            queue.enqueue([1,2,3]);
+            queue.dequeue();
+            assert.equal(queue.getSize(),2);
+        });
+        it('нельзя удалить элемент из пустой очереди', () => {
+            const queue = new core.Queue();
+            assert.equal(queue.dequeue(),null);
+        });
+    });
 });
