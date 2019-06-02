@@ -18,8 +18,8 @@ function truncate(str, n) {
 
 //Определите, пуст ли объект
 function isEmpty(obj) {
-  for (let i in obj){
-    if (obj.hasOwnProperty(i)) return false;
+  for (let i in obj) {
+    return false;
   }
   return true;
 }
@@ -27,7 +27,7 @@ function isEmpty(obj) {
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) {
   for (let i in obj){
-    if (+obj[i]){
+    if (typeof obj[i] === 'number'){
       obj[i] *= 2;
     }
   }
