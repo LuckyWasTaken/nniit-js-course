@@ -17,32 +17,32 @@ class Point3D extends Point {
     constructor(xCoordinate, yCoordinate, zCoordinate){
         super(xCoordinate, yCoordinate);
         this.z = zCoordinate;
-}
+    }
+    distanceToTheCenterOfCoordinates() {
+        return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+    }
 }
 
 // Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала
 class Queue {
     constructor() {
-        this.queueArray = [];
+        this._queueArray = [];
     }
     push(elementToPush) {
-        this.queueArray.push(elementToPush); //возможна реализация через queueArray[queueArray.length] = elemetToPush, чтобы не копировать в наглую то, что уже сделали до нас
+        this._queueArray.push(elementToPush); //возможна реализация через _queueArray[_queueArray.length] = elemetToPush, чтобы не копировать в наглую то, что уже сделали до нас
     }
     front() {
         if (!this.isEmpty()) {
-            return this.queueArray[0];
-        }
-        else {
-            return undefined;
+            return this._queueArray[0];
         }
     }
     pop() {
         if (!this.isEmpty()) {
-            this.queueArray.shift();
+            this._queueArray.shift();
         }
     }
     isEmpty() {
-        if (this.queueArray.length == 0) {
+        if (this._queueArray.length == 0) {
             return true;
         }
         else {
