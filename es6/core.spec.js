@@ -31,16 +31,23 @@ describe('es6', () => {
             assert.equal(core.calculateSalaryDifference([1, 2, 3]), 3);
         });
 
-        it('на пустой массив возвращается falsy значение', () => {
+        it('на пустой массив возвращается false значение', () => {
             assert.equal(!!core.calculateSalaryDifference([]), false);
         });
     });
 
     describe('#Dictionary', () => {
-        it('экземпляр класса создается', () => {
+        it('экземпляр класса создается, ошибки обрабатываются, правильные пары ', () => {
             const dic = new core.Dictionary();
-
             assert.equal(!!dic, true);
+        });
+        it('ошибки ввода значений, неправильных аргументов обрабатываются ', () => {
+            assert.equal(dic.AddWord({c:"h"}),-1);
+            assert.equal(dic.Translation("ab"),null);
+        });
+        it('словарь работает ', () => {
+            dic.AddWord("ac","aaa");
+            assert.equal(dic.Translation("ac"),"aaa");
         });
     });
 });
