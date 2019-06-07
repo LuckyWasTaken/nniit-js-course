@@ -30,13 +30,40 @@ function calculateSalaryDifference(array) {
 // возвращает массив чисел от 1 до n, где вместо чисел, которые делятся на 3 — "Foo",
 // чисел, которые делятся на 5 — "Bar", а на 15 — "FooBar"
 // * покройте тестами
-function fooBar() {}
+function fooBar(val) {
+    var str;
+    var array =[];
+    for (var i = 0; i < val; i++) {
+        str = `${(i%3==0)?"Foo":''}${(i%5==0)?"Bar":''}`;
+        array[i] = (str==='')?i:str;
+    }
+    return array;
+}
 
 // Реализуйте класс "словарь слов"
 // класс должен быть безопасным и работать только со словами
 // присмотритесь к коллекции "Map"
 // * покройте класс тестами
-class Dictionary {}
+    class Dictionary {
+        constructor() {
+            this.dict = new Map();
+        }
+    
+        AddWord(word, translation) {
+            if (typeof(word) !== 'string' || typeof(translation) !== 'string') {
+                return -1;
+            }
+            this.dict.set(word, translation);
+        }
+    
+        Translation(word) {
+            if (typeof(word) !== 'string' || !(this.dict.has(word))) 
+            {
+                return null;
+            }
+            return this.dict.get(word);
+        }
+    }
 
 module.exports = {
     fioToName,
