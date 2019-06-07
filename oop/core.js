@@ -1,28 +1,33 @@
 // Напишите класс геометрической точки, принимающей в конструкторе координаты X и Y
 // Со звездочкой: реализовать метод, который возвращает расстояние от точки до центра координат (0, 0)
 class Point {
-    constructor (x,y) {
-        this.x = x;
-        this.y = y;
+    constructor (x = 0,y = 0) {
+        this.xcoord = x;
+        this.ycoord = y;
     }
-    get getRadius (x,y){
-        return Math.sqrt(x*x+y*y);
+    get getRadius (){
+        return Math.sqrt(this.x*this.x+this.y*this.y);
     }
-
+    get x(){
+        return this.xcoord;
+    }
+    get y(){
+        return this.ycoord;
+    }
 }
 
 // Напишите класс геометрической точки в трехмерном пространстве (x, y, z),
 // который будет наследоваться от точки в двумерном пространстве
 class Point3D extends Point {
-    constructor (x,y,z){
+    constructor (x = 0,y =0,z = 0){
         super(x,y);
-        this.z = z;
+        this.zcoord = z;
     }
-    getRadius(x,y,z){
-        return Math.sqrt(x*x+y*y+z*z);
+    getRadius(){
+        return Math.sqrt(this.x*this.x+this.y*this.y+this.z*this.z);
     }
-    get Coord(){
-       return [...super.Coord, this.z];
+    get z(){
+        return this.zcoord;
     }
 }
 
