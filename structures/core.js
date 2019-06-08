@@ -14,8 +14,8 @@ function capitalize(str)
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) 
 {
-  var newStr='';
-  let len=str.length;
+  let newStr='';
+  const len=str.length;
   if (n<len)
   {
     {
