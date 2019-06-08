@@ -33,7 +33,7 @@ class Queue
 {
     constructor()
     {
-        var queue = [];
+        this.queue = [];
     }
     popElement=function()
     {
