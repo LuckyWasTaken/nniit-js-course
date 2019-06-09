@@ -36,11 +36,40 @@ describe('es6', () => {
         });
     });
 
-    describe('#Dictionary', () => {
-        it('экземпляр класса создается', () => {
-            const dic = new core.Dictionary();
+    describe('#fooBar', () => {
+        it('корректно работает при n==3', () => {
+            assert.deepEqual(core.fooBar(3), [1,2,'Foo']);
+        });
+        it('корректно работает при n==15', () => {
+            assert.deepEqual(core.fooBar(15), [ 1,2,'Foo',4,'Bar','Foo',7,8,'Foo','Bar',11,'Foo',13,14,'FooBar' ]);
+        });
+        it('корректно работает при n==0', () => {
+            assert.deepEqual(core.fooBar(0), []);
+        });
+    });
 
+    describe('#Dictionary', () => {
+        
+        const dic = new core.Dictionary();
+        dic.insert('one','1');
+        dic.insert('two','2');
+        dic.insert('three','3');
+        dic.insert('three','три');
+
+        it('экземпляр класса создается', () => {
             assert.equal(!!dic, true);
+        });
+        it('добавлено "one => 1"', () => {
+            assert.equal(dic.getValue('one'),'1');
+        });
+        it('добавлено "two => 2"', () => {
+            assert.equal(dic.getValue('two'),'2');
+        });
+        it('изменено "three => 3" на "three => три"', () => {
+            assert.equal(dic.getValue('three'),'три');
+        });
+        it('размер словаря равен 3"', () => {
+            assert.equal(dic.size(),3);
         });
     });
 });
