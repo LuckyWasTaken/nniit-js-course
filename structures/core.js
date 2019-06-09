@@ -5,7 +5,9 @@ function capitalize(str) {
     if(i===0 || str[i-1]===' '){
       ans+=str[i].toUpperCase();
     }
-    else ans+=str[i];
+    else {
+      ans+=str[i];
+    }
   }
   return ans;
 }
@@ -13,6 +15,7 @@ function capitalize(str) {
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
   if(str.length<n){
+    
     return str;
   }
   return str.substring(0,n)+"...";
