@@ -19,11 +19,33 @@ class Point3D extends Point {
         super(x,y);
         this.z = (typeof(z)!= "number") ? 0 : z;
     }
+    getDistance()
+    {
+        return Math.sqrt((this.x*this.x)+(this.y*this.y)+(this.z*this.z)) ;
+    }
 }
 
 // Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала
 class Queue {
- //а можно подсказку в каком ввиде должны быть элементы?
+    constructor(arr)
+    {
+        this.arr = arr;
+    }
+    push(val)
+    {
+        this.arr.push(val);
+    }
+    shift()
+    {
+        let val = this.arr[0];
+        this.arr.shift();
+        return val;
+    }
+    IsEmpty()
+    {
+        if(this.arr[0]) return false;
+        return true;
+    }
 }
 
 module.exports = {
