@@ -36,11 +36,28 @@ describe('es6', () => {
         });
     });
 
-    describe('#Dictionary', () => {
-        it('экземпляр класса создается', () => {
-            const dic = new core.Dictionary();
+    describe('#fooBar', () => {
+        it('Проверка на 15', () => {
+            assert.deepEqual(core.fooBar(15), [1, 2, 'Foo', 4, 'Bar', 'Foo', 7, 8, 'Foo', 'Bar', 11, 'Foo', 13, 14, 'FooBar']);
+        });
 
+        it('Проверка на 5', () => {
+            assert.deepEqual(core.fooBar(5), [1, 2, 'Foo', 4, 'Bar']);
+        });
+    });
+
+    describe('#Dictionary', () => 
+    {
+        const dic = new core.Dictionary();
+        it('экземпляр класса создается', () => {
             assert.equal(!!dic, true);
+        });
+        it('корректная работа словаря', () => {
+            dic.addWordToDict("JS","хороший язык программирования");
+            assert.equal(dic.getDefinition("JS"),"хороший язык программирования");
+        });
+        it('реакция на ввод пустой строки', () => {
+            assert.equal(dic.addWordToDict(''),null);
         });
     });
 });
