@@ -4,23 +4,16 @@
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
 function fioToName(str) {
-    let arr = str.split(' ', 2);
+    const arr = str.split(' ', 2);
     arr.reverse();
-    str = arr.join(' ');
-    return str;
+    return arr.join(' ');;
 }
 
 // преобразуйте массив чисел так, чтобы в нем остались только
 // уникальные элементы
 // присмотритесь к коллекции "Set"
 function filterUnique(arr) {
-    let set = new Set();
-    // for (var i = 0; i < arr.length; i++) {
-    //     set.add(arr[i]);
-    //   }
-    arr.forEach(function(item, i, arr) {
-       set.add(item);
-      });
+    let set = new Set(arr);
     arr = [];
     let i = 0;
       set.forEach((value, valueAgain, set) => {
@@ -36,18 +29,19 @@ function filterUnique(arr) {
 // сотрудника превышает зарплату самого низкооплачиваемого
 // присмотритесь к методу .reduce
 function calculateSalaryDifference(arr) {
-    var result = arr.reduce(function(minAndMax, current) {
-        if (minAndMax[0] === -1) {
-            minAndMax[0] = current;
-            minAndMax[1] = current;
-        }
+    if (arr === []) return false;
+    let result = arr.reduce(function(minAndMax, current) {
+        // if (minAndMax[0] === -1) {
+        //     minAndMax[0] = current;
+        //     minAndMax[1] = current;
+        // }
         if (minAndMax[0] > current)
                     minAndMax[0] = current;
         if (minAndMax[1]<current) 
                     minAndMax[1] = current;
         return minAndMax;
-      }, [-1,-1]);
-      if (result[0] === -1) return false;
+      }, [arr[0],arr[0]]);
+      //if (result[0] === -1) return false;
       return result[1]/result[0];
 }
 
@@ -84,8 +78,9 @@ class Dictionary {
     chekWord (str){
         if (typeof(str) !== "string") return false;
         for(let i = 0; i<str.length; i++){
-            if (~"0123456789".indexOf(str.charAt(i))){
-                return false;
+            //if (~"0123456789".indexOf(str.charAt(i))){
+            if (!isNaN(str[i])) { 
+            return false;
             }
         }
         return true;
@@ -105,6 +100,7 @@ class Dictionary {
             return this.diction.get(word);
         }
         console.log("такое слово не найдено");
+        return null;
     }
     del(word)
     {

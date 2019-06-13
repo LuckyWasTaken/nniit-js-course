@@ -3,8 +3,8 @@
 class Point {
     constructor(x, y)
     {
-        this.x = (typeof(x)!= "number") ? 0 : x;
-        this.y = (typeof(y)!= "number") ? 0 : y;
+        this.x = (typeof(x)!== "number") ? 0 : x;
+        this.y = (typeof(y)!== "number") ? 0 : y;
     }
 
     getDistance() {
@@ -17,7 +17,7 @@ class Point {
 class Point3D extends Point {
     constructor (x,y,z) {
         super(x,y);
-        this.z = (typeof(z)!= "number") ? 0 : z;
+        this.z = (typeof(z)!== "number") ? 0 : z;
     }
     getDistance()
     {
@@ -29,22 +29,23 @@ class Point3D extends Point {
 class Queue {
     constructor(arr)
     {
-        this.arr = arr;
+        this._arr = arr;
     }
     push(val)
     {
-        this.arr.push(val);
+        this._arr.push(val);
     }
     shift()
     {
-        let val = this.arr[0];
-        this.arr.shift();
+        let val = this._arr[0];
+        this._arr.shift();
         return val;
     }
     IsEmpty()
     {
-        if(this.arr[0]) return false;
-        return true;
+        //if(this._arr[0]) return false;
+        //return true;
+        return this._arr.length === 0;
     }
 }
 
