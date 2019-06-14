@@ -1,0 +1,29 @@
+.myButtonBlue {
+  background-color: #0000ff;
+  width: 200px;
+  height: 100px;
+  color: white;
+  font-size: 45px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.myButtonPurple {
+  background-color: #ff00ff;
+  width: 200px;
+  height: 100px;
+  color: white;
+  font-size: 45px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.myButtonBlue:hover {
+  color: black;
+  border-color: black;
+}
+
+.myButtonPurple:hover {
+  color: black;
+  border-color: black;
+}

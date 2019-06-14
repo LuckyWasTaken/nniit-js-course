@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Solovyov_Ilya.DOM.task2</title>
+	<link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+
+	<div style="text-align: center;">
+		<h1>Calculator</h1>
+		<form>
+			<input id="x" placeholder="Enter a number" oninput="calculate()">
+
+			<select id="operation" name="operation" onchange="calculate()">
+				<option value="" selected disabled hidden>Choose operation</option>
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="÷">÷</option>
+				<option value="%">%</option>
+				<option value="^">^</option>
+				<option value="&">побитовое &</option>
+				<option value="|">побитовое |</option>
+			</select>
+
+			<input id="y" placeholder="Enter a number" oninput="calculate()">
+			=
+			<output id="result"></output>
+		</form>
+	</div>
+
+	<script src="task2.js"> </script>
+</body>
+
+</html>

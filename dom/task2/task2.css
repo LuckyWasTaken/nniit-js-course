@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+  font-size: 35px;
+}
+
+input,
+select {
+  width: 15%;
+  font-size: 15px;
+  padding: 12px 20px;
+  margin: 20px 5px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fffacd;
+  padding: 10px;
+}
