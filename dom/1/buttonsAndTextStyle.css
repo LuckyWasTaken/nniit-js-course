@@ -1,0 +1,23 @@
+.buttons {
+    color: #fff;
+    width:400px;
+    height:100px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.center{
+    text-align: center;
+}
+.blueButton {
+    background-color: #fff;
+    text-align: center;
+}
+.redButton {
+    background-color: #fff;
+    text-align: center;
+}
+p {
+    text-indent: 40px;
+} 

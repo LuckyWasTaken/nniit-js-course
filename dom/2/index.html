@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Задание 2</title>
+</head>
+<body>
+    <div style = text-align:center>
+        <legend>Калькулятор</legend>
+        <input type = "text" id = "firstNum" oninput = "calc()">
+        <select id="operationSelect" onchange="calc()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id = "secondNum" oninput = "calc()">
+        = <output id="result"></output>
+    </div>
+     <script src="index.js"></script>
+</body>
+</html>
+
