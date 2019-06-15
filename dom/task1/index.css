@@ -1,0 +1,25 @@
+body {
+  font-family: tahoma, arial, sans-serif;
+  width: 800px;
+  margin: auto;
+  color: black;
+}
+.information{
+  margin-bottom: 10px;
+}
+.mainBlock img {
+  float: left;
+  margin: 5px 10px 0px 0;
+}
+.mainBlock.rightPositionInf {
+  float: right;
+  margin-top: 20px;
+}
+.buttons input:first-child {
+  margin-left: 260px;
+  margin-top: 20px;
+}
+.buttons input:last-child{
+  margin-left: 100px;
+  margin-top: 20px;
+}
