@@ -1,0 +1,23 @@
+body {
+  font-family: tahoma, arial, sans-serif;
+  width: 800px;
+  margin: auto;
+  font-size: 25px;
+  text-align: center;
+  color: black;
+}
+td, tr { 
+  padding: 5px; 
+}
+table {
+  border: 5px solid black;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+td {
+  border: 3px solid rgb(90, 89, 89);
+}
+tr:first-child{
+  font-weight: bold;
+  font-size: 29px;
+}
