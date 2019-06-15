@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>help me, pls</title>
+    </head>
+    <body>
+        <input type="text" id="firstValue" oninput="onFirstValueInput()" value="0"></input>
+        <select id="typeOfOper" onchange="onTypeOfOperChange()">
+            <option selected value =0>+</option>
+            <option value =1>-</option>
+            <option value =2>*</option>
+            <option value =3>/</option>
+        </select>
+        <input type="text" id="secondValue" oninput="onSecondValueInput()" value="0"></input>
+         = 
+        <input type="text" id="ansValue" value="0" readonly></input>
+    </body>
+    <script src=index.js></script>
+</html>
