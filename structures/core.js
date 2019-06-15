@@ -1,7 +1,9 @@
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
 function capitalize(str) {
-  if (str == '') return '';
-  let arr = str.split(' ');
+  if (str === '') {
+    return '';
+  }
+  const arr = str.split(' ');
   for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1);
   }
@@ -10,8 +12,10 @@ function capitalize(str) {
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
-  if (str.length < n) return str;
-  else  return str.slice(0, n) + '...';
+  if (str.length < n) {
+    return str;
+  }
+  return str.slice(0, n) + '...';
 }
 
 //Определите, пуст ли объект
