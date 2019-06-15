@@ -4,7 +4,7 @@
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
 function fioToName(fio) {
-    let[lastName,firstName, ...other]=fio.split(' ');
+    const[lastName,firstName]=fio.split(' ');
     return `${firstName} ${lastName}`;
 }
 
@@ -12,7 +12,7 @@ function fioToName(fio) {
 // уникальные элементы
 // присмотритесь к коллекции "Set"
 function filterUnique(arrOfNum) {
-    let unique=new Set(arrOfNum);
+    const unique=new Set(arrOfNum);
     return [...unique];
 }
 
@@ -25,8 +25,13 @@ function calculateSalaryDifference(arrOfSalary) {
     if(arrOfSalary.length===0){
         return false;
     }
-   let min=arrOfSalary.reduce((prevValue,currValue)=>Math.min(prevValue,currValue));
-   let max=arrOfSalary.reduce((prevValue,currValue)=>Math.max(prevValue,currValue));
+   //let min=arrOfSalary.reduce((prevValue,currValue)=>Math.min(prevValue,currValue));
+   //let max=arrOfSalary.reduce((prevValue,currValue)=>Math.max(prevValue,currValue));
+    const {min,max}=arrOfSalary.reduce(function({min=arrOfSalary[0],max=arrOfSalary[0]},current){
+       min=Math.min(min,current)
+       max=Math.max(max,current)
+       return {min,max};
+   });
    return max/min;
 }
 
@@ -68,39 +73,34 @@ class Dictionary {
                 console.log(`Ключ (${addKey}) ранее был довавлен в словарь. Текущее значение (${this._dict.get(addKey)}) было заменено на (${addValue}).`)
             }
             this._dict.set(addKey,addValue);
+            return;
         }
-        else{
-            console.error(`Неверный формат ключа (${addKey}, ${addValue}).`);
-        }
+        console.error(`Неверный формат ключа (${addKey}, ${addValue}).`);
     }
     getValue(getKey){
         if(typeof(getKey)!=='string'){
             console.error(`Неверный формат ключа (${getKey}).`);
+            return null;
         }
-        else{
-            return this._dict.get(getKey);
-        }
+        return this._dict.get(getKey);
     }
     erase(eraseKey){
         if(typeof(eraseKey)!=='string'){
             console.error(`Неверный формат ключа (${eraseKey}).`);
+            return;
         }
-        else{
-            if(this._dict.has(eraseKey)){
-                this._dict.delete(eraseKey);
-            }
-            else {
-                console.error(`В словаре нет элемента (${eraseKey}).`)
-            }
+        if(this._dict.has(eraseKey)){
+            this._dict.delete(eraseKey);
+            return;
         }
+        console.error(`В словаре нет элемента (${eraseKey}).`);
     }
     find(findKey){
         if(typeof(findKey)!=='string'){
             console.error(`Неверный формат ключа (${findKey}).`);
+            return false;// или null. не уверен, как лучше.
         }
-        else{
-            return this._dict.has(findKey);
-        }
+        return this._dict.has(findKey);
     }
     empty(){
         return this._dict.size===0;
