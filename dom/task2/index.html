@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM.Task 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h3>Calculator</h3>
+
+<div>
+    <form>
+        <input type="text" id="number1" placeholder="First number" oninput="calculate()">
+
+        <select id="operation" name="operation" onchange="calculate()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="÷">÷</option>
+            <option value="%">%</option>
+            <option value="^">^</option>
+        </select>
+
+        <input type="text" id="number2" placeholder="Second number" oninput="calculate()">
+
+        =
+
+        <output id="result"></output>
+    </form>
+</div>
+
+<script src="index.js"> </script>
+</body>
+</html> 
