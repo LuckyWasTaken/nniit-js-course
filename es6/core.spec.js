@@ -37,10 +37,37 @@ describe('es6', () => {
     });
 
     describe('#Dictionary', () => {
+        const dict = new core.Dictionary();
+        dict.addWord('Intelligence','Mage');
+        dict.addWord('Strength','Warrior');
+        dict.addWord('Agility','Assassin'); 
+        dict.addWord(1,'sad');
         it('экземпляр класса создается', () => {
-            const dic = new core.Dictionary();
-
-            assert.equal(!!dic, true);
+            assert.equal(!!dict,true);  
+        });
+        it('Проверка не пустой ли словарь', () => {
+            assert.equal(dict.isEmpty(), false);
+        });
+        it('Добавлено Agility -> Assassin ', () => {
+            assert.equal(dict.check('Agility'), 'Assassin');
+        });
+        it('Проверка на размер словаря ', () => {
+            assert.equal(dict.number(), 3);
+        });
+        
+    });
+    describe('#fooBar',()=>{
+        it('заменяет 3 на Foo',()=>{
+            assert.deepEqual(core.fooBar(3),[1,2,'Foo']);
+        });
+        it('заменяет 5 на Bar',()=>{
+            assert.deepEqual(core.fooBar(5),[1,2,'Foo',4,'Bar']);
+        });
+        it('заменяет 15 на fooBar',()=>{
+            assert.deepEqual(core.fooBar(15),[1,2,'Foo',4,'Bar','Foo',7,8,'Foo','Bar',11,'Foo',13,14,'fooBar']);
+        });
+        it('выводит пустой массив, если 0',()=>{
+            assert.deepEqual(core.fooBar(0),[]);
         });
     });
 });

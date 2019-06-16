@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Task 2</title>
+        <script defer src="index.js"></script>
+    </head>
+    <h1>Calculator</h1>
+    <body>
+        <input type="text" id="number1" placeholder="enter the first number" class="numbers" oninput="calculate()">
+        <select id="operation" onchange="calculate()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>    
+            <option value="÷">÷</option>
+            <option value="^">^</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="number2" placeholder="Enter the second number" class="numbers" oninput="calculate()">
+        =
+        <output id="result"></output>
+    </body>
+</html>
