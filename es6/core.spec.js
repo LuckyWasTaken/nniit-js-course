@@ -36,11 +36,29 @@ describe('es6', () => {
         });
     });
 
+    describe('#fooBar', () => {
+        it('Числа до 10', () => {
+            assert.deepEqual(core.fooBar(10), [1, 2, 'Foo', 4, 'Bar', 'Foo', 7, 8, 'Foo', 'Bar']);
+        });
+
+        it('Числа до 16', () => {
+            assert.deepEqual(core.fooBar(16), [1, 2, 'Foo', 4, 'Bar', 'Foo', 7, 8, 'Foo', 'Bar', 11, 'Foo', 13, 14, 'FooBar', 16]);
+        });
+    });
+
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
+        });
+        it('Добавляется пара слово/слово', () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.add('JS', 'JavaScript'), true);
+        });
+        it('Не Добавляется пара , ключом или значением которой является число', () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.add('7', 'Seven'), false);
         });
     });
 });
