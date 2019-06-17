@@ -4,18 +4,19 @@
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
 function fioToName(FIO) {
-if (typeof FIO !== "string" ){
-        return false;
-    }
-    let [familia, imya] = FIO.split(" ");
-    return (imya + " " + familia);}
+   if (typeof FIO !== "string" ){
+     return false;
+   }
+   let [surname, name] = FIO.split(" ");
+   return (name + " " + surname);}
 
 // преобразуйте массив чисел так, чтобы в нем остались только
 // уникальные элементы
 // присмотритесь к коллекции "Set"
 function filterUnique(array) {
-let set = new Set(array);
-    return [...set];}
+   let set = new Set(array);
+   return [...set];
+}
 
 // Задача: разница зарплат
 // в функцию приходит массив из n зарплат сотрудников фирмы
@@ -24,22 +25,22 @@ let set = new Set(array);
 // присмотритесь к методу .reduce
 function calculateSalaryDifference(array) {
     if(array.length > 0) {
-            let maxSalary = array.reduce(function(maxSalary, current) {
-                if (maxSalary > current) {
-                    return maxSalary;
-                }
-                else{
-                    return current;
-                }
-            }, 0);
-            let minSalary = array.reduce(function(minSalary, current) {
-                if (minSalary < current) {
-                    return minSalary;
-                }
-                return current;
-            }, maxSalary);
+       let maxSalary = array.reduce(function(maxSalary, current) {
+           if (maxSalary > current) {
+              return maxSalary;
+           }
+           else{
+              return current;
+           }
+       }, 0);
+       let minSalary = array.reduce(function(minSalary, current) {
+           if (minSalary < current) {
+             return minSalary;
+           }
+           return current;
+       }, maxSalary);
             return maxSalary / minSalary;
-        }
+    }
 }
 
 // Задачка с собеседований fooBar
@@ -67,7 +68,27 @@ function fooBar(n) {
 // класс должен быть безопасным и работать только со словами
 // присмотритесь к коллекции "Map"
 // * покройте класс тестами
-class Dictionary {}
+class Dictionary {
+    constructor(){
+        this._map=new Map();
+    }
+    addWord(word, meaning) {
+        this._map.set(word,meaning);
+    }
+    getWord(word) {
+        return this._map.get(word);
+    }
+    changeMeaning(word, meaning) {
+        if (this._map.get(word)) {
+            this.addWord(word, meaning);
+            return true;
+        }
+        return false;
+    }
+    deleteWord(word) {
+        return this._map.delete(word);
+    }
+}
 
 module.exports = {
     fioToName,
