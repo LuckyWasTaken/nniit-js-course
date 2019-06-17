@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Task 2 - Calculator</title>
+</head>
+<body>
+    <div style = "text-align: center" >
+        <input type = "text" id = "n1" oninput = "calculate()">
+        <select id="operation" onchange="calculate()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id = "n2" oninput = "calculate()">
+        = <output id="result"></output>
+    </div>
+     <script src="index.js"></script>
+</body>
+</html>
