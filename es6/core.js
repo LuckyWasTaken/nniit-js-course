@@ -5,7 +5,7 @@
 // строку формата Имя Фамилия
 function fioToName(FIO) {
    if (typeof FIO !== "string" ){
-     return false;
+     return null;
    }
    let [surname, name] = FIO.split(" ");
    return (name + " " + surname);}
