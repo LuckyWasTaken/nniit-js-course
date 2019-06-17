@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <div align = "middle">
+        <script src="index.js"></script>
+        <input type = "text" id = "cell1" oninput = "calculate()">
+        <select id="action" onchange="calculate()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="^">^</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id = "cell2" oninput = "calculate()"> 
+        = 
+        <output id="answer"></output>
+    </div>
+</body>
+</html>
