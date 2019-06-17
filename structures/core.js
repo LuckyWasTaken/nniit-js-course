@@ -2,26 +2,26 @@
 function capitalize(str) {
   if (str==='') {
       return str;
-    }
-    const strNew = str.split(' ');
-    for (let i=0; i<strNew.length; i++){
-      strNew[i]= strNew[i][0].toUpperCase() + str.slice(1);
-    }
-    return strNew.join(' ');
+  }
+  let strNew = str.split(' ');
+  let strNewUp = strNew.map(word => {
+    return  word[0].toUpperCase() + word.slice(1)
+  });
+  return strNew.join(' ');
 }
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
   if (str.length<n+1) {
       return str;
-    }
-    return (str.substr(0, n) + '...');
+  }
+  return (str.substr(0, n) + '...');
 }
 
 //Определите, пуст ли объект
 function isEmpty(obj) {
-  for (let i in obj) {
-    if (obj.hasOwnProperty(i)) {
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
       return false;
     }
   }
@@ -34,26 +34,21 @@ function multiply(obj) {
       if (!isNaN(parseFloat( obj[key] )) && isFinite( obj[key])){
         obj[key] *= 2;
       }
-    }
-    return obj;
+  }
+  return obj;
 }
 
 //Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
 function sumArr(arr) {
   return arr.reduce(function(sum, current) {
       return sum + current;
-    }, 0);
+  }, 0);
 }
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
-  strNew = str.split("").reverse().join("");
-    if (str === strNew){
-      return true;
-    }
-    else {
-      return false;
-    }
+  const reversedStr = str.split("").reverse().join("");
+  return str === reversedStr;
 }
 
 module.exports = {
