@@ -36,11 +36,29 @@ describe('es6', () => {
         });
     });
 
+    describe('#fooBar', () => {
+        it('до 15', () => {
+            assert.equal(core.fooBar(7), [1,2,"Foo",4,"Bar","Foo"]);
+        });
+
+        it('после 15', () => {
+            assert.equal(core.fooBar(17), [1,2,"Foo",4,"Bar","Foo",7,8,"Foo","Bar",11,"Foo",13,14,"FooBar",16]);
+        });
+    });
+
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
+        });
+        it('Добавляем слова', () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.add("fsdfsd","sdfsfsd"), true);
+        });
+        it("Проверка на числа", () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.add(7,"fsd"), false);
         });
     });
 });

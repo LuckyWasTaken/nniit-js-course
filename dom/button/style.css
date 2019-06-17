@@ -1,0 +1,14 @@
+.button1 {
+    background: black; 
+    color: red;
+    font-size: 14pt;
+   }
+.button2 {
+    background: black; 
+    color: blue;
+    font-size: 14pt;
+   }
+.blockText{
+    width:512px;
+    font-size: 16pt;
+}
