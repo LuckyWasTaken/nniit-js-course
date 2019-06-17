@@ -23,6 +23,11 @@ describe('ООП', () => {
             assert.equal(point.x, 1);
             assert.equal(point.y, 0);
         });
+        it('Находит расстояние между точкой и центром координат', () => {
+            const point = new core.Point(12, 5);
+
+            assert.equal(core.Point.prototype.Distance(point.x,point.y), 13);
+        });
     });
 
     describe('#Point3D', () => {

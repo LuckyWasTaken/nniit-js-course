@@ -28,7 +28,9 @@ describe('es6', () => {
 
     describe('#calculateSalaryDifference', () => {
         it('считает разницу корректно', () => {
+            
             assert.equal(core.calculateSalaryDifference([1, 2, 3]), 3);
+            assert.equal(core.calculateSalaryDifference([3, 2, 4]), 2);
         });
 
         it('на пустой массив возвращается falsy значение', () => {

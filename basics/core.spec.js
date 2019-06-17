@@ -57,6 +57,7 @@ describe('Первое задание', () => {
             assert.equal(core.fibonacci(2), 1);
             assert.equal(core.fibonacci(7), 13);
             assert.equal(core.fibonacci(10), 55);
+            assert.equal(core.fibonacci(15), 610);
         })
     })
 })
