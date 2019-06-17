@@ -35,7 +35,6 @@ class Queue {
             return this._array.shift();
     }
 }
-
 module.exports = {
     Point,
     Point3D,
