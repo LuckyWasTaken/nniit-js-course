@@ -11,8 +11,8 @@ function average() {
   let sum = 0;
   return function (value)
   {
-    sum = sum + value;
-    counter = counter + 1;
+    sum += value;
+    counter++;
     return sum/counter;
   }
 }
