@@ -25,21 +25,13 @@ function filterUnique(array) {
 // присмотритесь к методу .reduce
 function calculateSalaryDifference(array) {
     if(array.length > 0) {
-       let maxSalary = array.reduce(function(maxSalary, current) {
-           if (maxSalary > current) {
-              return maxSalary;
-           }
-           else{
-              return current;
-           }
-       }, 0);
-       let minSalary = array.reduce(function(minSalary, current) {
-           if (minSalary < current) {
-             return minSalary;
-           }
-           return current;
-       }, maxSalary);
-            return maxSalary / minSalary;
+        let minSalary = array.reduce((min, current) => {
+            return (current < min ? current : min);
+        }, array[0]);
+        let maxSalary = array.reduce((max, current) => {
+            return (current > max ? current : max);
+        }, array[0]);
+        return maxSalary / minSalary;
     }
 }
 
