@@ -42,5 +42,38 @@ describe('es6', () => {
 
             assert.equal(!!dic, true);
         });
+
+        it('при добавлении числа возвращает "It is no word"', () => {
+           
+            assert.equal( dic.setNewWord("123"), "It is no word");
+        });
+
+        it('корректно работает с добавлением слова', () => {
+            
+            assert.equal(dic.setNewWord("fueu"), dic.getWord(0));
+        });
+
+        it('корректно работает с добавлением двойного слова', () => {
+            
+            assert.equal(dic.setNewWord("fueu оарао"), dic.getWord(1));
+        });
+
+        it('при добавлении строки с количеством 3 и более возвращает "It is no word"', () => {
+            
+            assert.equal(dic.setNewWord("fueu оарао tyu"),"It is no word");
+        });
+
+        it('корректно удаляет слово', () => {
+            assert.equal(dic.deleteWord(0),"word deleted");
+            assert.equal(dic.getWord(0),undefined);
+        });
+
+        it('повторная попытка удаления слова возвращает "word not found"', () => {
+            assert.equal(dic.deleteWord(0),"word not found");
+        });
+
+        it('корректно возвращает слово по его ключевому значению ', () => {
+            assert.equal(dic.getWord(1),"fueu оарао");
+        });
     });
 });
