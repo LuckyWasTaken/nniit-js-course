@@ -42,4 +42,6 @@ describe('ООП', () => {
             assert.equal(point.z, -3);
         });
     });
+
+    
 });
