@@ -42,5 +42,14 @@ describe('es6', () => {
 
             assert.equal(!!dic, true);
         });
+        it('новые слова добавляются, выполняется проверка на строки',() =>{
+            assert.equal(core.Dictionary.addNewWord('asd','dsa'), 'added');
+            assert.equal(core.Dictionary.addNewWord('asd',3), 'not added');
+            assert.equal(core.Dictionary.addNewWord('asd',), 'not added');
+        });
+        it ('получение описания', () =>{
+            assert.equal(core.Dictionary.getDescription('asd',), 'dsa');
+            assert.equal(core.Dictionary.getDescription('as',), null);
+        });
     });
 });
