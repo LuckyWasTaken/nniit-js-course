@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Calculation Station</title>
+    </head>
+    <body>
+        <p>Welcome to the Calculation Station. It will calculate the result according to the selected operator while you're inputting. Test it out!</p>
+        <form>
+            <input value=0 type="number" id="input1" oninput="calculate(input1.value, input2.value)">
+            <select id="selector" onchange="swapoperator();calculate(input1.value, input2.value)">
+                <option selected value='+'>+</option>
+                <option value='-'>-</option>
+                <option value='*'>*</option>
+                <option value='/'>/</option>
+                <option value='sqr'>a^b</option>
+            </select>
+            <input value=0 type="number" id="input2" oninput="calculate(input1.value, input2.value)">
+        </form>
+        <p>Result:</p>
+        <p id="res">0</p>
+    </body>
+    <script src="calc.js"></script>
+</html>
