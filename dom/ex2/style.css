@@ -1,0 +1,30 @@
+.numbers{
+    width: 14%;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 20px;
+}
+.select{
+    height: 50px;
+    width: 100px;
+    padding: 12px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 20px;
+    
+}
+.buttons{
+    color:black;
+    text-align: center;
+    width:200px;
+    height:60px;
+    cursor: pointer;
+    font-size: 20px;
+}
+div {
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+} 

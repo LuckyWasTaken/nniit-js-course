@@ -12,10 +12,7 @@ function fioToName(fio) {
 // уникальные элементы
 // присмотритесь к коллекции "Set"
 function filterUnique(arr) {
-    let uniqueArr = new Set;
-    arr.forEach(function(elem){
-        uniqueArr.add(elem);
-    });
+    let uniqueArr = new Set(arr);
     return Array.from(uniqueArr);
 
 }

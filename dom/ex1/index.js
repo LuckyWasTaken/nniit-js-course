@@ -1,4 +1,4 @@
 function changeColor(color){
-    var text = document.getElementById("text_area");
-    text.style.color = color;
+    var textElement = document.getElementById("textArea");
+    textElement.style.color = color;
 }

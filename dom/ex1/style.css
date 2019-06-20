@@ -1,0 +1,22 @@
+
+.blueButton,.redButton{
+    color:white;
+    text-align: center;
+    width:200px;
+    height:60px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.blueButton {
+    background-color: blue;
+    
+}
+.redButton {
+    background-color: red;
+}
+.textArea{
+    font-size: 20px;
+}
+p {
+    text-indent: 40px;
+} 

@@ -1,32 +1,29 @@
-let first;
-let second;
+let firstElement;
+let secondElement;
 let operator;
-function isNumeric(n) {
-    return ((Number)(n)) && isFinite(n);
-  }
 function setFirstOperand(){
-    first = (Number)(document.getElementById('first').value);
+    firstElement = (Number)(document.getElementById('first').value) || 0;
 }
 function setSecondOperand(){
-    second = (Number)(document.getElementById('second').value);
+    secondElement = (Number)(document.getElementById('second').value) || 0;
     }
 function setSelection(){
-    operator=document.getElementsByTagName("select")[0].selectedIndex;
+    operator=document.getElementById('selectAction').value;
     
 }
 function findAnswer(){
     setFirstOperand();
     setSecondOperand();
     setSelection();
-    if (operator === 0){
-        document.getElementsByTagName("h2")[0].innerHTML=first + second;
-    }else if (operator === 1){
-        document.getElementsByTagName("h2")[0].innerHTML=first - second;
+    if (operator === '+'){
+       document.getElementById('result').value = firstElement + secondElement;
+    }else if (operator === '-'){
+        document.getElementById('result').value = firstElement - secondElement;
     }
-    else if (operator === 2){
-        document.getElementsByTagName("h2")[0].innerHTML=first * second;
-    }else if(operator === 3){
-        document.getElementsByTagName("h2")[0].innerHTML=first/ second;
+    else if (operator === '*'){
+        document.getElementById('result').value = firstElement * secondElement;
+    }else if(operator === '/'){
+        document.getElementById('result').value = firstElement / secondElement;
     }
 
 }

@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
     <title>Задание 2</title>
+    <link rel="stylesheet" href="style.css">
     <body>
         <script type = "text/javascript" src= "index.js"></script>
         <h1>Калькулятор</h1>
-        <input id = 'first'  type = 'text'>
-        <select id = 'select_action' onInput = 'setSelection'>
-            <option id = '+'>+</option>
-            <option id = '-'>-</option>
-            <option id = '*'>*</option>
-            <option id = '/'>/</option>
-        </select>
-        <input id = 'second' type = 'text'>
-        <p>=</p>
-        <h2 id = 'result_area'></h2>
-        <button id = 'button' onClick = 'findAnswer()'>Посчитать</button>
+        <div> 
+            <p>
+            <input class = 'numbers' id = 'first'  type = 'text'>
+            <select class = 'select' id = 'selectAction' onInput = 'setSelection'>
+                <option value = '+'>+</option>
+                <option value = '-'>-</option>
+                <option value = '*'>*</option>
+                <option value = '/'>/</option>
+            </select>
+            <input class = 'numbers' id = 'second' type = 'text'>
+            =
+            <output id = 'result'></output>
+            </p>
+            <button class = 'buttons' id = 'button' onClick = 'findAnswer()'>Посчитать</button>
+        </div>
+       
+        
     </body>
 </html>
