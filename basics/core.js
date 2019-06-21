@@ -8,7 +8,7 @@ function even() {
 
     let outputArray = [];
 
-    for (let index = 2; index <= 20; index=index+2) {
+    for (let index = 2; index <= 20; index+=2) {
         
         outputArray.push(index);
     }
@@ -27,11 +27,11 @@ function sumTo(n) {
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-    if(n)
+    if(n > 0)
     {
         return n + recSumTo(n-1);
     }
-    else return(n);
+    return(n);
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -40,21 +40,22 @@ function factorial(n) {
     {
         return n*factorial(n-1);
     }
-    else return(1);
+    return(1);
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
     let s2 = 1
     for (s2;s2<n;s2=s2*2);
-    if(s2==n) return true;
-    if(s2>n) return false;
+    return (s2===n);
+    //if(s2===n) return true;
+    //if(s2>n) return false;
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
-    if(n==1) return 1;
-    if(n==2) return 1;
+    if(n===1) return 1;
+    if(n===2) return 1;
     return fibonacci(n-2) + fibonacci(n-1);  
 }
 

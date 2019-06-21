@@ -1,9 +1,18 @@
 // Напишите функцию, суммирующую два числа, так, что sum(a)(b) == a + b (задание с очень жирной звездочкой на поразбираться - суммируйте любое количество чисел)
 function sum(a) {
-  return function (b) 
-  {    
-      return a + b;  
+
+  var currentSum = a;
+
+  function f(b) {
+    currentSum += b;
+    return f;
   }
+  
+  f.toString = function() {
+    return currentSum;
+  };
+
+  return f;
 }
 
 
@@ -11,25 +20,17 @@ function sum(a) {
 function average() 
 {
   let avgValue = [];
-  avgValue.push(0);
   let inputValue = arguments[0];
   return function(inputValue)
   {
-      if (avgValue[0] == 0)
-      {
-        avgValue[0] = inputValue;
-        return inputValue;
-      }
-      else
-      { 
-        avgValue.push(inputValue);
-        currentAvgValue = 0;
-        for (var i=0; i<avgValue.length; i++)
-        {
-          currentAvgValue = currentAvgValue + avgValue[i];
-        } 
-        return currentAvgValue / avgValue.length;
-      }
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    if (avgValue[0] === 0)
+    {
+      avgValue[0] = inputValue;
+      return inputValue;
+    }
+    avgValue.push(inputValue);
+    return avgValue.reduce(reducer) / avgValue.length;
   }
 }
 
