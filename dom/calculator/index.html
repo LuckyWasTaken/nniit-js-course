@@ -18,21 +18,20 @@
 				</div>
 			</div>
 
-			<div class="content" id="t">
+			<div class="content">
 				<p>КАЛЬКУЛЯТОР</p>
-				
-				<input> </input>
+				<input id="left" type = 'number' oninput="calculate()"> 
 
-				<select>
-						<option>+</option>
-						<option>-</option>
-						<option>*</option>
-						<option>/</option>
+				<select onchange="calculate()" id='action'>
+						<option id="add">+</option>
+						<option id="sub">-</option>-</option>
+						<option id="mul">*</option>
+						<option id="div">/</option>
 				</select>
 
-				<input> </input>
+				<input id="right" type = 'number' oninput="calculate()">
 
-				=
+				<p id="result">= </p>
 
 			</div>
 
