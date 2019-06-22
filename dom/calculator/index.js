@@ -7,16 +7,16 @@ function calculate()
     switch (document.getElementById("action").value) 
     {
         case '+':
-            result.innerHTML = '=' + (Number(left.value) + Number(right.value));
+            result.innerHTML = (Number(left.value) + Number(right.value));
             break;
         case '-':
-            result.innerHTML = '=' + (left.value - right.value);
+            result.innerHTML = (left.value - right.value);
             break;
         case '*':
-            result.innerHTML = '=' + (left.value * right.value);
+            result.innerHTML = (left.value * right.value);
             break;
         case '/':
-            result.innerHTML = '=' + (left.value / right.value);
+            result.innerHTML = (left.value / right.value);
             break;
         default:
             break;
