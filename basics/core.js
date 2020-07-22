@@ -21,19 +21,14 @@ function sumTo(n) {
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-    if(n == 1) return 1;
+    if(n === 1) return 1;
     return recSumTo(n - 1) + n;
 }
 
 //Напишите функцию, считающую факториал заданного числа
 function factorial(n) {
-    if(n < 0) return -1;
-    else if(n == 0) return 1;
-    else {
-        return (factorial(n - 1) * n);
-    }
-    let resuld = factorial(n);
-    return result;
+    if(n == 0) return 1;
+    return (factorial(n - 1) * n);
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
@@ -43,13 +38,13 @@ function isBinary(n) {
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
-    let x = 1, y = 1;
+    let first = 1, second = 1;
     for(let i = 3; i <= n; i++) {
-        let z = x + y;
-        x = y;
-        y = z;
+        let fibonacci = first + second;
+        first = second;
+        second = fibonacci;
     }
-    return y;
+    return second;
 }
 
 module.exports = {
