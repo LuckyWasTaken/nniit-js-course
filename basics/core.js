@@ -1,25 +1,18 @@
 //Напишите функцию, которая проверяет, является ли число целым используя побитовые операторы
 function isInteger(n) {
-    /*if(parseInt(n)==parseFloat(n)) {
-        return true;
-    } else {
-        return false;
-    }*/
     return (n ^ 0) === n;
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
-    let list=[];
-    let finishNumber=20;
+    const list=[];
+    const finishNumber=20;
     for(let startNumber=2; startNumber<=finishNumber; startNumber++){
         if(startNumber%2==0){
             list.push(startNumber);
-        } else {continue}
-        if(startNumber==finishNumber){
-            return list;
-        }
+        } 
     }
+    return list;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя цикл
@@ -27,10 +20,8 @@ function sumTo(n) {
     let result=0;
     for(let count=0; count<=n; count++){
         result=result+count;
-        if(count==n){
-            return result;
-        }
     }
+    return result;
 }
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
@@ -49,10 +40,8 @@ function factorial(n) {
     }
     for(let startNumber=1; startNumber<=n; startNumber++){
         result=result*startNumber;
-        if(startNumber==n){
-            return result;
-        }
     }
+    return result;
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
