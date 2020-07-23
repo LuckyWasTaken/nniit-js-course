@@ -27,16 +27,14 @@ function sumTo(n) {
 function recSumTo(n) {
     if(n===0)
         return 0;
-    else
-        return n+recSumTo(--n)
+    return n+recSumTo(--n)
 }
 
 //Напишите функцию, считающую факториал заданного числа
 function factorial(n) {
     if(n<=1)
-      return 1;
-   else
-      return n*factorial(n-1);
+        return 1;
+    return n*factorial(n-1);
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
@@ -45,15 +43,13 @@ function isBinary(n) {
         return true;
     else if (n>2)
         return isBinary(n/2);
-    else
-        return false
+    return false
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
     if(n==1 || n==2)
-    return 1;
- else
+        return 1;
     return fibonacci(n-1)+fibonacci(n-2);
 }
 
