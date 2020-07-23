@@ -28,9 +28,8 @@ function recSumTo(n) {
     if (n === 1){
         return 1;
     }
-    else{
-        return recSumTo(n - 1) + n;
-    }
+     
+    return recSumTo(n - 1) + n;
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -38,9 +37,8 @@ function factorial(n) {
     if (n === 1){
         return 1;
     }
-    else{
-        return factorial(n - 1) * n;
-    }
+     
+    return factorial(n - 1) * n;
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
@@ -50,18 +48,20 @@ function isBinary(n) {
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
-    if (n > 0){
-        let a = 0;
-        let b = 1;
-        let fib = 1;
-        for (let i = 2; i<=n; i++){
-            fib = a + b;
-            a = b;
-            b = fib;
-        }
-        return fib;
+    if (n <= 0){
+        return null;
     }
-    else return null;
+
+    let a = 0;
+    let b = 1;
+    let fib = 1;
+    for (let i = 2; i<=n; i++){
+        fib = a + b;
+        a = b;
+        b = fib;
+    }
+
+    return fib;
 }
 
 module.exports = {
