@@ -29,13 +29,7 @@ function sumTo(n) {
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 
 function recSumTo(n) {
-    let count = 0;
-    if(n === 0){
-        return count;
-    }else{
-        count+=n;
-        return n + recSumTo(n - 1);
-    }
+    return n !==0 ? n + recSumTo(n - 1) : 0;
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -47,7 +41,7 @@ function factorial(n) {
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 
 function isBinary(n) {
-    return !(n & (n - 1)) && n !== 0 ? true : false;
+    return !(n & (n - 1)) && n !== 0
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
