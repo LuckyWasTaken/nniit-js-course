@@ -16,7 +16,7 @@ function sumAnyQuantityOfNumbers1(a) {
 }
 
 //Task* second option
-function sumQuantityOfNumbers2(a) {
+function sumAnyQuantityOfNumbers2(a) {
   let result = a;
   return function summarize(b) {
     result += b;
@@ -27,7 +27,7 @@ function sumQuantityOfNumbers2(a) {
 // Напишите замыкание, которое будет принимать число и считать среднее арифметическое от всех переданных ранее чисел (если задание не до конца понятно - подглядите тесты :) )
 function average() {
   const array = [];
-  return function calcucateAvarage(number) {
+  return function calculateAvarage(number) {
     array.push(number);
     let result = array.reduce(function(sum, current) {
       return sum + current;
