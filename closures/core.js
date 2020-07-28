@@ -29,7 +29,7 @@ function average() {
   const array = [];
   return function calculateAvarage(number) {
     array.push(number);
-    let result = array.reduce(function(sum, current) {
+    const result = array.reduce(function(sum, current) {
       return sum + current;
 
     }, 0);
