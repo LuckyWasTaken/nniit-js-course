@@ -5,10 +5,10 @@ function isInteger(n) {
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
-    let arr = [];
+    const arr = [];
     let i = 0;
-    for (let num = 0; num <= 20; num++){
-        if ((num % 2) == 0 && num != 0){
+    for (let num = 2; num <= 20; num++){
+        if ((num % 2) == 0 ){
             arr[i++] = num;
         }
     }
@@ -27,12 +27,10 @@ function sumTo(n) {
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-    if (n-1 == 0){
+    if (n === 1){
         return n;
     }
-    else{
-        return n+recSumTo(n-1);
-    }
+    return n+recSumTo(n-1);
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -50,19 +48,15 @@ function isBinary(n) {
     if (n == 0){
         return false;
     }
-    else if (n == 1){
+    if (n == 1){
         return true;
     }
-    else{
-        let num = n;
-        while (num / 2 > 1){
-            if (num % 2 != 0){
-                return false;
-            }
-            else{
-                num /= 2;
-            }
+    let num = n;
+    while (num / 2 > 1){
+        if (num % 2 != 0){
+            return false;
         }
+        num /= 2;
     }
     return true;
 }
@@ -79,5 +73,3 @@ function fibonacci(n) {
 module.exports = {
     isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
 }
-
-console.log(isBinary(0));
