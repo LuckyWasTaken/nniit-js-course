@@ -3,21 +3,19 @@ function capitalize(str) {
   if (str === "") {
         return "";
   }
-  else {
-        let array = str.split(" ");
-        let arrayUp = [];
-        for (let i = 0; i<array.length; i++) {
-          if (array[i] === "") {
+  const array = str.split(" ");
+  const arrayUp = [];
+  for (let i = 0; i<array.length; i++) {
+      if (array[i] === "") {
             arrayUp.push("");
-          }
-          else {
-            let word = array[i];
-            let wordUp = word[0].toUpperCase() + word.slice(1);
-            arrayUp.push(wordUp);
+      }
+      else {
+        let word = array[i];
+        let wordUp = word[0].toUpperCase() + word.slice(1);
+          arrayUp.push(wordUp);
           }
         }
-        return arrayUp.join(" ");
-      }
+  return arrayUp.join(" ");     
 }
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
@@ -25,9 +23,7 @@ function truncate(str, n) {
   if (str.length < n) {
     return str;
   }
-  else {
-    return str.slice(0, n) + "...";
-  }
+  return str.slice(0, n) + "...";
 } 
 
 //Определите, пуст ли объект
@@ -58,18 +54,8 @@ function sumArr(arr) {
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
-  let i = 0;
-  let j = str.length - 1;
-  while (i < j) {
-    if (str[i] === str[j]) {
-      i++;
-      j--;
-    }
-    else {
-      return false;
-    }
-  }
-  return true;
+  let reversedStrring = str.split('').reverse().join('');
+  return str === reversedStrring;
 }
 
 module.exports = {
