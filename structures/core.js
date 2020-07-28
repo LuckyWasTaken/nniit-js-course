@@ -2,11 +2,17 @@
 function capitalize(str) {
   if (str.length!=0)
     return str[0].toUpperCase()+str.slice(1);
-  else
-    return str;
+  
+  return str;
 }
 
 function capitalizeAllWords(str) {
+  
+  const buf=str.split(' '); // divide into words
+  const buf2=buf.map((x)=>capitalize(x)); // capitalize every word
+  
+  return buf2.join(' '); //get the finishLine
+  /*
     const capitalizeArr=[]; //this is array
     let flag=0; //flag==0 - we are not in the word, flag==1 - we are in the word 
 
@@ -32,6 +38,7 @@ function capitalizeAllWords(str) {
        finishLine+=capitalizeArr[i];
      
    return finishLine;
+   */
 }
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
@@ -54,7 +61,7 @@ function isEmpty(obj) {
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) {
   for (var key in obj){
-    if (typeof(obj[key])==typeof(7)){ //I write 'typeof(7)', becouse in test use int.
+    if (typeof(obj[key])==='number'){ 
       obj[key]=obj[key]*2;
     }
   }
@@ -70,6 +77,13 @@ function sumArr(arr) {
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
+  const buf=str.split(''); //for use filter()
+  const buf2=buf.filter((x) => x!=' ' && x!='.' && x!=',' && x!='!' && x!='?' && x!='-' && x!=':' && x!=';').map(x=>x.toLowerCase());
+  const str1=buf2.join(''); // str after filter
+  const str2=buf2.reverse().join('') // str in reverse order
+  
+  return str1==str2; //locateCompare() return 'number'
+  /*
   //for palindrom has some words ('а шорохами зима хороша') 
   let indexHead=0;
   let indexTail=str.length-1;
@@ -99,6 +113,7 @@ function isPali(str) {
       return false;
     }
   }
+  */
 }
 
 module.exports = {
