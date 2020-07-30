@@ -45,11 +45,10 @@ function factorial(n) {
 function isBinary(n) {
     let result = 0;
     for (; ;) {
-        if(n/1 == 1)return true;
+        if(n == 1)return true;
         result = n / 2;
         if(result <= 0) {
             return false;
-            break;
         }
         else if (result != 2) {
             n = result;
@@ -58,7 +57,6 @@ function isBinary(n) {
         }
         else if (result == 2) {
             return true;
-            break;
         }
     }
 }
