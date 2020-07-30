@@ -1,16 +1,14 @@
 //Напишите функцию, которая проверяет, является ли число целым используя побитовые операторы
 function isInteger(n) {
-	if(n >> 1)
-		return true;
-		else
-		return false;
+	return (n >> 1)
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
 	let arr=[];
-	for(let i =2 ; i<=20;i++)
+	for(let i =2 ; i<=20;i++){
 		arr[i]=i;
+	}
 	var isEven = arr.filter(function(x){
 		return ((x%2)==0)
 	})
@@ -53,7 +51,6 @@ function isBinary(n) {
         else if (result != 2) {
             n = result;
             result = 0;
-            continue;
         }
         else if (result == 2) {
             return true;
