@@ -12,7 +12,6 @@ function capitalizeAllWordsInString(str) {
     let j=0;
         for(let i=0;i<divStr.length;i++) {
             str+=divStr[i].charAt(j).toUpperCase()+divStr[i].substring(j+1,divStr[i].length)+" ";
-            j=0;
         }
          return str;
 }
