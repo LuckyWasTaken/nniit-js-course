@@ -5,11 +5,8 @@ function isInteger(n) {
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
-	let arr=[];
-	for(let i =2 ; i<=20;i++){
-		arr[i]=i;
-	}
-	var isEven = arr.filter(function(x){
+	let arr=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+	let isEven = arr.filter(function(x){
 		return ((x%2)==0)
 	})
 	return isEven;
