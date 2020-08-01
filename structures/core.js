@@ -51,11 +51,7 @@ function sumArr(arr) {
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
     let len = str.length;
-    let strCmp="";
-    for (let j = len; j > 0;j--) {
-        strCmp+= str.charAt(len-1);
-        len--;
-    }
+    let strCmp=str.split('').reverse().join('')
     if(strCmp==str)return true;
     return false;
 }
