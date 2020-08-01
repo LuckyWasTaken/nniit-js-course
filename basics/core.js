@@ -41,21 +41,7 @@ function factorial(n) {
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
-    let result = 0;
-    for (; ;) {
-        if(n == 1)return true;
-        result = n / 2;
-        if(result <= 0) {
-            return false;
-        }
-        else if (result != 2) {
-            n = result;
-            result = 0;
-        }
-        else if (result == 2) {
-            return true;
-        }
-    }
+ return ((n!=0)&&(n&(n-1))==0)
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
