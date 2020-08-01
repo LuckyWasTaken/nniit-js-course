@@ -2,14 +2,12 @@
 function capitalize(str) {
   if(str.length===0)
     return "";
-  let separator = " ";
+  const separator = " ";
   let arrayOfStrings = str.split(separator);
-  let firstLetter="";
-  let partOfWord="";
   let newStr="";
   for (let i = 0; i<arrayOfStrings.length; i++){
-     firstLetter = arrayOfStrings[i][0];
-     partOfWord = arrayOfStrings[i];
+     let firstLetter = String(arrayOfStrings[i][0]);
+     let partOfWord = String(arrayOfStrings[i]);
      newStr+=firstLetter.toUpperCase()+partOfWord.substr(1);
   }
   return newStr;
