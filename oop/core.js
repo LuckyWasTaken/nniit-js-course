@@ -38,21 +38,13 @@ class Queue {
 
     addToQueue(item) {
         this.array.push(item);
-        return this.array;
     }
 
     getElementFromBeginningOfQueue() {
         if (this.array.length != 0) {
-            return this.array[0];
+            return this.array.shift;
         }
         console.log("Nothing to get! The queue is empty!")
-    }
-
-    getAnyElement(index) {
-        if (index in this.array) {
-            return this.array[index];
-        }
-        console.log("There isn`t such element in queue!")
     }
 
 }
