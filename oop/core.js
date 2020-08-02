@@ -8,12 +8,10 @@ class Point {
     }
 
     getX() {
-        console.log(this.x);
         return this.x;
     }
 
     getY() {
-        console.log(this.y);
         return this.y;
     }
 
