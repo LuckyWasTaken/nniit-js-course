@@ -2,8 +2,8 @@
 // Со звездочкой: реализовать метод, который возвращает расстояние от точки до центра координат (0, 0)
 class Point {
     constructor(x, y){
-        this.x = typeof x !== 'undefined' ?  x : 0;
-        this.y = typeof y !== 'undefined' ? y : 0;
+        this.x = x || 0;
+        this.y = y || 0;
     }
     getDistance(){
         return Math.sqrt(Math.pow(this.x, 2)+Math.pow(this.y, 2));
@@ -15,7 +15,7 @@ class Point {
 class Point3D extends Point {
     constructor(x,y,z){
         super(x, y);
-        this.z = typeof z !== 'undefined' ? z : 0;
+        this.z = z || 0;
     }
 }
 
