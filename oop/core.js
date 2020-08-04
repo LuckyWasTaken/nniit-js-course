@@ -7,14 +7,6 @@ class Point {
         this.y = y;
     }
 
-    getX() {
-        return this.x;
-    }
-
-    getY() {
-        return this.y;
-    }
-
     distanceToCenter () {
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2))
     }
@@ -44,7 +36,7 @@ class Queue {
         if (this.array.length != 0) {
             return this.array.shift;
         }
-        console.log("Nothing to get! The queue is empty!")
+        throw "Nothing to get! The queue is empty!";
     }
 
 }
