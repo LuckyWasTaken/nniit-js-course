@@ -36,11 +36,47 @@ describe('es6', () => {
         });
     });
 
+    describe('#fooBar', () => {
+        it('возвращает массив корректно', () => {
+            assert.deepEqual(core.fooBar(16), [1, 2, 'Foo', 4, 'Bar', 'Foo', 7, 8, 'Foo', 'Bar', 11, 'Foo', 13, 14, 'FooBar', 16]);
+        });
+
+        it('вызов без аргумента', () => {
+            assert.deepEqual(core.fooBar(), []);
+        });
+    });
+
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
         });
+
+        it('в словарь добавляются key:value', () => {
+            const dic = new core.Dictionary();
+            assert.equal(dic.addWord("map","отображения"), true);
+            assert.equal(dic.addWord("set","наборы"), true);
+            assert.equal(dic.addWord(77,"аааа"), false);
+        });
+
+        it('корректный поиск по ключу', () => {
+            const dic = new core.Dictionary();
+            dic.addWord("map","отображения");
+            dic.addWord("set","наборы");
+
+            assert.equal(dic.getValue("map"), "отображения");
+            assert.equal(dic.getValue("book"), undefined);
+        });
+
+        it('удаление из словаря', () => {
+            const dic = new core.Dictionary();
+            dic.addWord("map","отображения");
+            dic.addWord("set","наборы");
+
+            assert.equal(dic.deleteWord("map"), true);
+            assert.equal(dic.deleteWord("book"), false);
+        });
+
     });
 });
