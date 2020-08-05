@@ -36,12 +36,8 @@ function sumArr(arr) {
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
-  for(let i = 0; i < str.length / 2; i++) {
-    if(str[i] !== str[str.length - i - 1]) {
-      return false;
-    }
-  }
-  return true;
+  let reverse = str.split('').reverse().join('');
+  return reverse === str;
 }
 
 module.exports = {
