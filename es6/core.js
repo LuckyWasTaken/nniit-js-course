@@ -3,10 +3,9 @@
 
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
-function fioToName() {
-    if (arguments.length !== 0){
-        const str=arguments[0].split(' ');
-        const [surname, name]=[...str]; 
+function fioToName(fio) {
+    if (fio.length !== 0){
+        const [surname, name]=fio.split(' '); 
         return name+' '+surname;
     }
     
