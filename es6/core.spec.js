@@ -10,6 +10,9 @@ describe('es6', () => {
         it('ФИ в Имя Фамилия', () => {
             assert.equal(core.fioToName('Петров Петр'), 'Петр Петров');
         });
+        it('При получении пустой строки бросить исключение', () => {
+            assert.throws(function () {core.fioToName("");}, Error);
+        });
     });
 
     describe('#filterUnique', () => {
@@ -41,6 +44,15 @@ describe('es6', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
+        });
+        it('при получении цифровых знанчений словарь не меняется', () => {
+            const d = new core.Dictionary();
+            assert.equal(d.addToDictionary("s", "string"), d.addToDictionary(3, 3));
+        });
+        it('проверка правильность получения значения по ключу', () => {
+            const d = new core.Dictionary();
+            d.addToDictionary("s", "string");
+            assert.equal("string", d.getValue("s"));
         });
     });
 });
