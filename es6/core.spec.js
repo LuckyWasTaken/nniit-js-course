@@ -68,7 +68,7 @@ describe('es6', () => {
             assert.notEqual(dic.add('one', 'один'), false);
         });
         it('Возвращается корректное значение по ключу', () => {
-            const dic = new core.Dictionary();
+            const dic = new core.Dictionary();   
             dic.add('one', 'один');
             assert.equal(dic.getTranslation('one'), 'один');
         });
