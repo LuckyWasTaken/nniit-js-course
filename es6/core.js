@@ -4,8 +4,11 @@
 // строку формата Имя Фамилия
 function fioToName(fio) {
     let fullFio = String(fio).split(" ");
-    let surname = fullFio[0];
-    let name = fullFio[1];
+    if (fullFio.length<2){
+        console.log("incorrect input")
+        return false
+    }
+    let [surname, name] = fullFio;
     return `${name} ${surname}`;
 }
 
@@ -13,7 +16,7 @@ function fioToName(fio) {
 // уникальные элементы
 // присмотритесь к коллекции "Set"
 function filterUnique(numArr) {
-    numSet = new Set(numArr);
+    let numSet = new Set(numArr);
     return Array.from(numSet);
 }
 
@@ -25,7 +28,7 @@ function filterUnique(numArr) {
 function calculateSalaryDifference(salary) {
     if(salary.length===0){
         console.log('no salary entered')
-        return false;
+        return null;
     }
     salary.sort((a, b) => a - b);
     return salary[salary.length-1]/salary[0];
@@ -80,7 +83,7 @@ class Dictionary {
     delete(word){
         if(!this.dictionary.has(word)){
             console.log('this word is not found')
-            return false;
+            return null;
         }
         return this.dictionary.delete(word);
     }

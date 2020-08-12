@@ -31,8 +31,8 @@ describe('es6', () => {
             assert.equal(core.calculateSalaryDifference([1, 2, 3]), 3);
         });
 
-        it('на пустой массив возвращается false значение', () => {
-            assert.equal(core.calculateSalaryDifference([]), false);
+        it('на пустой массив возвращается null', () => {
+            assert.equal(core.calculateSalaryDifference([]), null);
         });
     });
 
@@ -51,42 +51,38 @@ describe('es6', () => {
     });
 
     describe('#Dictionary', () => {
+        let dic;
+        beforeEach(() => {
+            dic = new core.Dictionary();
+          });
         it('экземпляр класса создается', () => {
-            const dic = new core.Dictionary();
             assert.equal(!!dic, true);
         });
         it('при добавлении не строки в качестве key возвращается false', () => {
-            const dic = new core.Dictionary();
             assert.equal(dic.add(1, 'one'), false);
         });
         it('при добавлении не строки в качестве value возвращается false', () => {
-            const dic = new core.Dictionary();
             assert.equal(dic.add('one', 1), false);
         });
         it('При добавлении строки в качестве key и value не возвращается false', () => {
-            const dic = new core.Dictionary();
             assert.notEqual(dic.add('one', 'один'), false);
         });
-        it('Возвращается корректное значение по ключу', () => {
-            const dic = new core.Dictionary();   
+        it('Возвращается корректное значение по ключу', () => { 
             dic.add('one', 'один');
             assert.equal(dic.getTranslation('one'), 'один');
         });
         it('Если перевод не найден, возвращается false', () => {
-            const dic = new core.Dictionary();
             dic.add('one', 'один');
             assert.equal(dic.getTranslation('two'), false);
         });
         it('слово корректно удаляется', () => {
-            const dic = new core.Dictionary();
             dic.add('one', 'один');
             dic.delete('one');
             assert.equal(dic.getTranslation('one'), false);
         });
-        it('При удалении несуществующего слова возвращается false', () => {
-            const dic = new core.Dictionary();
+        it('При удалении несуществующего слова возвращается null', () => {
             dic.add('one', 'один');
-            assert.equal(dic.delete('two'), false);
+            assert.equal(dic.delete('two'), null);
         });
     });
 });
