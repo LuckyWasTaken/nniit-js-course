@@ -37,9 +37,7 @@ function calculateSalaryDifference(arr) {
 // чисел, которые делятся на 5 — "Bar", а на 15 — "FooBar"
 // * покройте тестами
 function fooBar(n) {
-    const fun = () => Array.from({length: n}, (v, k) => {
-        return (++k % 3 == 0) ? "foo" : ((k % 5) == 0 ? "bar" : k);
-    });
+    const fun = () => Array.from({length: n}, (v, k) => (++k % 3 == 0) ? "foo" : ((k % 5) == 0 ? "bar" : k));
     return fun();
 }
 
