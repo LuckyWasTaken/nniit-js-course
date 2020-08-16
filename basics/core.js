@@ -50,8 +50,7 @@ function isBinary(n) {
         return true;
     else if (n > 2)
         return isBinary (n/2);
-    else
-        return false;
+    return false;
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
