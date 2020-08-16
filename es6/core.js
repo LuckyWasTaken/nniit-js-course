@@ -146,5 +146,3 @@ module.exports = {
     calculateSalaryDifference,
     fooBar
 };
-
-console.log(calculateSalaryDifference([2,3,4,5]));
