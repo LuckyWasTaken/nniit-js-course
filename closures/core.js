@@ -9,11 +9,11 @@ function sum(a) {
 function average() {
   let sum = 0;
   let i = 0;
-  
+
   return function result(num) {
     i++;
     sum = sum + num;
-    return sum/i;
+    return sum / i;
   }
 }
 

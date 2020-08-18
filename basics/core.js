@@ -1,18 +1,17 @@
 //Напишите функцию, которая проверяет, является ли число целым используя побитовые операторы
 function isInteger(n) {
-    let a = n & n;
+    let roundNum = n & n;
 
-    if (a != n)
+    if (roundedNum != n)
         return false;
 
-    else
-        return true;
+    return roundNum === n;
 
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
 function even() {
-    let arr = new Array();
+    const arr = new Array();
 
     let i = 2;
     while (i != 22) {
@@ -64,8 +63,7 @@ function isBinary(n) {
     if (check != num)
         return false;
 
-    else
-        return true;
+    return num === n;
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
