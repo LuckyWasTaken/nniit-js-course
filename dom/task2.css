@@ -1,0 +1,36 @@
+body{
+    background-image: url("./1.jpg");
+    margin: 400px;
+}
+
+#num1{
+     background-color: black;
+     color: yellow;
+     height: 70px;  
+     width: 200px;
+     font-size: 40px;
+}
+
+#num2{
+     background-color: black;
+     color: yellow;
+     height: 70px;  
+     width: 200px;
+     font-size: 40px;
+}
+
+#op{
+     background-color: black;
+     color: yellow;
+     height: 70px;  
+     width: 70px;
+     font-size: 40px;
+}
+
+#res{
+     background-color: black;
+     color: yellow;
+     height: 70px;  
+     width: 200px;
+     font-size: 40px;
+}
