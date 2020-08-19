@@ -7,7 +7,7 @@ function fioToName(fio) {
     if (!fio) {
         throw new Error("The string is empty!");
     }
-    let[surname, name, middlename] = fio.split(" ");
+    let[surname, name] = fio.split(" ");
     return name + " " + surname;
 }
 
@@ -18,14 +18,7 @@ function filterUnique(arr) {
     if (arr.length == 0) {
         return arr;
     }
-    const uniqueValue = new Set();
-    for (let value of arr) {
-        uniqueValue.add(value);
-    }
-    arr = [];
-    for (let value of uniqueValue) {
-        arr.push(value);
-    }
+    arr = [...new Set(arr)]
     return arr;
 }
 
@@ -88,10 +81,8 @@ class Dictionary {
     }
 
     addToDictionary(stringKey,stringValue) {
-        console.log(this.map);
         if (typeof(stringKey) === "string" && typeof(stringValue) === "string") {
             this.map.set(stringKey, stringValue);
-            console.log(this.map);
         }
         return this.map;
     }
