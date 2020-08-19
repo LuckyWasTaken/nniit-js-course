@@ -1,20 +1,20 @@
+const num1=document.getElementById('num1')
+const op=document.getElementById('op')
+const num2=document.getElementById('num2')
+const resLink=document.getElementById('res')
+
 function calculator(){
-    const num1=document.getElementById('num1').value
-    const op=document.getElementById('op').value
-    const num2=document.getElementById('num2').value
-    
-    if(num1!="" && num2!="" && op!="**")
+
+    if(num1.value!="" && num2.value!="" && op.value!="**")
     {
-        document.getElementById('res').innerText=String(eval(num1+op+num2))  
+        resLink.innerText=String(eval(num1.value+op.value+num2.value))  
     }
-    else if(num1!="" && num2!="" && op=="**")
+    else if(num1.value!="" && num2.value!="" && op.value=="**")
     {
-        document.getElementById('res').innerText=String(Math.pow(num1,num2))
-    }
-           
+        resLink.innerText=String(Math.pow(num1.value,num2.value))
+    }      
     else
     {
-        document.getElementById('res').innerText="Nan"  
-    }
- 
+        resLink.innerText="Nan"  
+    }  
 }
