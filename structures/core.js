@@ -14,8 +14,7 @@ function capitalize(str) {
       let word = item[0].toUpperCase() + item.substring(1) + " ";
       newStr += word;
     }
-  })
-
+  });
   return newStr;
 }
 
@@ -37,19 +36,22 @@ function isEmpty(obj) {
     count ++;
   }
 
-  if (count == 0)
-    console.log("Объект пуст");
-  else
-    console.log("Объект не пуст");
+  if (count == 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) {
   for (let key in obj)  {
-    if (typeof(obj[key]) == "number")
+    if (typeof(obj[key]) == "number") {
       obj[key] = obj[key]*2
-      console.log("Ключ: " + key + " значение: " + obj[key]);
+    }  
   }
+  return obj;
  }
 
 //Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
@@ -62,27 +64,32 @@ function sumArr(arr) {
  }
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
-function isPali(str){
+function isPali(str) {
   let subStr = "";
   let pos = 0;
   let isPali = 0;
   
-  for (let i = str.length-1; i >= str.length/2; i--){
+  for (let i = str.length-1; i >= str.length/2; i--) {
     subStr += str[i];
   }
   
-  for (pos in subStr){
+  for (pos in subStr) {
     if (subStr[pos] == str[pos])
       isPali = 1;
-    else{
+    else {
       isPali = 0;
-      break;}
+      break;
+    }
   }
 
-  if (isPali == 0)
+  if (isPali == 0) {
     console.log("Слово не является палиндромом.");
-  else
+    return false;
+  }
+  else {
     console.log("Слово является палиндромом.");
+    return true;
+  }
 }
 
 
