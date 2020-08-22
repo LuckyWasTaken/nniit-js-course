@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>MixedTask</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <h2 align="center">Фильтр таблицы с данными по UserId</h2>
+        <form align="center" id="form">
+            <p><input id="inputedUserId"></p>
+            <p><input class="Button" type="submit" value="Найти"></p>
+            <p><button class="Button" type="button" id="flushButton">Очистить</button></p>
+        </form>     
+        <table border="1px" align="center" id="tableData">
+            <tr>
+                <th class="Th" id="thN">№</th>
+                <th class="Th" id="thUserId">UserId</th>
+                <th class="Th" id="thId">Id</th>
+                <th class="Th" id="thTitle">Title</th>
+                <th class="Th" id="thCompleted">Completed</th>
+            </tr>
+        </table>   
+        <script src="./index.js"></script>
+    </body>
+</html>

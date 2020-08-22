@@ -1,0 +1,22 @@
+#thN{
+    width: 10%
+}
+#thUserId{
+    width: 10%
+}
+#thId{
+    width: 10%
+}
+#thTitle{
+    width: 60%
+}
+#thCompleted{
+    width: 10%
+}
+.Th{
+    background-color: whitesmoke;
+}
+.Button{
+    height: 20px;
+    width: 100px;
+}
