@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src = "index.js"></script>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>Калькулятор</header>
+    <div class = "calculator">
+        <input  id="first-number", oninput="onFirstNumberInput()">  
+        <select id="action", onchange="onActionChange()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input id="second-number", oninput="onSecondNumberInput()">    
+        <label id="result"></label>   
+    </div>
+
+
+</body>
+</html>
