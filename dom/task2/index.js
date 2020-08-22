@@ -13,7 +13,7 @@ class Calculator{
         else
             alert("not a number!")
       }
-
+ 
       setSecondNumber(num){
         if(!isNaN(num))
             this.secondNumber = Number(num);

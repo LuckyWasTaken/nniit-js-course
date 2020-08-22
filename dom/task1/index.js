@@ -4,4 +4,4 @@ function setRedColor() {
 
 function setBlueColor() {
     document.getElementById("fishText").style.color = "blue"
-   }
+   } 
