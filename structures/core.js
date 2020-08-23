@@ -1,31 +1,25 @@
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
 function capitalize(str) {
   let arr = str.split(' ');
+  let newArr = [];
   let newStr = "";
 
   arr.forEach(function (item, index, array) {
-    if (item === "")
-        return newStr;
-    else if (index === array.length - 1) {
-      let word = item[0].toUpperCase() + item.substring(1);
-      newStr += word;
+    if (item !== "") {
+      newArr.push(item[0].toUpperCase() + item.substring(1));
     }
-    else {
-      let word = item[0].toUpperCase() + item.substring(1) + " ";
-      newStr += word;
-    }
-  });
-  return newStr;
-}
+    });
+    newStr = newArr.join(' ');
+    console.log(newStr)
+    return newStr;
+  }
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
   if (n <= str.length) {
     let newStr = str.slice(0, n) + "...";
-    return newStr;
   }
-  else
-    return str;
+  return str;
 }
 
 //Определите, пуст ли объект
@@ -39,9 +33,7 @@ function isEmpty(obj) {
   if (count == 0) {
     return true;
   }
-  else {
-    return false;
-  }
+  return count == 0
 }
 
 //Напишите функцию, умножающую численные свойства на 2
@@ -56,40 +48,22 @@ function multiply(obj) {
 
 //Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
 function sumArr(arr) {
-  let res = arr.reduce(function(sum, cur) {
+  const res = arr.reduce(function(sum, cur) {
     return sum + cur;
   }, 0);
-
   return res;
  }
 
 //Напишите функцию, определяющую, является ли данное слово палиндромом
 function isPali(str) {
-  let subStr = "";
-  let pos = 0;
-  let isPali = 0;
+  let reverseStr = "";
   
-  for (let i = str.length-1; i >= str.length/2; i--) {
-    subStr += str[i];
-  }
-  
-  for (pos in subStr) {
-    if (subStr[pos] == str[pos])
-      isPali = 1;
-    else {
-      isPali = 0;
-      break;
+  for (let i = str.length-1; i >= 0; i--) {
+    reverseStr += str[i];
     }
-  }
-
-  if (isPali == 0) {
-    console.log("Слово не является палиндромом.");
-    return false;
-  }
-  else {
-    console.log("Слово является палиндромом.");
-    return true;
-  }
+    if (reverseStr !== str) {
+      return false;
+    }
 }
 
 
