@@ -1,0 +1,131 @@
+/*Day*/
+.day {
+  background-image: url("Day.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.day .heading {
+  margin: 43px;
+  background-color: rgb(240, 236, 202);
+  background-size: cover;
+  opacity: 0.5;
+  filter: alpha(Opacity=50);
+  background-size: cover;
+  color: rgb(3, 7, 71);
+  font-family: sans-serif, bold;
+  font-size: 30;
+  font-weight: 900;
+}
+
+.day .content {
+  margin: 43px;
+  background-color: rgb(240, 236, 202);
+  background-size: cover;
+  opacity: 0.55;
+  filter: alpha(Opacity=55);
+  color: rgb(3, 5, 71);
+  font-family: sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.day .button-day {
+  margin-top: 20px;
+  margin-left: 45px;
+  background-color: rgb(241, 234, 168);
+  opacity: 0.5;
+  filter: alpha(Opacity=50);
+  color: rgb(3, 7, 71);
+  width: 900;
+  height: 400;
+  text-align: center;
+  border-color: rgb(29, 3, 126);
+  border-radius: 2px;
+  font-family: sans-serif, bold;
+  font-size: 21px;
+  font-weight: 800;
+}
+.day .button-night {
+  margin-top: 20px;
+  margin-left: 2px;
+  background-color: rgb(73, 48, 187);
+  opacity: 0.63;
+  filter: alpha(Opacity=63);
+  color: rgb(225, 236, 70);
+  width: 900;
+  height: 400;
+  text-align: center;
+  border-color: lemonchiffon;
+  border-radius: 2px;
+  font-family: sans-serif, bold;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+/*Night*/
+.night {
+  background-image: url("Night.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.night .heading {
+  margin: 43px;
+  background-color: rgb(73, 48, 187);
+  background-size: cover;
+  opacity: 0.55;
+  filter: alpha(Opacity=55);
+  background-size: cover;
+  color: rgb(225, 236, 70);
+  font-family: sans-serif, bold;
+  font-size: 30;
+  font-weight: 900;
+}
+
+.night .content {
+  margin: 43px;
+  background-color: rgb(58, 54, 121);
+  background-size: cover;
+  opacity: 0.63;
+  filter: alpha(Opacity=63);
+  color: rgb(234, 250, 7);
+  font-family: sans-serif;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.night .button-day {
+  margin-top: 20px;
+  margin-left: 45px;
+  background-color: rgb(241, 234, 168);
+  opacity: 0.5;
+  filter: alpha(Opacity=50);
+  color: rgb(3, 7, 71);
+  width: 900;
+  height: 400;
+  text-align: center;
+  border-color: rgb(29, 3, 126);
+  border-radius: 2px;
+  font-family: sans-serif, bold;
+  font-size: 21px;
+  font-weight: 800;
+}
+.night .button-night {
+  margin-top: 20x;
+  margin-left: 2px;
+  background-color: rgb(73, 48, 187);
+  opacity: 0.63;
+  filter: alpha(Opacity=63);
+  color: rgb(225, 236, 70);
+  width: 900;
+  height: 400;
+  text-align: center;
+  border-color: lemonchiffon;
+  border-radius: 2px;
+  font-family: sans-serif, bold;
+  font-size: 21px;
+  font-weight: 800;
+}
