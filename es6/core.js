@@ -69,7 +69,7 @@ class Dictionary {
         this._store.set(word, translate);
     }
 
-    getTransplate(word) {
+    getTranslate(word) {
         if (typeof word !== 'string') return null;
         return this._store.get(word);
     }
