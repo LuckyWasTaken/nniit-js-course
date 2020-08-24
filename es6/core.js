@@ -21,8 +21,17 @@ function filterUnique(arr) {
 // сотрудника превышает зарплату самого низкооплачиваемого
 // присмотритесь к методу .reduce
 function calculateSalaryDifference(array) {
-    if (array.length === 0)
-        return false;
+    if (array.length > 0) {
+        let maxsalary = array.reduce((max, cur) => {
+            return (cur > max ? cur : max);
+       }, array [0]);
+        let minsalary = array.reduce((min, cur) => {
+            return (cur < min ? cur : min);
+       }, array [0]);
+       return maxsalary/minsalary;
+    } 
+ } 
+       /*return false;
     let max = array[0];
     let min = array[0];
     reducmax = (max, cur) => (cur > max) ? max = cur : max;
@@ -30,7 +39,7 @@ function calculateSalaryDifference(array) {
     max = array.reduce(reducmax);
     min = array.reduce(reducmin);
     return max/min;
-}
+}*/
 
 // Задачка с собеседований fooBar
 // Напишите функцию, которая принимает n
@@ -38,10 +47,10 @@ function calculateSalaryDifference(array) {
 // чисел, которые делятся на 5 — "Bar", а на 15 — "FooBar"
 // * покройте тестами
 function fooBar() {
-    let array = []
+    const array = []
     for (let i = 1; i < n; i++) {
     
-            if (!(i % 3) & !(i % 5)) {
+            if (i % 15 == 0){
                 array.push('foobar');
             } else if (!(i % 3)) {
                 array.push('foo');
