@@ -1,0 +1,29 @@
+<html>
+<head>
+	<link rel="stylesheet" href="css/styles.css" type="text/css">
+	<script async src="index.js"></script>
+
+</head>
+<body>
+		<div class="wrapper">
+	
+		<div class="content">
+				<p>Simple calc</p>
+				<input id="left" type = 'number' oninput="calculate()"> 
+
+				<select onchange="calculate()" id='action'>
+						<option id="add">+</option>
+						<option id="sub">-</option>-</option>
+						<option id="mul">*</option>
+						<option id="div">/</option>
+				</select>
+
+				<input id="right" type = 'number' oninput="calculate()">
+				 =
+				<div id="result"> </div>
+
+			</div>
+
+		</div>
+</body>
+</html> 
