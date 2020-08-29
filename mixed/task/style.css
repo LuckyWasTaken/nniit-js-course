@@ -1,0 +1,18 @@
+form {
+    margin: 20px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse; 
+    border: 1px solid grey; 
+    align-items: center;
+    margin: auto;
+    padding: 10px 15px;
+}
+
+th, td {
+    border: 1px solid grey;
+    padding: 0px 5px;
+    text-align: center;
+}
