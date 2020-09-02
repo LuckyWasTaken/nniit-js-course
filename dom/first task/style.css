@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+}
+
+.lyrics {
+  display: inline-block;
+  text-align: left;
+  margin: auto;
+  line-height: 1.6;
+}
+
+
+.lyrics p {
+  white-space: pre;
+}
+
+.centered {
+  text-align: center;
+}
