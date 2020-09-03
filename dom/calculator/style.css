@@ -1,0 +1,30 @@
+.simpleCalc {
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.simpleCalc .title {
+  margin-top: 10px;
+  margin: 25;
+  background-color: rgba(242, 247, 216, 0.651);
+  font-family: sans-serif, bold;
+  font-size: 40px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.simpleCalc .number-input {
+  margin-top: 13px;
+  background-color: rgb(180, 197, 103);
+  opacity: 0.8;
+  font-family: sans-serif, bold;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.simpleCalc .calculator {
+  text-align: center;
+}
