@@ -29,8 +29,8 @@ class Point3D extends Point
 }
 class Node
 {
-    previous;
-    next;
+    previous=null;
+    next=null;
     constructor(val)
     {
         this.val=val;
@@ -39,11 +39,11 @@ class Node
 // Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала
 class Queue 
 {
-    first;
-    last;
+    first=null;
+    last=null;
     add(node)
     {
-        if(this.first==undefined && this.last==undefined)
+        if(this.first==null && this.last==null)
         {
             this.first=this.last=node;
         }
@@ -55,9 +55,9 @@ class Queue
     }
     remove()
     {
-        if(this.first==undefined)
+        if(this.first==null)
         {
-            return undefined;
+            return null;
         }
         else
         {
@@ -65,17 +65,16 @@ class Queue
             if(this.first!=this.last)
             {
                 this.first=this.first.next;
-                this.first.previous=undefined;
+                this.first.previous=null;
             }
             else
             {
-                this.first=this.last=undefined;
+                this.first=this.last=null;
             }
             return result;
         }
     }
 }
-
 module.exports = {
     Point,
     Point3D,

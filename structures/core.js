@@ -1,40 +1,39 @@
+function isLetter(symbol)
+{
+  return symbol.match( /^[A-Za-zа-яА-Я]+$/)
+}
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
 function capitalize(str) 
 {
-  letters = /^[A-Za-zа-яА-Я]+$/;
-  for(i=0;i<str.length;i++)
+  if(isLetter(str[0]))
+    str=str[0].toUpperCase() + str.substr(1);
+  for(let i=1;i<str.length;i++)
   {
-    if(str[i].match(letters) && (i==0 || !str[i-1].match(letters)))
+    if(!isLetter(str[i-1]) && isLetter(str[i]))
     {
       str=str.substr(0, i) + str[i].toUpperCase() + str.substr(i+1);
     }
   }
   return str
 }
-
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) 
 {
   if(n>str.length)
     return str;
-  else
-    return str.substr(0,n)+"...";
+  return str.substr(0,n)+"...";
 }
-
 //Определите, пуст ли объект
 function isEmpty(obj) 
 {
-  if(Object.keys(obj).length===0)
-    return true;
-  else
-    return false;
+  return !Object.keys(obj).length
 }
 
 //Напишите функцию, умножающую численные свойства на 2
 function multiply(obj) 
 {
-  keys=Object.keys(obj)
-  for(i=0;i<keys.length;i++)
+  let keys=Object.keys(obj)
+  for(let i=0;i<keys.length;i++)
   {
     if(typeof obj[keys[i]] =="number")
     {
@@ -47,8 +46,8 @@ function multiply(obj)
 //Напишите функцию, считающую сумму всех элементов массива (желательно использовать reduce)
 function sumArr(arr) 
 {
-  sum=0
-  for(i=0;i<arr.length;i++)
+  let sum=0
+  for(let i=0;i<arr.length;i++)
   {
     sum+=arr[i]
   }
@@ -76,4 +75,3 @@ module.exports = {
   sumArr,
   isPali
 };
-console.log(capitalize("привет"))
