@@ -4,7 +4,7 @@
 // Напишите функцию, которая принимает ФИО пользователя и возвращает
 // строку формата Имя Фамилия
 function fioToName(str) {
-    let arr = str.split(" ");
+    const arr = str.split(" ");
     return arr[1] + " " + arr[0]
 }
 
@@ -23,14 +23,9 @@ function filterUnique(arr) {
 function calculateSalaryDifference(arraySalary) {
     if(arraySalary.length === 0) return false;
 
-    let maxSalary = arraySalary.reduce(function (previousValue, currentValue) {
-        if(previousValue <= currentValue) return currentValue;
-        return previousValue;  
-    }, 0);
-    let minSalary = arraySalary.reduce(function (previousValue, currentValuee) {
-        if(previousValue >= currentValuee) return currentValue;
-        return previousValue;
-    });
+    let maxSalary = arraySalary.reduce((previousValue, currentValue) => currentValue > previousValue ? currentValue : previousValue);
+    let minSalary = arraySalary.reduce((previousValue, currentValue) => currentValue < previousValue ? currentValue : previousValue);
+
     return maxSalary / minSalary;
 }
 
