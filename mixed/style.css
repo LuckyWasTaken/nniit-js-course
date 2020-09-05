@@ -1,0 +1,67 @@
+.field {
+  margin-top: 30px;
+  margin-left: 20px;
+  background-color: rgb(233, 235, 250);
+  font-size: 25px;
+  font-family: serif;
+  font-weight: 700;
+  color: rgb(59, 47, 141);
+}
+
+.field .number-field {
+margin-left: 20px;
+height: 25px;
+width: 170px;
+background-color: rgb(221, 229, 250);
+border: 1.5px solid;
+border-color:  rgb(75, 0, 130);
+border-radius: 3px;
+font-family: serif;
+font-size: 23px;
+color: rgb(72, 61, 139);
+font-weight: 600;
+}
+
+.field .table {
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 3px;
+  background-color: rgb(221, 229, 250);
+  border: 1.5px solid rgb(61, 28, 121);
+  border-spacing: 10px 35px;
+  font-size: 20px;
+  font-family: serif;
+  font-weight: 350;
+}
+
+.field .head {
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 24px;
+  border-spacing: 10px 35px;
+  font-family: serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.field .tableStyle {
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: serif;
+  font-weight: 100;
+  text-align: center;
+}
+
+.field .button {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(221, 229, 250);
+  border: 1.5px solid;
+  border-color:  rgb(75, 0, 130);
+  border-radius: 3px;
+  font-family: serif;
+  font-size: 23px;
+  color: rgb(72, 61, 139);
+  font-weight: 600;
+}
