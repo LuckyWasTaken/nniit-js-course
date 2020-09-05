@@ -18,20 +18,22 @@ function calculateResult(firstNumber, operator, secondNumber) {
     if (isNaN(firstNumber) || isNaN(secondNumber)) {
         return 0;
     }
-    if (operator === '+') {
-        return firstNumber + secondNumber;
-    } else if (operator ===  '-') {
-        return firstNumber - secondNumber;
-    } else if (operator ===  '*') {
-        return firstNumber * secondNumber;
-    } else if (operator ===  '/') {
-        return firstNumber / secondNumber;
-    }
-    else if (operator ===  '%') {
-        return firstNumber % secondNumber;
-    }
-    else {
-        return 0;
+    switch (operator) {
+        case '+':
+            return firstNumber + secondNumber;
+            break;
+        case '-':
+            return firstNumber - secondNumber;
+            break;
+        case '*':
+            return firstNumber * secondNumber;
+            break;
+        case '/':
+            return firstNumber / secondNumber;
+            break;
+        case '%':
+            return firstNumber % secondNumber;
+            break;
     }
 }
 
