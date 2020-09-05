@@ -2,11 +2,7 @@
 function isInteger(n) {
     let roundNum = n & n;
 
-    if (roundedNum != n)
-        return false;
-
     return roundNum === n;
-
 }
 
 //Напишите функцию, которая возвращает массив четных чисел от 2 до 20 включительно
