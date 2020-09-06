@@ -36,11 +36,40 @@ describe('es6', () => {
         });
     });
 
+    describe('#fooBar', () => {
+        it('Массив корректен', () => {
+            assert.deepEqual(core.fooBar(20),[
+                1,     2,     'Foo',
+                4,     'Bar', 'Foo',
+                7,     8,     'Foo',
+                'Bar', 11,    'Foo',
+                13,    14,    'FooBar',
+                16,    17,    'Foo',
+                19,    'Bar'
+              ]);
+        });
+    });
+
     describe('#Dictionary', () => {
         it('экземпляр класса создается', () => {
             const dic = new core.Dictionary();
 
             assert.equal(!!dic, true);
+        });
+        it('Элемент добавляется', () => {
+            const dic = new core.Dictionary();
+            let key="aaa";
+            let val="bbb"
+            dic.set(key,val);
+            assert.deepEqual(dic.getVal(key),val);
+        });
+        it('Элемент удаляется', () => {
+            const dic = new core.Dictionary();
+            let key="aaa";
+            let val="bbb"
+            dic.set(key,val);
+            dic.delete(key);
+            assert.deepEqual(dic.getVal(key),undefined);
         });
     });
 });
