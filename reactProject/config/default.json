@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "jwtSecret": "react",
+    "mongoUri": "mongodb+srv://Marina:2112@cluster0.vg5ag.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority"
+}

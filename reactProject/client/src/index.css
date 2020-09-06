@@ -1,0 +1,22 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+input.deep-purple-input {
+  border-bottom: 1px solid #fff!important;
+  box-shadow: 0 1px 0 0 solid #fff!important;
+
+}
+
+input.deep-purple-input + label {
+  color:  #fff!important;
+}
+
+input.deep-purple-input:focus + label {
+  color:#bb9cf5!important;
+}
+
+
+input.deep-purple-input:focus {
+  border-bottom: 1px solid #bb9cf5!important;
+  box-shadow: 0 1px 0 0 solid #bb9cf5!important;
+
+}
