@@ -43,7 +43,7 @@ class Queue
     last=null;
     add(node)
     {
-        if(this.first==null && this.last==null)
+        if(!this.first && !this.last)
         {
             this.first=this.last=node;
         }
