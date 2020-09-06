@@ -1,0 +1,51 @@
+body{  
+    background-color: rgb(176, 208, 255);          
+  }
+
+#p {
+    color: blue;
+    margin: 25px;
+    font-size: 30px;
+}
+#userId{
+    height: 30px;
+    right: 100px;
+    font-size: 20px;
+    margin: 25px; 
+    background-color: rgb(4, 87, 197);
+    color: white;
+}
+
+#button{
+     height: 30px; 
+     font-size: 20px; 
+     background-color:rgb(4, 87, 197); 
+     color: white;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 5px solid blue; 
+}
+
+thead{
+    background-color: rgb(4, 87, 197);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+tbody{
+    text-align: center;
+    color: blue;
+    font-size: 16px;
+}
+
+th{
+    letter-spacing: 1px;
+}
+
+td{
+    letter-spacing: 2px;
+}

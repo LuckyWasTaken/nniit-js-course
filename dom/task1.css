@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(255, 239, 253);
+}
+
+#h2{
+    margin: 30px
+}
+
+#blueButton{
+    height: 50px;
+    width: 90px;
+    font-size: 25px;
+    margin: 30px;
+    background-color: rgb(162, 234, 243);
+    color: blue;
+    border-color: blue;
+    border-radius: 20;
+}
+
+#grayButton{
+    height: 50px;
+    width: 90px;
+    font-size: 25px;
+    margin: 30px;
+    background-color: rgb(209, 218, 208);
+    color: rgb(62, 63, 62);
+    border-color: rgb(62, 63, 62);
+    border-radius: 30;
+}
