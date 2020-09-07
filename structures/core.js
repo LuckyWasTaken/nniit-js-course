@@ -13,16 +13,13 @@ function truncate(str, n) {
     return str;
   }
 
-  return str.substring(0, 26) + "...";
+  return str.substring(0, n) + "...";
 }
 
 //Определите, пуст ли объект
 function isEmpty(obj) {
-  if (Object.keys(obj).length > 0) {
-    return false
-  }
-
-  return true
+  
+  return !Object.keys(obj).length
 }
 
 //Напишите функцию, умножающую численные свойства на 2
