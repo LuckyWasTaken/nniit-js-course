@@ -1,22 +1,22 @@
-#thN{
+#table-data-th-number{
     width: 10%
 }
-#thUserId{    
+#table-data-th-user-id{
     width: 10%
 }
-#thId{
+#table-data-th-id{
     width: 10%
 }
-#thTitle{
+#table-data-th-title{
     width: 60%
 }
-#thCompleted{
+#table-data-th-completed{
     width: 10%
 }
-.Th{
+.table-data-th{
     background-color: whitesmoke;
 }
-.Button{
+.form-button{
     height: 20px;
     width: 100px;
-} 
+}
