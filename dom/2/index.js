@@ -1,6 +1,6 @@
 function getInputVal(name) {
-    let inFirst = document.getElementById(name)
-    let allowed = /[0-9.]/
+    const inFirst = document.getElementById(name)
+    const allowed = /[0-9.]/
     let str = inFirst.value
     for (let i = 0; i < str.length; i++) {
         if (!str[i].match(allowed))
@@ -14,9 +14,9 @@ function getInputVal(name) {
     return val
 }
 function onInput() {
-    let operation = document.getElementById("operation").value;
-    let valFirst = getInputVal("inFirst");
-    let valSecond = getInputVal("inSecond");
+    const operation = document.getElementById("operation").value;
+    const valFirst = getInputVal("inFirst");
+    const valSecond = getInputVal("inSecond");
     let result = 0
     switch (operation) {
         case '+':

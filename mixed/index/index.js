@@ -4,14 +4,12 @@ async function get(params) {
             response => { return response.json(); }
         )
     let table = document.getElementById("tableResult")
-    table.innerHTML="";
+    table.innerHTML = "";
     let userId = document.getElementById("inpId").value;
+    result = result.filter(record => record['userId'] == userId);
     for (let i = 0; i < result.length; i++) {
-        if (result[i]['userId'] == userId) {
-            let row = table.insertRow();
-            let cell = row.insertCell(0);
-            cell.appendChild(document.createTextNode(JSON.stringify(result[i])))
-        }
-        console.log(result[i])
+        let row = table.insertRow();
+        let cell = row.insertCell(0);
+        cell.appendChild(document.createTextNode(JSON.stringify(result[i])))
     }
 }
