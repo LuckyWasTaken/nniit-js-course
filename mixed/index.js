@@ -18,11 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 foundData = [...data];
             }
             else {
-                for (datum of data){
-                    if (datum[`userId`].toString() == input.value){
-                        foundData.push(datum);
-                    }
-                }
+                foundData = data.filter(function(datum){return datum[`userId`].toString() == input.value});
             }
             createTableData(foundData, tableData, tablerows);
         });
@@ -68,6 +64,6 @@ const flushTablerows = (tablerows) => {
 }
 
 const flushInput = (input) => {
-    console.log("fluush")
+    console.log("fluush")  
     input.value = "";
-}
+} 
