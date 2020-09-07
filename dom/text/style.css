@@ -1,0 +1,17 @@
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.but1{
+    margin-right: 20px;
+}
+.text{
+    text-align: center
+}
+.button{
+    min-width: 300px;
+    height: 44px;
+    margin: 5px;
+}
