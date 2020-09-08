@@ -1,8 +1,14 @@
-<p>first value<input type="text" id="a"></p>
-<p>second value<input type="text" id="b"></p>
-<button onclick="sum()">+</button>
-<button onclick="minus()">-</button>
-<button onclick="mul()">X</button>
-<button onclick="div()">/</button>
-<hr>
-<p>Result: <span id="out"></span></p>
+<input id="a" />
+
+<div id="operator_btns">
+  <button id="plus" class="operator" onclick="operator='+'">+</button>
+  <button id="minus" class="operator" onclick="operator='-'">-</button>
+  <button id="times" class="operator" onclick="operator='*'">x</button>
+  <button id="divide" class="operator" onclick="operator='/'">:</button>
+</div>
+
+<input id="b" />
+
+<button onclick="out()">Result</button>
+
+<p id="result"></p>
