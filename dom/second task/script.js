@@ -1,39 +1,28 @@
-let a; 
-let b;   
-let out = document.getElementById('out');
- 
-function sum() {
- a = document.getElementById('a').value; 
- a = parseInt(a)
- b = document.getElementById('b').value;
- b = parseInt(b)
- 
- out.innerHTML = a + b;
-}
- 
-function minus() {
- a = document.getElementById('a').value; 
- a = parseInt(a)
- b = document.getElementById('b').value;
- b = parseInt(b)
- 
- out.innerHTML = a - b;
-}
- 
-function mul() {
- a = document.getElementById('a').value; 
- a = parseInt(a)
- b = document.getElementById('b').value;
- b = parseInt(b)
- 
- out.innerHTML = a * b;
-}
- 
-function div() {
- a = document.getElementById('a').value; 
- a = parseInt(a)
- b = document.getElementById('b').value;
- b = parseInt(b)
- 
- out.innerHTML = a / b;
-}
+let operator;
+  function out() {
+    let result;
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    switch (operator) {
+      case '+':
+        result = a + b;
+        break;
+      case '-':
+        result = a - b;
+        break;
+      case '*':
+        result = a * b;
+        break;
+      case '/':
+        if (b) {
+          result = a / b;
+        } else {
+          result = 'NaNa';
+        }
+        break;
+      default:
+        result = 'Choice +/-/*/:';
+    }
+
+    document.getElementById("result").innerHTML = result;
+  }
