@@ -1,10 +1,10 @@
+
 document.addEventListener("DOMContentLoaded", () => {
-    const requestBtn = document.getElementById("getRequestBtn");
-    requestBtn.addEventListener('click', e => {
-        e.preventDefault();
+    requestBtn = document.getElementById("getRequestBtn");
+    requestBtn.addEventListener('click', () => {
         getInfo();
         });
-    const indexInput = document.getElementById("index");
+    indexInput = document.getElementById("index");
     indexInput.addEventListener('change', () => {
         clearTable();
     });
@@ -16,7 +16,7 @@ function getInfo(){
 }
 
 function getId(){
-    let id = document.getElementById("index").value;
+    let id = indexInput.value;
     if(id===""){
         alert("empty input");
     }
