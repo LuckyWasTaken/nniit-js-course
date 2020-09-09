@@ -1,0 +1,25 @@
+.calculator{
+    justify-content: center;
+    margin: 150px auto;
+    width: 700px;
+    padding: 30px;
+}
+
+.input{
+    margin: 30px 20px 30px 30px;
+    padding-left: 8px;
+    border-radius: 4px;
+    min-width: 60px;
+    height: 35px;
+    font-size: 10pt;
+}
+
+#operator {
+    min-width: 120px;
+    height: 30px;
+}
+
+#result {
+    margin-left: 10px;
+    font-size: 12pt;
+}
