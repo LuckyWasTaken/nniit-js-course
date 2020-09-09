@@ -1,0 +1,50 @@
+:root{
+    --red1: 255;
+    --blue1: 255;
+    --green1: 255;
+    --red2: 0;
+    --blue2: 0;
+    --green2: 112;
+    --red3: 63;
+    --blue3: 0;
+    --green3: 136;
+    --red4: 0;
+    --blue4: 0;
+    --green4: 0;
+  }
+
+body {
+    background: rgb(var(--red1), var(--blue1), var(--green1));
+}
+
+form {
+    margin-top: 100px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+caption{
+    margin-bottom: 15px;
+    font-size: 150%;
+    color: rgb(var(--red2), var(--blue2), var(--green2));
+}
+
+table {
+    border-collapse: collapse; 
+    border: 3px solid rgb(var(--red3), var(--blue3), var(--green3));
+    align-items: center;
+    margin: auto;
+    width: 700px;
+    padding: 10px 15px;
+}
+
+th, td {
+    border: 2px solid grey;
+    padding: 0px 5px;
+    color: rgb(var(--red4), var(--blue4), var(--green4));
+}
+
+h3 {
+    color: darkred;
+    text-align: center;
+}
