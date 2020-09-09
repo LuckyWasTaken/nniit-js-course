@@ -1,0 +1,36 @@
+body {
+    background: #ffefd5;
+}
+
+.blue_button {
+    width:200px;
+    height:30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align-last: center;
+}
+
+.green_button {
+    width:200px;
+    height:30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align-last: center;
+}
+
+.red_button {
+    width:200px;
+    height:30px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align-last: center;
+}
+
+.text {
+    width:600px;
+    height:200px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    text-align-last: center;
+    font-size: 180%;
+}
