@@ -1,0 +1,13 @@
+body {
+    color: black;
+    margin: 30px;
+    background-image: url(2.jpg);
+    background-repeat: no-repeat; 
+    background-position: top center;
+}
+#orangeButton {
+    color: rgb(99, 42, 4);
+}
+#redButton {
+    color : rgb(133, 16, 16);
+}

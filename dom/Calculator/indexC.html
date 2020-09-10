@@ -1,0 +1,24 @@
+<html>
+    <head>
+         <title>Calculator</title>
+    </head>
+
+    <body>
+        <form>
+            <h4>"Калькулятор"</h4>
+            <input id="first" type="number" oninput="calculator()">
+            <select id="operation" onchange="calculator()">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="**">**</option>
+                <option value="%">%</option>
+            </select>
+            <input id="second" type="number" oninput="calculator()">
+            <label>=</label>
+            <output id="result" oninput="calculator()"></output>
+        </form>
+       <script src="./indexC.js"></script>
+    </body>
+</html> 
