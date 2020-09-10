@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+    background-image:url(image_back2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+form {
+    text-align: left;
+}
+
+#userID {
+    width:200px;
+    height:35px;
+    
+    text-align-last: center;
+    font-size: large;
+    color: #13a1e2;
+}
+
+#requestBtn {
+    font-weight: 700;
+    color: #13a1e2;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(236, 233, 13);
+    box-shadow: 0 -3px rgb(214, 185, 17) inset;
+    transition: 0.2s;
+}
+caption{
+    font-size: 150%;
+    color: #13a1e2;
+}
+table {
+    border-collapse: collapse; 
+    border: 3px solid #13a1e2;
+    align-items: top;
+    width: 700px;
+    padding: 10px 15px;
+    float: right;
+}
+
+th {
+    font-weight: normal;
+    color: #13a1e2;
+    padding: 10px 15px;
+    }
+td {
+    color: rgb(236, 233, 13);
+    border-top: 1px solid #13a1e2;
+    padding: 10px 15px;
+}
+tr:hover td {background: #13a1e2;}
+
+#response {
+    color:  rgb(236, 233, 13);
+    text-align: left;
+    font-size: 150%;
+    font-style: oblique;
+} 
