@@ -1,22 +1,28 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 
 input.deep-purple-input {
-  border-bottom: 1px solid #fff!important;
-  box-shadow: 0 1px 0 0 solid #fff!important;
-
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 solid #fff !important;
 }
 
 input.deep-purple-input + label {
-  color:  #fff!important;
+  color: #fff !important;
 }
 
 input.deep-purple-input:focus + label {
-  color:#bb9cf5!important;
+  color: #bb9cf5 !important;
 }
 
-
 input.deep-purple-input:focus {
-  border-bottom: 1px solid #bb9cf5!important;
-  box-shadow: 0 1px 0 0 solid #bb9cf5!important;
+  border-bottom: 1px solid #bb9cf5 !important;
+  box-shadow: 0 1px 0 0 solid #bb9cf5 !important;
+}
 
+.table {
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #4527a0;
+  text-align: center;
 }
