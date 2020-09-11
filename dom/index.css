@@ -1,0 +1,25 @@
+.text {
+    width: 500px;
+    margin: 0 auto;
+}
+button.knopka1 {
+    color: #fff; 
+    background: #FFA500; 
+    padding: 10px; 
+    border-radius: 10px;
+    border: 3px solid #FF8247;
+    } 
+    button.knopka1:hover { 
+    background: #FF6347; 
+    }
+
+    button.knopka {
+        color: #fff; 
+        background: #FFA500; 
+        padding: 10px; 
+        border-radius: 10px;
+        border: 3px solid #5633d4;
+        } 
+        button.knopka:hover { 
+        background: #5206df; 
+        }
