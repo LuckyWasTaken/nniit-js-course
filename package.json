@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "mocha": "^6.0.2"
+  "devDependencies": {
+    "mocha": "^10.2.0"
   }
 }
