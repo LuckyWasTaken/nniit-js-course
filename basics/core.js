@@ -39,10 +39,24 @@ function factorial(n) {
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
+    if (n == 0){
+        return false;
+    }
+    return ((n & (n - 1)) == 0);
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
 function fibonacci(n) {
+    if (n == 0){
+        return 0;
+    }
+    if (n == 1){ 
+        return 1;
+    }
+    if(n == 2){ 
+        return 1;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 module.exports = {
