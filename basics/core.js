@@ -63,3 +63,4 @@ function fibonacci(n) {
 module.exports = {
     isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
 }
+// ok seems done. made by grigory from 20 PI-1
