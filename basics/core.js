@@ -23,28 +23,17 @@ function sumTo(number) {
 
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
-    if (n === 0) {
-        return 0;
-	}
-    else {
-        return n + recSumTo(n - 1);
-	}
+    return n === 0 ? 0 : n + recSumTo(n - 1);
 }
 
 //Напишите функцию, считающую факториал заданного числа
 function factorial(n) {
-    if (n === 0 || n === 1) {
-        return 1
-	}
-    return n * factorial(n - 1)
+    return n === 0 || n === 1 ? 1 : n * factorial(n - 1);
 }
 
 //Напишите функцию, которая определяет, является ли число двойкой, возведенной в степень
 function isBinary(n) {
-    if (n === 0) {
-        return false;
-	}
-    return (n & (n - 1)) === 0;
+	return n == 0 ? false : (n & (n - 1)) === 0;
 }
 
 //Напишите функцию, которая находит N-е число Фибоначчи
@@ -52,7 +41,10 @@ function fibonacci(n) {
     if (n < 0) {
         return undefined;
     } 
-    return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);
+	if ( n <= 1) {
+		return n;
+	}
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 module.exports = {
