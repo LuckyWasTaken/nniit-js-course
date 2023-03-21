@@ -25,7 +25,7 @@ function sumTo(n) {
 //Напишите функцию, считающую сумму чисел до заданного используя рекурсию
 function recSumTo(n) {
   if (n === 1) return n;
-  else return n + recSumTo(n - 1);
+  return n + recSumTo(n - 1);
 }
 
 //Напишите функцию, считающую факториал заданного числа
