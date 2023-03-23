@@ -60,3 +60,6 @@ function fibonacci(n) {
     return prev
 }
 
+module.exports = {
+    isInteger, even, sumTo, recSumTo, factorial, isBinary, fibonacci
+}
