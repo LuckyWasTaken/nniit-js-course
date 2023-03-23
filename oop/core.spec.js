@@ -42,4 +42,26 @@ describe('ООП', () => {
             assert.equal(point.z, -3);
         });
     });
+
+    describe('#Queue', () => {
+        it('Push', () => {
+            const q = new core.Queue();
+            assert.equal(q.size, 0);
+            q.push(1);
+
+            assert.equal(q.size, 1);
+        });
+
+        it('Push, push, pop', () => {
+            const q = new core.Queue();
+            assert.equal(q.size, 0);
+
+            q.push("sdfg");
+            q.push(1.5);
+            val = q.pop()
+
+            assert.equal(q.size, 1);
+            assert.equal(val, "sdfg");
+        });
+    });
 });
