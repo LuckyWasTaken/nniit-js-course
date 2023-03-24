@@ -6,6 +6,7 @@ function capitalize(str) {
     }
     return capitalized_words.join(" ")
 }
+
  
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
 function truncate(str, n) {
