@@ -4,13 +4,13 @@ class Point
 {
     constructor(x = 0, y = 0)
     {
-        this.x = x
-        this.y = y
+        this.x = x;
+        this.y = y;
     }
     
     distance()
     {
-        return (this.x ** 2 + this.y **2) ** 0.5
+        return (this.x ** 2 + this.y **2) ** 0.5;
     }
     
 }
@@ -21,8 +21,8 @@ class Point3D extends Point
 {
     constructor(x = 0, y = 0, z = 0)
     {
-        super(x,y)
-        this.z = z
+        super(x,y);
+        this.z = z;
     }
 
 }
@@ -32,23 +32,23 @@ class Queue
 {
     constructor()
     {
-        this.data = []
+        this.data = [];
     }
     
     push(x)
     {
-        this.data.push(x)
+        this.data.push(x);
     }
     
     pop()
     {
         if (this.data.length > 0)
         {
-            return this.data.shift()
+            return this.data.shift();
         }
         else
         {
-            return null
+            return null;
         }
     }
     
