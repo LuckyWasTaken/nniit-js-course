@@ -1,9 +1,23 @@
 //Напишите функцию, которая делает первый символ строки заглавным (задание со звездочкой - капитализируйте каждое слово)
 function capitalize(str) {
-    if (str){
-        return str[0].toUpperCase() + str.slice(1);
+    let capitalized = ""
+    let isWord = false;
+    for (let symb of str){
+        // слово начинается
+        if (symb !== ' ' && !isWord){
+            isWord = true;
+            capitalized += symb.toUpperCase();
+        }
+        // слово заканчивается
+        else if (symb === ' ' && isWord){
+            isWord = false;
+            capitalized += symb;
+        }
+        else {
+            capitalized += symb;
+        }
     }
-    return '';
+    return capitalized;
 }
 
 //Напишите функцию, которая вернет строку, усеченную до n символов и добавляет в конец многоточие (если n > длина строки - ничего делать не надо)
