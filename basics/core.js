@@ -25,9 +25,8 @@ function sumTo(n) {
 function recSumTo(n) {
 if (n === 1) {
     return 1;
-  } else {
-    return n + recSumTo(n - 1);
   }
+return n + recSumTo(n - 1);
 }
 
 //Напишите функцию, считающую факториал заданного числа // Я очень надеюсь что факториал не может быть взят от отрицательного числа
@@ -55,9 +54,8 @@ function isBinary(n) {
 function fibonacci(n) {
   if (n === 0 || n === 1) {
     return n;
-  } else {
-    return fibonacci(n - 1) + fibonacci(n - 2);
   }
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 module.exports = {
