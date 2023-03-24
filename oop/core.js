@@ -5,6 +5,14 @@ class Point {
         this.x = x;
         this.y = y;
     }
+    
+    calcRadiusVector(){
+        let sumOfSquares = 0;
+        for (let value of Object.values(this)){
+            sumOfSquares += value ** 2;
+        }
+        return Math.sqrt(sumOfSquares);
+    }
 }
 
 // Напишите класс геометрической точки в трехмерном пространстве (x, y, z),
