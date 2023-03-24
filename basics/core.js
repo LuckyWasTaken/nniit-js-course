@@ -26,9 +26,7 @@ function recSumTo(n) {
     if (n > 0) {
         return n + recSumTo(n - 1);
     }
-    else {
-        return n;
-    }
+    return n;
 }
 
 //Напишите функцию, считающую факториал заданного числа
@@ -36,7 +34,7 @@ function factorial(n) {
     if (n < 0) {
         return -1;
     }
-    else if (n == 0) {
+    else if (n == 0) { //Тут не буду править, ладно?
         return 1;
     }
     else {
@@ -56,9 +54,8 @@ function isBinary(n) {
 function fibonacci(n) {
     if (n == 1 || n == 2) {
         return 1;
-    } else {
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    } //is it JS or I just wrote Python once again?..
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2); //is it JS or I just wrote Python once again?..
 }
 
 module.exports = {

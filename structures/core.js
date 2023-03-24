@@ -13,9 +13,8 @@ function capitalize(str) {
 function truncate(str, n) {
   if (n > str.length) {
     return str.slice(0, n);
-  } else {
-    return str.slice(0, n) + "...";
   }
+  return str.slice(0, n) + "...";
 }
 
 //Определите, пуст ли объект
