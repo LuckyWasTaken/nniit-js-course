@@ -21,7 +21,25 @@ class Point3D extends Point {
 }
 
 // Напишите класс "очередь", в котором можно добавить элемент в конец и получить из начала
-class Queue {}
+class Queue {  
+    
+  constructor() {
+    this.queue = [];
+    this.len = 0;
+  }
+    
+  push(x) {
+    this.queue.push(x);
+    this.len += 1;
+  }
+    
+  pop() {
+    if (this.len!=0) {
+      return this.queue.shift();
+      this.len -= 1;
+    }
+  }
+}
 
 module.exports = {
     Point,
