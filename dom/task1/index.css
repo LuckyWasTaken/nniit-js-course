@@ -1,0 +1,9 @@
+div.button {
+    border: 2px;
+    border-color: black;
+}
+
+div {
+    text-align: center;
+    margin: auto;
+}
