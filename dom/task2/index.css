@@ -1,0 +1,5 @@
+div {
+    width: 10px;
+    display: inline-block;
+    white-space:nowrap
+}
