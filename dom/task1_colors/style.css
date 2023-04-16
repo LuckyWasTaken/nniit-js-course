@@ -1,0 +1,21 @@
+.redButton {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 32px;
+}
+
+.blueButton {
+    background-color: #0000ff;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 32px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
