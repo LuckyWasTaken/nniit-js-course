@@ -1,4 +1,4 @@
-document.getElementById('resultButton').onclick = function(){
+function calculate(){
     var number1 = parseFloat(document.getElementById('number1').value);
     var number2 = parseFloat(document.getElementById('number2').value);
     var el = document.getElementById("operator");
@@ -6,7 +6,7 @@ document.getElementById('resultButton').onclick = function(){
     var result;
     
     if (Number.isNaN(number1) || Number.isNaN(number2)){
-        result = "Incorrect input!";
+        result = "";
     }
     else if (operator === '+'){
         result = number1 + number2;
@@ -28,3 +28,7 @@ document.getElementById('resultButton').onclick = function(){
     
     document.getElementById("result").innerHTML = result;
 }
+
+document.getElementById('number1').oninput = calculate;
+document.getElementById('number2').oninput = calculate;
+document.getElementById('operator').onchange = calculate;
