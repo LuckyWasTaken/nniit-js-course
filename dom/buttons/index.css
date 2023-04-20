@@ -1,0 +1,18 @@
+#text-block {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 24px;
+    padding: 12px 24px;
+    margin: 0 12px;
+}
