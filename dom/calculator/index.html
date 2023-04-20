@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator page!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <input type="number" id="first_number" oninput="calculate()" />
+    <select id="operator" onchange="calculate()">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="second_number" oninput="calculate()" />
+    <span>=</span>
+    <span id="result"></span>
+    <script src="index.js"></script>
+</body>
+
+</html>

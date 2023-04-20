@@ -1,0 +1,31 @@
+/* RANDOM STYLES GOOOOOOOOOOOOO */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+input[type="number"],
+select {
+    font-size: 20px;
+    width: 120px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+span {
+    font-size: 20px;
+    padding: 10px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+}
