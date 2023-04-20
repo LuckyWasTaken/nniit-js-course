@@ -1,0 +1,22 @@
+#button-block {
+	display: flex;
+	justify-content: center;
+}
+button {
+	font-size: 20px;
+    height: 50px;
+    width: 200px;
+    margin: 20px;
+}
+#button-red {
+	color: red;
+}
+#button-black {
+	color: black;
+}
+#text-block {
+	color: green;
+	font-size: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
