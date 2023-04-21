@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="title">Калькулятор</h1>
+
+    <input type="number" id="first-number" oninput="calculate()" placeholder="Введите число">
+
+    <select id="operation" onchange="calculate()">
+      <option value="plus">+</option>
+      <option value="minus">-</option>
+      <option value="multiply">*</option>
+      <option value="divide">/</option>
+      <option value="power">^</option>
+    </select>
+
+    <input type="number" id="second-number" oninput="calculate()" placeholder="Введите число">
+
+    <button onclick="calculate()">=</button>
+    <h2 id="result"></h2>
+    
+    <script src="./index.js"></script>
+</body>
+</html>

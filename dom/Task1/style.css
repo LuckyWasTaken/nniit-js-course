@@ -1,0 +1,21 @@
+#text-block {
+    height: 300px;
+    width: 500px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+button {
+    font-size: 18px;
+    margin: 5px;
+}
+
+#green-button {
+    color: #008a00;
+}
+
+#violet-button {
+    color: #af01af
+}

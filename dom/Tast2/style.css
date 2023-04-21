@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+  
+#title {
+    margin: 20px 0;
+}
+  
+input, select, button{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 30px;
+}
