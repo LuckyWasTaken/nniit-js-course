@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8" />
+ <title>Калькулятор</title>
+ <script src="index.js"></script>
+</head>
+<body>
+ <h1>Калькулятор</h1>
+ <input type="number" id="first_number" oninput="calculate()">
+ <select id="operation" onchange="calculate()">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+ </select>
+ <input type="number" id="second_number" oninput="calculate()">
+ <p id="ans"></p>
+</body>
+</html>
