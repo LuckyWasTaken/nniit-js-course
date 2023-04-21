@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <style>
+    /* Align all fields horizontally */
+    input, select, #result {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <input type="number" id="num1" placeholder="Enter a number">
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="number" id="num2" placeholder="Enter a number">
+  <span>=</span>
+  <div id="result"></div>
+  <script src="index.js"></script>
+</body>
+</html>
