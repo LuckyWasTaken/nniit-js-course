@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+    <head>  
+        <meta charset="utf-8">
+        <title>Task 1</title>
+        <script src="index.js"></script>
+		<link rel="stylesheet" href="index.css"> 
+    </head>
+    <body>
+        <div class="text">
+            <p id="src-text"">
+                Raznocvetnbli text
+            </p>
+		</div>
+		
+		<div class="buttons">
+			<button id="firstBtn" style="background:skyblue;margin-left:10px;height: 50px;width: calc(33% - 12px);">Нажми сюда</button>
+            <button id="secondBtn" style="background:green;margin-left:10px;height: 50px;width: calc(33% - 12px);">Нет сюда</button>
+
+				
+			<script>
+				firstBtn.addEventListener("click", SetTextColor.bind(null, "firstBtn"));
+				firstBtn.addEventListener("click", RandButtonColor.bind(null, "firstBtn"));
+				
+				secondBtn.addEventListener("click", SetTextColor.bind(null, "secondBtn"));
+				secondBtn.addEventListener("click", RandButtonColor.bind(null, "secondBtn"));
+			</script>
+		</div>
+    </body> 
+</html>

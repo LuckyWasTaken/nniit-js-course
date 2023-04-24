@@ -1,0 +1,16 @@
+.main {
+    width: 50%;
+    text-align: center;
+    margin:0 auto;
+	display: inline-block;
+	transform: translate(50%, 0%)
+}
+
+input {
+    text-align: center;
+    height: 20px;
+}
+
+#result {
+    text-align: center;
+}
