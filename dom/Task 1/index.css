@@ -1,0 +1,14 @@
+.text {
+    width: 30%;
+    text-align: center;
+    margin:0 auto;
+	margin-bottom: 5px;
+	font-size: 25px;
+	border: 1px solid #999;
+}
+
+.buttons {
+    width: 30%;
+    text-align: center;
+	margin:0 auto;
+}
