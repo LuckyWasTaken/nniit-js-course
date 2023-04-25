@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<title>the CALCULATOR</title>
+	<style>
+	  input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+	  
+      input[type=number] {
+          -moz-appearance: textfield;
+      }
+	</style>
+  </head>
+
+  <body>
+	<input type="number" id="numA" oninput="calculate()">
+	<select id="operator" onchange="calculate()">
+	  <option value="+">+</option>
+	  <option value="-">-</option>
+	  <option value="*">*</option>
+	  <option value="/">/</option>
+	  <option value="^2">^2</option>
+	</select>
+	<input type="number" id="numB" oninput="calculate()">
+	<!-- <input type="number" id="result" readonly> -->
+	<span >=</span>
+	<span type="number" id="result" readonly></span>
+	<!-- <input type="text" id="result" readonly> -->
+	<!-- <div id="result"> -->
+	<!--   <p>=number</p> -->
+	<!-- </div> -->
+	<!-- <label for="result">Result:</label> -->
+	
+	<!-- <input type="text" id="result" readonly> -->
+	
+	<script src="index.js"></script>
+  </body>
+
+</html>
