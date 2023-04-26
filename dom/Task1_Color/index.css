@@ -1,0 +1,18 @@
+#textBlock {
+    font-family: 'Arial', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
