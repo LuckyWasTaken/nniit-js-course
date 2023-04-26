@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM_Task2_Calculator page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <input type="number" id="lValue" oninput="calculate()" />
+    <select id="operator" onchange="calculate()">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="rValue" oninput="calculate()" />
+    <span>=</span>
+    <span id="result"></span>
+    <script src="index.js"></script>
+</body>
+
+</html>
