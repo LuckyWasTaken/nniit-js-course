@@ -1,0 +1,33 @@
+.container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.change-color-buttons {
+    width: 100%;
+    display: inline-block;
+}
+
+.change-color-buttons > button {
+    height: 50px;
+    width: 200px;
+    color: white;
+    cursor: pointer;
+}
+
+#orange-button {
+    background-color: #ffa500;
+    border-color: #ffa500;
+}
+
+#blue-button {
+    background-color: #42aaff;
+    border-color: #42aaff;
+}

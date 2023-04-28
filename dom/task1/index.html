@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Задание 1</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Нажми на кнопку для смены цвета текста</h2>
+
+        <p id="text">
+            Основы HTML содержат основные правила языка HTML, описание структуры HTML-страницы, отношения в структуре HTML-документа между HTML-элементами.
+            HTML-документ — это обычный текстовый документ, может быть создан как в обычном текстовом редакторе (Блокнот), так и в специализированном, с подсветкой кода (Notepad++, Visual Studio Code и т.п.). HTML-документ имеет расширение .html.
+        </p>
+
+        <div class="change-color-buttons">
+            <button id="orange-button" value="#ffa500" onclick="setColor(this.value)">Orange</button>
+            <button id="blue-button" value="#42aaff" onclick="setColor(this.value)">Blue</button>
+        </div>
+
+    </div>
+</body>
+</html>

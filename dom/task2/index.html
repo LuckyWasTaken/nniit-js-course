@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Задание 2</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="container">
+
+        <input type="number" id="number1"  placeholder="Введите первое число" oninput="calculate()" />
+
+        <select id="operator" onchange="calculate()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="^">^</option>
+        </select>
+
+        <input type="number" id="number2"  placeholder="Введите второе число" oninput="calculate()" />
+
+        <span>=</span>
+        <span id="result"></span>
+
+    </div>
+</body>
+</html>
