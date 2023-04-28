@@ -1,0 +1,19 @@
+name: CI-CD-vot-eto-vot
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+
+  joba-should-bdone:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version:  18.x
+    - name: Intstall Node.js stuff
+      run: npm install
+    - name: Run tests
+      run: npm test ./basics
