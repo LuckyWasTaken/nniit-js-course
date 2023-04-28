@@ -1,0 +1,14 @@
+.container {
+    width: 50%;
+    text-align: center;
+    margin:0 auto;
+}
+
+input {
+    text-align: center;
+    height: 20px;
+}
+
+#result {
+    text-align: center;
+}
