@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catculator</title>
+    <meta name="description" content="A Furrier Lorem Ipsum Calculator">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<style>
+    /* Text */
+    @font-face {
+        font-family: 'OrientalCats';
+        src: url('OrientalCats.otf') format('opentype');
+    }
+
+    div {
+        font-family: 'OrientalCats';
+        font-size: 24px;
+        text-align: center;
+        margin: auto;
+        padding-top: 5%;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-bottom: 10%;
+        word-wrap: break-word;
+    }
+
+    .calc {
+        background-color: #8f8f8f;
+        width: 228px;
+        height: 280px;
+    }
+
+    .grid {
+        display: grid;
+        gap: 4px;
+        grid-template-columns: repeat(4, 1fr);
+        position: absolute; /* Heck. */
+    }
+
+    div>div {
+        height: 42px;
+        width: 42px;
+        padding: 10px;
+    }
+
+    .screen {
+        background-color: #027148;
+        font-size: 24px;
+        text-align: right;
+        height: 42px;
+        width: 198px;
+        padding: 10px;
+        border: none;
+    }
+
+    /* Buttons */
+    .calc-button-digit {
+        background-color: black;
+        border: none;
+        padding: 10px 16px;
+        /*text*/color: white;
+        font-size: 24px;
+    }
+
+    .calc-button-action {
+        background-color: #554d8f;
+        border: none;
+        padding: 10px 16px;
+        /*text*/color: white;
+        font-size: 24px;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Catculator</h1>
+        <div class="calc">
+            <input class="screen" id="calc-screen"></input>
+            <div class="grid">
+                <button class="calc-button-action" id="calc-button-add">+</button>
+                <button class="calc-button-action" id="calc-button-sub">-</button>
+                <button class="calc-button-action" id="calc-button-mlt">✕</button>
+                <button class="calc-button-action" id="calc-button-div">÷</button>
+
+                <button class="calc-button-digit" id="calc-button-7">7</button>
+                <button class="calc-button-digit" id="calc-button-8">8</button>
+                <button class="calc-button-digit" id="calc-button-9">9</button>
+                <button class="calc-button-action" id="calc-button-CE">CE</button>
+
+                <button class="calc-button-digit" id="calc-button-4">4</button>
+                <button class="calc-button-digit" id="calc-button-5">5</button>
+                <button class="calc-button-digit" id="calc-button-6">6</button>
+                <button class="calc-button-action" id="calc-button-switch">↔︎</button>
+
+                <button class="calc-button-digit" id="calc-button-1">1</button>
+                <button class="calc-button-digit" id="calc-button-2">2</button>
+                <button class="calc-button-digit" id="calc-button-3">3</button>
+                <button class="calc-button-action" id="calc-button-cat">🐱</button>
+            </div><!--Grid-->
+        </div><!--Calc-->
+    </div>
+    <!--<div id="calc-fallback">
+        <input id="number1" type="number">
+        <select id="action">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mlt">x</option>
+            <option value="div">:</option>
+        </select>
+        <input id="number2" type="number">
+        <span id="result">= </span>
+    </div><!--Calc-2-->
+    <script src="index.js"></script>
+</body>
+
+</html>
