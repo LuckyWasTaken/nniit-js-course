@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Task 2</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='index.js'></script>
+    </head>
+
+    <body>
+        <input id="first-number" type="text" oninput="calculate()">
+        <select name="operation" id="operation-select" onchange="calculate()">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>**</option>
+        </select>
+        <input id="second-number" type="text" oninput="calculate()">
+        <a>=</a>
+        <a id="result">res</a>
+    </body>
+</html>
