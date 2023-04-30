@@ -1,11 +1,11 @@
-var assert = require('assert'),
-    core   = require('./core');
+const assert = require('assert'),
+    core = require('./core');
 
 describe('Первое задание', () => {
     describe('#isInteger', () => {
         it('Возвращает true на целое число', () => {
             assert.equal(core.isInteger(3), true);
-        }),
+        })
         it('Возвращает false на нецелое число', () => {
             assert.equal(core.isInteger(1.2), false);
         })
@@ -43,7 +43,7 @@ describe('Первое задание', () => {
             assert.equal(core.isBinary(1), true);
             assert.equal(core.isBinary(2), true);
             assert.equal(core.isBinary(2048), true);
-        }), 
+        })
         it('Возвращает false при передаче не степени двойки', () => {
             assert.equal(core.isBinary(0), false);
             assert.equal(core.isBinary(12), false);

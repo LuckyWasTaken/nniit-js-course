@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colorful Text</title>
+
+    <style>
+        p {
+            font-family: sans-serif;
+            font-size: 16px;
+            margin: auto;
+            max-width: 500px;
+        }
+
+        .cornflowerblue, .coral {
+            border-radius: 14px;
+            border-color: transparent;
+            font-family: sans-serif;
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 4px 12px;
+            margin: 12px;
+        }
+
+        .cornflowerblue {
+            background-color: cornflowerblue;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+<p id="text">
+    Did you ever hear the tragedy of <b>Darth Plagueis The Wise</b>? I thought not. It's not a story the <b>Jedi</b> would tell you. It's a <b>Sith</b> legend. Darth Plagueis was a <b>Dark Lord of the Sith</b>, so powerful and so wise he could use the <b>Force</b> to influence the <b>midichlorians</b> to create life... He had such a knowledge of the <b>dark side</b> that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many <b>abilities</b> some consider to be <b>unnatural</b>. He became so <b>powerful</b>... the only thing he was afraid of was <b>losing his power</b>, which eventually, of course, <b>he did</b>. Unfortunately, he taught his <b>apprentice</b> everything he knew, then his apprentice <b>killed</b> him in his sleep. It's <b>ironic</b> he could save others from death, but not <b>himself</b>.'
+</p>
+
+<div style="text-align: center;">
+    <button onclick="makeCornflowerBlue()" class="cornflowerblue">Cornflower Blue</button>
+    <button onclick="makeCoral()" class="coral">Coral</button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
