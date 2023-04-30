@@ -1,5 +1,5 @@
-var assert = require('assert');
-var core = require('./core');
+const assert = require('assert');
+const core = require('./core');
 
 describe('ООП', () => {
     describe('#Point', () => {

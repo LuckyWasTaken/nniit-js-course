@@ -1,4 +1,4 @@
-var assert = require("assert"),
+const assert = require("assert"),
     core = require("./core");
 
 describe("Структуры данных", () => {
