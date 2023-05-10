@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.change-color-buttons {
+    width: 100%;
+    display: inline-block;
+}
+
+.change-color-buttons > button {
+    height: 60px;
+    width: 200px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+#green-button {
+    background-color: #26ff00;
+    border-color: #d4ff00;
+}
+
+#red-button {
+    background-color: #ff4242;
+    border-color: #ff7842;
+}
