@@ -1,0 +1,37 @@
+.container {
+    width: 30%;
+    text-align: center;
+    margin:0 auto;
+}
+
+.btns {
+    width: 100%;
+    display: inline-block;
+}
+
+.btns > button {
+    height: 50px;
+    width: calc(33% - 12px);
+
+    cursor: pointer;
+    color: white;
+}
+
+#blueBtn {
+    background-color: blue;
+    border-color: blue;
+}
+
+#blueBtn:hover {
+    background-color: rgb(2, 2, 164);
+}
+
+#redBtn {
+    color: white;
+    background-color: red;
+    border-color: red;
+}
+
+#redBtn:hover {
+    background-color: rgb(162, 1, 1);
+}
