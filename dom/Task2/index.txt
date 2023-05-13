@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Task 2</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="index.css">   
+    </head>
+    <body>
+        <div class="container">
+            <h2>Calculator</h2>
+            <input id="firstNum" type="number" oninput="updateResult()" placeholder="Enter number" required/>
+            <select id="operations" onchange="updateResult()">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="^">^</option>
+            </select>
+            <input id="secondNum" type="number" oninput="updateResult()" placeholder="Enter number" required/>
+            <h3 style="font-weight: bold;">equals</h3>
+            <input id="result" disabled/>
+        </div>
+    </body> 
+</html>
