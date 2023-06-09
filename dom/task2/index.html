@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Playing with numbers</title>
+</head>
+
+<body>
+<input type="number" id="fstNum" oninput=calculate()>
+<select id="operator" onchange=calculate()>
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+<input type="number" id="sndNum" oninput=calculate()>
+<span>=</span>
+<span type="number" id="result" readonly></span>
+<script src="index.js"></script>
+</body>
+
+</html>
