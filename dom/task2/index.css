@@ -1,0 +1,12 @@
+input[type="number"] {
+  width: 80px;
+}
+
+select {
+  width: 60px;
+  margin: 0 10px;
+}
+
+button {
+  margin-left: 10px;
+}

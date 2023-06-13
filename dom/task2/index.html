@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="index.css">
+  </head>
+  <body>
+	<div>
+	  <link rel="stylesheet" href="index.css">
+	  <input id="num1" type="number" oninput="calculate()">
+	  <select id="operator" onchange="calculate()">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	  </select>
+	  <input id="num2" type="number" oninput="calculate()">
+	  <button onclick="calculate()">Calculate</button>
+	</div>
+	<script src="index.js"></script>
+	<p>Result: <span id="result"></span></p>
+  </body>
+</html>
