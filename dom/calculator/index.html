@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <style>
+    select {
+      font-family: system-ui;
+        font-size: 20px;
+        color: white;
+        background: grey;
+        padding: 0px 4px;
+        border: 0;
+        border-radius: 4px;
+        margin-left: 10px;
+    }
+    select:focus {
+      border: 2px solid #48494B;
+      outline: 0;
+     }
+    input {
+      font-family: system-ui;
+      font-size: 20px;
+      color: white;
+      background: grey;
+      padding: 0px 4px;
+      border: 0;
+      border-radius: 4px;
+      margin-left: 10px;
+      background-clip: padding-box;
+     }
+    input:focus {
+      border: 2px solid #48494B;
+      outline: 0;
+      caret-color: white;
+    }
+    label {
+      font-family: system-ui;
+      font-size: 20px;
+      color: #48494B;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <input id="val1">
+    <select id="sign">
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+    </select>
+    <input id="val2">
+    <label>= </label>
+    <label id="result"></label>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
