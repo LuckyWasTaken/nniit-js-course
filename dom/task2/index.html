@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<title>Task 2</title>
+  </head>
+
+  <body>
+	<input type="number" id="firstNumber" oninput=calculate()>
+	<select id="operator" onchange=calculate()>
+	  <option value="+">+</option>
+	  <option value="-">-</option>
+	  <option value="*">*</option>
+	  <option value="/">/</option>
+	</select>
+	<input type="number" id="secondNumber" oninput=calculate()>
+	<span>=</span>
+	<span type="number" id="result" readonly></span>
+	<script src="index.js"></script>
+  </body>
+
+</html>
